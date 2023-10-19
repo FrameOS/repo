@@ -58,6 +58,7 @@ for version_folder in version_folders:
     index_html_path = os.path.join(version_folder, "index.html")
     with open(index_html_path, 'w') as ihf:
         ihf.write(f"<html><body><h1>{version_folder}</h1>\n<h2>templates</h2>\n")
+        ihf.write(f'<a href="templates.json">templates.json</a><br>\n')
         for link in zip_links:
             ihf.write(f'<a href="templates/{link}">{link}</a><br>\n')
         ihf.write("</body></html>\n")
