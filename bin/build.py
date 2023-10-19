@@ -48,9 +48,9 @@ for version_folder in version_folders:
                 data["zip"] = f"./templates/{folder}.zip"
                 data.pop("config")
                 if data.get('image', '').startswith('./'):
-                    data['image'] = "./templates/{folder}/" + data['image'].substring(2)
+                    data['image'] = "./templates/{folder}/" + data['image'][2:]
                 if data.get('scenes', '').startswith('./'):
-                    data['scenes'] = "./templates/{folder}/" + data['scenes'].substring(2)
+                    data['scenes'] = "./templates/{folder}/" + data['scenes'][2:]
                 all_template_json_data.append(data)
 
     # Save combined template.json
