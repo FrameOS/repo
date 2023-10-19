@@ -1,0 +1,14 @@
+{
+  "name": "OpenAI random pencil drawing",
+  "description": "Random pencil drawing from OpenAI. On Pimoroni Inky Impressions frames, each button press is mapped to choose a random next image.",
+  "config": {
+    "interval": 7200,
+    "background_color": "white",
+    "scaling_mode": "cover",
+    "rotate": 0
+  },
+  "image": "./image.jpg",
+  "image_width": 800,
+  "image_height": 480,
+  "scenes": "./scenes.json"
+}

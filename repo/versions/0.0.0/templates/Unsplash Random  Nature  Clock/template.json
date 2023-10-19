@@ -1,0 +1,14 @@
+{
+  "name": "Unsplash Random / Nature + Clock",
+  "description": "Classic full screen background with digits. Random search set to 'nature' by default.",
+  "config": {
+    "interval": 600,
+    "background_color": "white",
+    "scaling_mode": "cover",
+    "rotate": 0
+  },
+  "image": "./image.jpg",
+  "image_width": 800,
+  "image_height": 480,
+  "scenes": "./scenes.json"
+}

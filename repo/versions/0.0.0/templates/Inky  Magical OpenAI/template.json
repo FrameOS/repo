@@ -1,0 +1,14 @@
+{
+  "name": "Inky / Magical OpenAI",
+  "description": "[Made for Pimoroni Inky Impressions 7.3\"] Random images from OpenAI, with each button mapped to one choice for the next image.",
+  "config": {
+    "interval": 7200,
+    "background_color": "white",
+    "scaling_mode": "cover",
+    "rotate": 0
+  },
+  "image": "./image.jpg",
+  "image_width": 800,
+  "image_height": 480,
+  "scenes": "./scenes.json"
+}
