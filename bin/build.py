@@ -39,7 +39,7 @@ for repo in repositories:
                     arcname = os.path.relpath(filepath, start=repo)
                     zipf.write(filepath, arcname)
 
-        template_json_path = os.path.join(folder, "template.json")
+        template_json_path = os.path.join(full_folder_path, "template.json")
         template_data = {"name": folder, "zip": f"./{folder}.zip"}
         if os.path.exists(template_json_path):
             with open(template_json_path, 'r') as f:
