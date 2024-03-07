@@ -1,9 +1,0 @@
-{
-  "name": "QR Message Board",
-  "description": "A simple message board where you scan the shown QR code, and update its content with your phone.",
-  "config": null,
-  "image": "./image.jpg",
-  "image_width": 480,
-  "image_height": 800,
-  "scenes": "./scenes.json"
-}
