@@ -1,6 +1,9 @@
-[
-  {
-    "name": "QR Message Board",
-    "zip": "./QR Message Board.zip"
-  }
-]
+{
+  "name": "FrameOS Samples",
+  "templates": [
+    {
+      "name": "QR Message Board",
+      "zip": "./QR Message Board.zip"
+    }
+  ]
+}
