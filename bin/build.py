@@ -39,8 +39,20 @@ for repo in repositories:
                     arcname = os.path.relpath(filepath, start=repo)
                     zipf.write(filepath, arcname)
 
-        # Append data for this template to the "templates" key
+        template_json_path = os.path.join(folder, "template.json")
         template_data = {"name": folder, "zip": f"./{folder}.zip"}
+        if os.path.exists(template_json_path):
+            with open(template_json_path, 'r') as f:
+                template = json.load(f)
+                template_data['name'] = template.get('name', template_data['name'])
+                if template.get('image', None):
+                    template_data['image'] = template.get('image', None)
+                    if template_data['image'].startswith('./'):
+                        template_data['image'] = "./" + folder + "/" + template_data['image'][2:]
+                if template.get('description', None):
+                    template_data['description'] = template.get('description', None)
+
+        # Append data for this template to the "templates" key
         existing_repo_data["templates"].append(template_data)
 
     # Save or update repository.json with combined data
