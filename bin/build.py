@@ -17,6 +17,16 @@ for repo in repositories:
 
     all_template_json_data = []
 
+    # Attempt to load existing repository.json if it exists
+    existing_repo_data = {"name": repo_name, "templates": []}  # Default structure
+    combined_json_path = os.path.join(repo, "repository.json")
+    if os.path.exists(combined_json_path):
+        with open(combined_json_path, 'r') as f:
+            existing_repo_data = json.load(f)
+        if "templates" not in existing_repo_data:
+            existing_repo_data["templates"] = []
+        existing_repo_data["name"] = existing_repo_data.get("name", repo_name)
+
     for folder in repo_folders:
         full_folder_path = os.path.join(repo, folder)
         zip_filename = os.path.join(repo, f"{folder}.zip")
@@ -29,14 +39,13 @@ for repo in repositories:
                     arcname = os.path.relpath(filepath, start=repo)
                     zipf.write(filepath, arcname)
 
-        # Prepare data for repository.json
+        # Append data for this template to the "templates" key
         template_data = {"name": folder, "zip": f"./{folder}.zip"}
-        all_template_json_data.append(template_data)
+        existing_repo_data["templates"].append(template_data)
 
-    # Save combined data to repository.json
-    combined_json_path = os.path.join(repo, "repository.json")
+    # Save or update repository.json with combined data
     with open(combined_json_path, 'w') as cjf:
-        json.dump(all_template_json_data, cjf, indent=2)
+        json.dump(existing_repo_data, cjf, indent=2)
 
     # Create index.html for the repository
     index_html_path = os.path.join(repo, "index.html")
