@@ -15,8 +15,6 @@ for repo in repositories:
     repo_folders = [d for d in os.listdir(repo) if
                     os.path.isdir(os.path.join(repo, d))]
 
-    all_template_json_data = []
-
     # Attempt to load existing repository.json if it exists
     existing_repo_data = {"name": repo_name, "templates": []}  # Default structure
     combined_json_path = os.path.join(repo, "repository.json")
@@ -62,9 +60,9 @@ for repo in repositories:
     # Create index.html for the repository
     index_html_path = os.path.join(repo, "index.html")
     with open(index_html_path, 'w') as ihf:
-        ihf.write(f"<html><body><h1>{repo_name}</h1>\n<h2>templates</h2>\n")
+        ihf.write(f"<html><body><h1>{repo_name}</h1>\n")
         ihf.write(f'<a href="repository.json">repository.json</a><br>\n')
-        for data in all_template_json_data:
+        for data in existing_repo_data["templates"]:
             ihf.write(f'<a href="{data["zip"]}">{data["name"]}.zip</a><br>\n')
         ihf.write("</body></html>\n")
 
