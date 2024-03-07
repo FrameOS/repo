@@ -20,10 +20,7 @@ jobs:
 
       - name: Run build script
         run: |
-          ls -lah
-          pwd
-          chmod +x ./bin/build.sh
-          ./bin/build.sh
+          python3 ./bin/build.py
 
       - name: Commit files
         run: |
