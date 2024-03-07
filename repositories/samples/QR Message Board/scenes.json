@@ -103,7 +103,9 @@
       },
       {
         "data": {
-          "config": {},
+          "config": {
+            "cacheSeconds": "3600"
+          },
           "keyword": "unsplash"
         },
         "dragging": false,
@@ -111,15 +113,15 @@
         "id": "933a782b-a6c4-4a42-b1b1-0db075c6d90c",
         "position": {
           "x": 290.35503152122044,
-          "y": 271.054620234034
+          "y": 168.01661624328028
         },
         "positionAbsolute": {
           "x": 290.35503152122044,
-          "y": 271.054620234034
+          "y": 168.01661624328028
         },
         "selected": false,
         "type": "app",
-        "width": 396
+        "width": 410
       },
       {
         "data": {
@@ -141,15 +143,17 @@
         },
         "selected": false,
         "type": "app",
-        "width": 300
+        "width": 303
       },
       {
         "data": {
           "config": {
-            "offsetX": "-3",
-            "offsetY": "-3",
-            "padding": "3",
+            "backgroundColor": "#000000",
+            "offsetX": "0",
+            "offsetY": "0",
+            "padding": "1",
             "position": "top-left",
+            "qrCodeColor": "#ffffff",
             "size": "1"
           },
           "keyword": "qr"
@@ -196,7 +200,7 @@
     ],
     "settings": {
       "backgroundColor": "#000000",
-      "refreshInterval": 600
+      "refreshInterval": 300
     }
   }
 ]
