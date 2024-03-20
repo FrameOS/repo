@@ -200,7 +200,7 @@
     ],
     "settings": {
       "backgroundColor": "#000000",
-      "refreshInterval": 300
+      "refreshInterval": 3600
     }
   }
 ]
