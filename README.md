@@ -6,8 +6,6 @@ Hosted on CloudFlare Pages.
 
 ## Make your own repository
 
-To create your own repo:
-
 1. Copy the `bin/build.py` script
 2. Create a `repo/` folder, and follow the structure `repo/category/template-name/`
 3. Export scenes from FrameOS as .zip files, and extract them as folders under `repo/category/`
