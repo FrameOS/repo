@@ -3,7 +3,7 @@ import os
 import zipfile
 import json
 
-base_path = "./repositories"
+base_path = "./repo"
 
 repo_links = []
 
