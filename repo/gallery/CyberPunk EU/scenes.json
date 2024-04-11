@@ -1,5 +1,6 @@
 [
   {
+    "default": true,
     "edges": [
       {
         "id": "f8bc72f3-7108-42b8-9acc-651a4cbd00d5",
@@ -8,43 +9,12 @@
         "target": "b67f367a-5a5e-4102-95cf-fffb2d5e8fa3",
         "targetHandle": "prev",
         "type": "edge"
-      },
-      {
-        "id": "c96eaaab-503d-479a-918e-90f19ee57301",
-        "source": "b67f367a-5a5e-4102-95cf-fffb2d5e8fa3",
-        "sourceHandle": "next",
-        "target": "1c36ab76-90e5-415a-af52-40cb35710f8f",
-        "targetHandle": "prev",
-        "type": "edge"
       }
     ],
     "fields": [],
     "id": "9b547436-7bd5-4c3e-beca-3119ec2ed76e",
-    "name": "CyberClock",
+    "name": "CyberPunk EU",
     "nodes": [
-      {
-        "data": {
-          "config": {
-            "borderWidth": "4",
-            "fontSize": "80"
-          },
-          "keyword": "clock"
-        },
-        "dragging": false,
-        "height": 380,
-        "id": "1c36ab76-90e5-415a-af52-40cb35710f8f",
-        "position": {
-          "x": 304.2184505406533,
-          "y": 61.342808942899865
-        },
-        "positionAbsolute": {
-          "x": 304.2184505406533,
-          "y": 61.342808942899865
-        },
-        "selected": false,
-        "type": "app",
-        "width": 372
-      },
       {
         "data": {
           "config": {

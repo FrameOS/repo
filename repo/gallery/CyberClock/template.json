@@ -1,9 +1,0 @@
-{
-  "name": "CyberClock",
-  "description": "European capitals reimagined as cyberpunk dystopias. And a digital 24h clock.",
-  "config": null,
-  "image": "./image.jpg",
-  "imageWidth": 1280,
-  "imageHeight": 720,
-  "scenes": "./scenes.json"
-}
