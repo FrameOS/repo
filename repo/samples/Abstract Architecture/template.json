@@ -1,0 +1,9 @@
+{
+  "name": "Abstract Architecture",
+  "description": "",
+  "config": null,
+  "image": "./image.jpg",
+  "imageWidth": 720,
+  "imageHeight": 1280,
+  "scenes": "./scenes.json"
+}

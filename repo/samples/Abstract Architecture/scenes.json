@@ -1,0 +1,58 @@
+[
+  {
+    "edges": [
+      {
+        "id": "0f9cdcf0-628d-4a7c-ba37-dbb149670747",
+        "source": "9eb12a2c-9606-4663-80c5-b8a61fd23fa7",
+        "sourceHandle": "next",
+        "target": "450391df-f38a-42e6-8915-acac0c11c19d",
+        "targetHandle": "prev",
+        "type": "edge"
+      }
+    ],
+    "fields": [],
+    "id": "9fc72258-c2e8-4edb-a3dc-3e72837fbc1e",
+    "name": "Abstract Architecture",
+    "nodes": [
+      {
+        "data": {
+          "config": {
+            "category": "building-art-styles"
+          },
+          "keyword": "frameOSGallery"
+        },
+        "dragging": false,
+        "height": 178,
+        "id": "450391df-f38a-42e6-8915-acac0c11c19d",
+        "position": {
+          "x": 473,
+          "y": 196
+        },
+        "positionAbsolute": {
+          "x": 473,
+          "y": 196
+        },
+        "selected": false,
+        "type": "app",
+        "width": 425
+      },
+      {
+        "data": {
+          "keyword": "render"
+        },
+        "height": 40,
+        "id": "9eb12a2c-9606-4663-80c5-b8a61fd23fa7",
+        "position": {
+          "x": 160,
+          "y": 209
+        },
+        "type": "event",
+        "width": 99
+      }
+    ],
+    "settings": {
+      "backgroundColor": "#000000",
+      "refreshInterval": 600
+    }
+  }
+]

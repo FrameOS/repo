@@ -1,0 +1,56 @@
+[
+  {
+    "edges": [
+      {
+        "id": "b45a4ddc-d1a1-4523-bdd7-876d7b172467",
+        "source": "19a2b834-f0ff-489c-b6e2-3700af5783c8",
+        "sourceHandle": "next",
+        "target": "a6fa6744-e84a-419a-9153-6c1d81e7bfd7",
+        "targetHandle": "prev",
+        "type": "edge"
+      }
+    ],
+    "fields": [],
+    "id": "e1cf3428-1de8-4fa3-aa3c-3158905c0ec8",
+    "name": "Cuteness Overload",
+    "nodes": [
+      {
+        "data": {
+          "config": {},
+          "keyword": "frameOSGallery"
+        },
+        "dragging": false,
+        "height": 178,
+        "id": "a6fa6744-e84a-419a-9153-6c1d81e7bfd7",
+        "position": {
+          "x": 459,
+          "y": 150
+        },
+        "positionAbsolute": {
+          "x": 459,
+          "y": 150
+        },
+        "selected": false,
+        "type": "app",
+        "width": 425
+      },
+      {
+        "data": {
+          "keyword": "render"
+        },
+        "height": 40,
+        "id": "19a2b834-f0ff-489c-b6e2-3700af5783c8",
+        "position": {
+          "x": 175,
+          "y": 163
+        },
+        "type": "event",
+        "width": 99
+      }
+    ],
+    "settings": {
+      "backgroundColor": "#000000",
+      "refreshInterval": 600
+    }
+  }
+]
