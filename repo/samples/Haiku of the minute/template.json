@@ -1,0 +1,9 @@
+{
+  "name": "Haiku of the minute",
+  "description": "Picture of the hour. It's zen, except for your wallet. Requires an OpenAI API key, makes a new request each minute.",
+  "config": null,
+  "image": "./image.jpg",
+  "imageWidth": 1280,
+  "imageHeight": 720,
+  "scenes": "./scenes.json"
+}

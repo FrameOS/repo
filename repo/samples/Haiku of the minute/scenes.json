@@ -1,0 +1,228 @@
+[
+  {
+    "id": "5c2bb412-b6f1-4b49-9934-c8fd3ea3c20c",
+    "name": "Haiku of the minute",
+    "nodes": [
+      {
+        "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "type": "event",
+        "position": {
+          "x": -489.420460394305,
+          "y": -57.21984988205102
+        },
+        "data": {
+          "keyword": "render"
+        },
+        "width": 147,
+        "height": 72,
+        "selected": false,
+        "positionAbsolute": {
+          "x": -489.420460394305,
+          "y": -57.21984988205102
+        },
+        "dragging": false
+      },
+      {
+        "id": "fa3ff544-fd8a-4098-b5bf-2e0d6fa74fc6",
+        "type": "app",
+        "position": {
+          "x": 772.935873840035,
+          "y": -100.26488095789924
+        },
+        "data": {
+          "keyword": "openaiText",
+          "config": {
+            "cacheSeconds": "60"
+          }
+        },
+        "width": 476,
+        "height": 310,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 772.935873840035,
+          "y": -100.26488095789924
+        },
+        "dragging": false
+      },
+      {
+        "id": "e8952e53-b18c-470c-a8a5-59f1b6d8ca93",
+        "position": {
+          "x": 181.50013345515475,
+          "y": 317.48498080678013
+        },
+        "type": "code",
+        "data": {
+          "code": "\"Generate a Haiku based on the current minute of the current day: \" & now().format(\"yyyy-MM-dd HH:mm\") & \" Include at least the hour and minute (\" & now().format(\"HH:mm\") & \") as words in the reply.\""
+        },
+        "style": {
+          "width": 448,
+          "height": 223
+        },
+        "width": 448,
+        "height": 223,
+        "selected": false,
+        "resizing": false,
+        "positionAbsolute": {
+          "x": 181.50013345515475,
+          "y": 317.48498080678013
+        },
+        "dragging": false
+      },
+      {
+        "id": "4f7af328-2d2b-41d9-9107-c607451024be",
+        "type": "app",
+        "position": {
+          "x": 1344.9643483982543,
+          "y": -71.39382287472662
+        },
+        "data": {
+          "keyword": "text",
+          "config": {
+            "fontSize": "64"
+          }
+        },
+        "width": 294,
+        "height": 308,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 1344.9643483982543,
+          "y": -71.39382287472662
+        },
+        "dragging": false
+      },
+      {
+        "id": "ca4b30ff-36f3-455a-b2a2-02d66a028f07",
+        "position": {
+          "x": 950.5091588355872,
+          "y": 337.66863355218953
+        },
+        "type": "code",
+        "data": {
+          "code": "state{\"reply\"}.getStr()"
+        },
+        "style": {
+          "width": 300,
+          "height": 130
+        },
+        "width": 300,
+        "height": 130,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 950.5091588355872,
+          "y": 337.66863355218953
+        },
+        "dragging": false
+      },
+      {
+        "id": "948ec063-215c-43ad-8435-6e89c0c79985",
+        "type": "app",
+        "position": {
+          "x": -253.0349582253538,
+          "y": -86.64115302077869
+        },
+        "data": {
+          "keyword": "unsplash",
+          "config": {
+            "keyword": "zen"
+          }
+        },
+        "width": 417,
+        "height": 106,
+        "selected": false,
+        "positionAbsolute": {
+          "x": -253.0349582253538,
+          "y": -86.64115302077869
+        },
+        "dragging": false
+      },
+      {
+        "id": "1ae0bc19-3596-4110-92bc-d6c3aa6e44e6",
+        "type": "app",
+        "position": {
+          "x": 260.2778947065314,
+          "y": -121.35244851193053
+        },
+        "data": {
+          "keyword": "clock",
+          "config": {
+            "format": "HH:mm",
+            "position": "bottom-center",
+            "fontSize": "32"
+          }
+        },
+        "width": 372,
+        "height": 380,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 260.2778947065314,
+          "y": -121.35244851193053
+        },
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "e8952e53-b18c-470c-a8a5-59f1b6d8ca93",
+        "target": "fa3ff544-fd8a-4098-b5bf-2e0d6fa74fc6",
+        "targetHandle": "fieldInput/user",
+        "source": "e8952e53-b18c-470c-a8a5-59f1b6d8ca93",
+        "sourceHandle": "fieldOutput",
+        "type": "edge"
+      },
+      {
+        "id": "4f8e56ac-600f-4b14-83c1-33b02eb48e42",
+        "source": "fa3ff544-fd8a-4098-b5bf-2e0d6fa74fc6",
+        "sourceHandle": "next",
+        "target": "4f7af328-2d2b-41d9-9107-c607451024be",
+        "targetHandle": "prev",
+        "type": "edge"
+      },
+      {
+        "id": "ca4b30ff-36f3-455a-b2a2-02d66a028f07",
+        "target": "4f7af328-2d2b-41d9-9107-c607451024be",
+        "targetHandle": "fieldInput/text",
+        "source": "ca4b30ff-36f3-455a-b2a2-02d66a028f07",
+        "sourceHandle": "fieldOutput",
+        "type": "edge"
+      },
+      {
+        "id": "a86d582e-1329-4434-9a08-a120320ab029",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "next",
+        "target": "948ec063-215c-43ad-8435-6e89c0c79985",
+        "targetHandle": "prev",
+        "type": "edge"
+      },
+      {
+        "id": "1d5b3ad8-042e-4b39-8432-5ba1910fdcf3",
+        "source": "948ec063-215c-43ad-8435-6e89c0c79985",
+        "sourceHandle": "next",
+        "target": "1ae0bc19-3596-4110-92bc-d6c3aa6e44e6",
+        "targetHandle": "prev",
+        "type": "edge"
+      },
+      {
+        "id": "a3f56d2a-e759-4514-8795-379278d2a513",
+        "source": "1ae0bc19-3596-4110-92bc-d6c3aa6e44e6",
+        "sourceHandle": "next",
+        "target": "fa3ff544-fd8a-4098-b5bf-2e0d6fa74fc6",
+        "targetHandle": "prev",
+        "type": "edge"
+      }
+    ],
+    "fields": [
+      {
+        "name": "reply",
+        "label": "reply",
+        "type": "string",
+        "persist": "disk",
+        "access": "private"
+      }
+    ],
+    "settings": {
+      "refreshInterval": 60,
+      "backgroundColor": "#000000"
+    },
+    "default": true
+  }
+]
