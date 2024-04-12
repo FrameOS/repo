@@ -1,0 +1,251 @@
+[
+  {
+    "default": true,
+    "edges": [
+      {
+        "id": "2717601d-33bb-45e9-8b1b-dc1149899fa7",
+        "source": "1889b055-884c-4db5-851c-1689c1c9cf61",
+        "sourceHandle": "next",
+        "target": "a825a9fc-175b-4ea6-b07b-f433e7e63b51",
+        "targetHandle": "prev",
+        "type": "edge"
+      },
+      {
+        "id": "578a95b3-83c8-4d32-9b71-e37f95472a99",
+        "source": "578a95b3-83c8-4d32-9b71-e37f95472a99",
+        "sourceHandle": "fieldOutput",
+        "target": "a825a9fc-175b-4ea6-b07b-f433e7e63b51",
+        "targetHandle": "fieldInput/text",
+        "type": "edge"
+      },
+      {
+        "id": "766f9195-d8e7-4931-a9f6-31efc35f98e9",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "code/state{\"prompt\"}.getStr()",
+        "target": "1889b055-884c-4db5-851c-1689c1c9cf61",
+        "targetHandle": "fieldInput/user",
+        "type": "edge"
+      },
+      {
+        "id": "9d6d042d-2853-4d9e-9482-5e3222eb06e7",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "next",
+        "target": "1889b055-884c-4db5-851c-1689c1c9cf61",
+        "targetHandle": "prev",
+        "type": "edge"
+      },
+      {
+        "id": "96efcebe-62ef-43f9-b1a4-dd098d4d7f9c",
+        "source": "a825a9fc-175b-4ea6-b07b-f433e7e63b51",
+        "sourceHandle": "next",
+        "target": "ca6aa3d0-c47d-4075-a16d-315e5d462e3b",
+        "targetHandle": "prev",
+        "type": "edge"
+      },
+      {
+        "id": "0f082e5c-cbeb-406a-9f56-1ff47583a69d",
+        "source": "ca6aa3d0-c47d-4075-a16d-315e5d462e3b",
+        "sourceHandle": "next",
+        "target": "2cb416a5-b0a0-447d-8998-3b9aeab9aff7",
+        "targetHandle": "prev",
+        "type": "edge"
+      },
+      {
+        "id": "b31c6854-7313-47fe-b178-c8c73febf7f8",
+        "target": "a825a9fc-175b-4ea6-b07b-f433e7e63b51",
+        "targetHandle": "fieldInput/fontSize",
+        "source": "b31c6854-7313-47fe-b178-c8c73febf7f8",
+        "sourceHandle": "fieldOutput",
+        "type": "edge"
+      }
+    ],
+    "fields": [
+      {
+        "access": "public",
+        "label": "Prompt",
+        "name": "prompt",
+        "persist": "disk",
+        "placeholder": "Type your question here",
+        "type": "text",
+        "value": "Generate ideas for a smart e-ink display around the house."
+      },
+      {
+        "access": "private",
+        "label": "Reply",
+        "name": "reply",
+        "persist": "disk",
+        "type": "text"
+      }
+    ],
+    "id": "cec8bbea-a7bd-49c1-936f-3003a4f6ad79",
+    "name": "MiniGPT",
+    "nodes": [
+      {
+        "data": {
+          "keyword": "render"
+        },
+        "dragging": false,
+        "height": 96,
+        "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "position": {
+          "x": -26.183560731561684,
+          "y": 130.17197083609256
+        },
+        "positionAbsolute": {
+          "x": -26.183560731561684,
+          "y": 130.17197083609256
+        },
+        "selected": false,
+        "type": "event",
+        "width": 150
+      },
+      {
+        "data": {
+          "config": {},
+          "keyword": "openaiText"
+        },
+        "dragging": false,
+        "height": 310,
+        "id": "1889b055-884c-4db5-851c-1689c1c9cf61",
+        "position": {
+          "x": 253.08589146904245,
+          "y": 50.14473244030006
+        },
+        "positionAbsolute": {
+          "x": 253.08589146904245,
+          "y": 50.14473244030006
+        },
+        "selected": false,
+        "type": "app",
+        "width": 467
+      },
+      {
+        "data": {
+          "config": {
+            "borderWidth": "0",
+            "fontColor": "#000000",
+            "fontSize": "32",
+            "position": "top-left"
+          },
+          "keyword": "text"
+        },
+        "dragging": false,
+        "height": 308,
+        "id": "a825a9fc-175b-4ea6-b07b-f433e7e63b51",
+        "position": {
+          "x": 963.7030255952195,
+          "y": 92.84111016544779
+        },
+        "positionAbsolute": {
+          "x": 963.7030255952195,
+          "y": 92.84111016544779
+        },
+        "selected": false,
+        "type": "app",
+        "width": 300
+      },
+      {
+        "data": {
+          "code": "\"> \" & state{\"prompt\"}.getStr() & \"\\n\\n\" & state{\"reply\"}.getStr()"
+        },
+        "dragging": false,
+        "height": 130,
+        "id": "578a95b3-83c8-4d32-9b71-e37f95472a99",
+        "position": {
+          "x": 403.661661373607,
+          "y": 402.7067058231838
+        },
+        "positionAbsolute": {
+          "x": 403.661661373607,
+          "y": 402.7067058231838
+        },
+        "resizing": false,
+        "selected": false,
+        "style": {
+          "height": 130,
+          "width": 382
+        },
+        "type": "code",
+        "width": 382
+      },
+      {
+        "data": {
+          "config": {
+            "position": "bottom-right",
+            "offsetX": "0",
+            "offsetY": "0"
+          },
+          "keyword": "qr"
+        },
+        "dragging": false,
+        "height": 420,
+        "id": "ca6aa3d0-c47d-4075-a16d-315e5d462e3b",
+        "position": {
+          "x": 1309.4296106781665,
+          "y": 90.45901479206913
+        },
+        "positionAbsolute": {
+          "x": 1309.4296106781665,
+          "y": 90.45901479206913
+        },
+        "selected": false,
+        "type": "app",
+        "width": 430
+      },
+      {
+        "data": {
+          "config": {
+            "borderColor": "#ffffff",
+            "fontColor": "#000000",
+            "fontSize": "16",
+            "format": "yyyy-MM-dd",
+            "position": "bottom-left"
+          },
+          "keyword": "clock"
+        },
+        "dragging": false,
+        "height": 380,
+        "id": "2cb416a5-b0a0-447d-8998-3b9aeab9aff7",
+        "position": {
+          "x": 1793.9244678025211,
+          "y": 100.11699638568459
+        },
+        "positionAbsolute": {
+          "x": 1793.9244678025211,
+          "y": 100.11699638568459
+        },
+        "selected": false,
+        "type": "app",
+        "width": 372
+      },
+      {
+        "id": "b31c6854-7313-47fe-b178-c8c73febf7f8",
+        "position": {
+          "x": 421.93749604110144,
+          "y": 578.917937548735
+        },
+        "type": "code",
+        "data": {
+          "code": "if len(state{\"reply\"}.getStr()) > 200: 24 elif len(state{\"reply\"}.getStr()) > 500: 16 else: 32"
+        },
+        "style": {
+          "width": 428,
+          "height": 130
+        },
+        "width": 428,
+        "height": 130,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 421.93749604110144,
+          "y": 578.917937548735
+        },
+        "dragging": false,
+        "resizing": false
+      }
+    ],
+    "settings": {
+      "backgroundColor": "#ffffff",
+      "refreshInterval": 60
+    }
+  }
+]
