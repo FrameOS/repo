@@ -1,0 +1,9 @@
+{
+  "name": "Github Stars",
+  "description": "",
+  "config": null,
+  "image": "./image.jpg",
+  "imageWidth": 250,
+  "imageHeight": 122,
+  "scenes": "./scenes.json"
+}
