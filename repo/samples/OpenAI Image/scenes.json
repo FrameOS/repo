@@ -1,0 +1,74 @@
+[
+  {
+    "default": true,
+    "edges": [
+      {
+        "id": "22bebb72-c22b-4853-957f-4c33bb96cc37",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "next",
+        "target": "47e8fc0b-f26f-4edd-bb76-ca8b9edd9ab0",
+        "targetHandle": "prev",
+        "type": "edge"
+      },
+      {
+        "id": "3af8dffe-e8f7-41f2-8eba-5d62037a05c8",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "code/state{\"prompt\"}.getStr()",
+        "target": "47e8fc0b-f26f-4edd-bb76-ca8b9edd9ab0",
+        "targetHandle": "fieldInput/prompt",
+        "type": "edge"
+      }
+    ],
+    "fields": [
+      {
+        "access": "public",
+        "label": "Prompt",
+        "name": "prompt",
+        "persist": "disk",
+        "type": "text",
+        "value": "Penguins having a winter barbecue"
+      }
+    ],
+    "id": "2bf20eac-5bac-4a9b-b095-bee4666c053e",
+    "name": "OpenAI Image",
+    "nodes": [
+      {
+        "data": {
+          "keyword": "render"
+        },
+        "height": 72,
+        "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "position": {
+          "x": 121,
+          "y": 113
+        },
+        "type": "event",
+        "width": 150
+      },
+      {
+        "data": {
+          "config": {},
+          "keyword": "openai"
+        },
+        "dragging": false,
+        "height": 246,
+        "id": "47e8fc0b-f26f-4edd-bb76-ca8b9edd9ab0",
+        "position": {
+          "x": 322.7111480865224,
+          "y": 109.97787900447611
+        },
+        "positionAbsolute": {
+          "x": 322.7111480865224,
+          "y": 109.97787900447611
+        },
+        "selected": false,
+        "type": "app",
+        "width": 396
+      }
+    ],
+    "settings": {
+      "backgroundColor": "#ffffff",
+      "refreshInterval": 60
+    }
+  }
+]
