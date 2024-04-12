@@ -1,0 +1,75 @@
+[
+  {
+    "id": "e8e57629-05a1-4e8d-8df7-4e8dd1176ddb",
+    "name": "Unsplash image",
+    "nodes": [
+      {
+        "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "type": "event",
+        "position": {
+          "x": 121,
+          "y": 113
+        },
+        "data": {
+          "keyword": "render"
+        },
+        "width": 157,
+        "height": 72
+      },
+      {
+        "id": "c027ae14-37ef-4dd6-aae3-b9b6f4a894da",
+        "type": "app",
+        "position": {
+          "x": 394.5,
+          "y": 131
+        },
+        "data": {
+          "keyword": "unsplash",
+          "config": {}
+        },
+        "width": 396,
+        "height": 106,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 394.5,
+          "y": 131
+        },
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "0a36c907-4bcd-4c28-81fc-3bf9bf905a1d",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "next",
+        "target": "c027ae14-37ef-4dd6-aae3-b9b6f4a894da",
+        "targetHandle": "prev",
+        "type": "edge"
+      },
+      {
+        "id": "490bd1f2-d6ed-4943-aacd-160879d66e33",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "code/state{\"search\"}.getStr()",
+        "target": "c027ae14-37ef-4dd6-aae3-b9b6f4a894da",
+        "targetHandle": "fieldInput/keyword",
+        "type": "edge"
+      }
+    ],
+    "fields": [
+      {
+        "name": "search",
+        "label": "Seach term (one word)",
+        "type": "string",
+        "persist": "disk",
+        "access": "public",
+        "value": "nature",
+        "placeholder": "e.g. nature, fish, city"
+      }
+    ],
+    "settings": {
+      "refreshInterval": 600,
+      "backgroundColor": "#000000"
+    },
+    "default": true
+  }
+]

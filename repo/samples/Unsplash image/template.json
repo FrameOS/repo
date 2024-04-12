@@ -1,0 +1,9 @@
+{
+  "name": "Unsplash image",
+  "description": "Search over a limited subset of unsplash.com images. Search with one word keywords like: nature, workout, etc",
+  "config": null,
+  "image": "./image.jpg",
+  "imageWidth": 480,
+  "imageHeight": 800,
+  "scenes": "./scenes.json"
+}
