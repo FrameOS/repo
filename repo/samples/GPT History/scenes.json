@@ -1,0 +1,262 @@
+[
+  {
+    "default": true,
+    "edges": [
+      {
+        "id": "578a95b3-83c8-4d32-9b71-e37f95472a99",
+        "source": "578a95b3-83c8-4d32-9b71-e37f95472a99",
+        "sourceHandle": "fieldOutput",
+        "target": "a825a9fc-175b-4ea6-b07b-f433e7e63b51",
+        "targetHandle": "fieldInput/text",
+        "type": "edge"
+      },
+      {
+        "id": "cf4e98d0-a947-4d15-bd4a-1b413688b5c2",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "next",
+        "target": "1889b055-884c-4db5-851c-1689c1c9cf61",
+        "targetHandle": "prev",
+        "type": "edge"
+      },
+      {
+        "id": "c68a46f3-46c8-40f0-8f59-aab1f50e7117",
+        "source": "1889b055-884c-4db5-851c-1689c1c9cf61",
+        "sourceHandle": "next",
+        "target": "e3ace93d-5d20-41f0-818e-6f2d57e8cede",
+        "targetHandle": "prev",
+        "type": "edge"
+      },
+      {
+        "id": "84210713-9cb1-4074-b912-75797d430573",
+        "source": "e3ace93d-5d20-41f0-818e-6f2d57e8cede",
+        "sourceHandle": "next",
+        "target": "a825a9fc-175b-4ea6-b07b-f433e7e63b51",
+        "targetHandle": "prev",
+        "type": "edge"
+      },
+      {
+        "id": "b3a7f0fd-5fba-4529-8f77-efef3f8d6fbd",
+        "source": "b3a7f0fd-5fba-4529-8f77-efef3f8d6fbd",
+        "sourceHandle": "fieldOutput",
+        "target": "1889b055-884c-4db5-851c-1689c1c9cf61",
+        "targetHandle": "fieldInput/user",
+        "type": "edge"
+      },
+      {
+        "id": "cad29f31-d678-45a2-8294-1f4b0ffd6f9b",
+        "source": "cad29f31-d678-45a2-8294-1f4b0ffd6f9b",
+        "sourceHandle": "fieldOutput",
+        "target": "e3ace93d-5d20-41f0-818e-6f2d57e8cede",
+        "targetHandle": "fieldInput/prompt",
+        "type": "edge"
+      },
+      {
+        "id": "18fd72db-86ee-4502-bb00-b038c068834a",
+        "source": "a825a9fc-175b-4ea6-b07b-f433e7e63b51",
+        "sourceHandle": "next",
+        "target": "2cb416a5-b0a0-447d-8998-3b9aeab9aff7",
+        "targetHandle": "prev",
+        "type": "edge"
+      }
+    ],
+    "fields": [
+      {
+        "access": "private",
+        "label": "Reply",
+        "name": "reply",
+        "persist": "disk",
+        "type": "text"
+      }
+    ],
+    "id": "2fbbab06-46da-4b65-b341-7257d015415a",
+    "name": "GPT History",
+    "nodes": [
+      {
+        "data": {
+          "keyword": "render"
+        },
+        "dragging": false,
+        "height": 72,
+        "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "position": {
+          "x": -600.0866991040164,
+          "y": 130.17197083609256
+        },
+        "positionAbsolute": {
+          "x": -600.0866991040164,
+          "y": 130.17197083609256
+        },
+        "selected": false,
+        "type": "event",
+        "width": 132
+      },
+      {
+        "data": {
+          "config": {
+            "cacheSeconds": "86400"
+          },
+          "keyword": "openaiText"
+        },
+        "dragging": false,
+        "height": 310,
+        "id": "1889b055-884c-4db5-851c-1689c1c9cf61",
+        "position": {
+          "x": -197.5541526423913,
+          "y": 82.26443984871571
+        },
+        "positionAbsolute": {
+          "x": -197.5541526423913,
+          "y": 82.26443984871571
+        },
+        "selected": false,
+        "type": "app",
+        "width": 476
+      },
+      {
+        "data": {
+          "config": {
+            "borderColor": "#000000",
+            "borderWidth": "1",
+            "fontColor": "#ffffff",
+            "fontSize": "16",
+            "position": "top-left"
+          },
+          "keyword": "text"
+        },
+        "dragging": false,
+        "height": 308,
+        "id": "a825a9fc-175b-4ea6-b07b-f433e7e63b51",
+        "position": {
+          "x": 963.7030255952195,
+          "y": 92.84111016544779
+        },
+        "positionAbsolute": {
+          "x": 963.7030255952195,
+          "y": 92.84111016544779
+        },
+        "selected": false,
+        "type": "app",
+        "width": 294
+      },
+      {
+        "data": {
+          "code": "\"On this day in history, \" & now().format(\"yyyy-MM-dd\") & \"\\n\\n\" & state{\"reply\"}.getStr()"
+        },
+        "dragging": false,
+        "height": 130,
+        "id": "578a95b3-83c8-4d32-9b71-e37f95472a99",
+        "position": {
+          "x": 409.159702611513,
+          "y": 193.78113878275371
+        },
+        "positionAbsolute": {
+          "x": 409.159702611513,
+          "y": 193.78113878275371
+        },
+        "resizing": false,
+        "selected": false,
+        "style": {
+          "height": 130,
+          "width": 382
+        },
+        "type": "code",
+        "width": 382
+      },
+      {
+        "data": {
+          "config": {
+            "borderColor": "#ffffff",
+            "fontColor": "#000000",
+            "fontSize": "16",
+            "format": "yyyy-MM-dd",
+            "position": "bottom-left"
+          },
+          "keyword": "clock"
+        },
+        "dragging": false,
+        "height": 380,
+        "id": "2cb416a5-b0a0-447d-8998-3b9aeab9aff7",
+        "position": {
+          "x": 1381.9676392338101,
+          "y": 82.95212852865498
+        },
+        "positionAbsolute": {
+          "x": 1381.9676392338101,
+          "y": 82.95212852865498
+        },
+        "selected": false,
+        "type": "app",
+        "width": 372
+      },
+      {
+        "data": {
+          "config": {
+            "cacheSeconds": "86400"
+          },
+          "keyword": "openai"
+        },
+        "dragging": false,
+        "height": 246,
+        "id": "e3ace93d-5d20-41f0-818e-6f2d57e8cede",
+        "position": {
+          "x": 374.1226082421439,
+          "y": -105.18424953248223
+        },
+        "positionAbsolute": {
+          "x": 374.1226082421439,
+          "y": -105.18424953248223
+        },
+        "selected": false,
+        "type": "app",
+        "width": 465
+      },
+      {
+        "data": {
+          "code": "\"Today is \" & now().format(\"yyyy-MM-dd\") & \". Describe the top 5 things that happened on this day in history.\""
+        },
+        "dragging": false,
+        "height": 173,
+        "id": "b3a7f0fd-5fba-4529-8f77-efef3f8d6fbd",
+        "position": {
+          "x": -579.9472695389513,
+          "y": 341.51933595586377
+        },
+        "positionAbsolute": {
+          "x": -579.9472695389513,
+          "y": 341.51933595586377
+        },
+        "resizing": false,
+        "selected": false,
+        "style": {
+          "height": 173,
+          "width": 327
+        },
+        "type": "code",
+        "width": 327
+      },
+      {
+        "data": {
+          "code": "\"Generate a background image to illustrate this text. Make it in the style of a movie poster with all activities together in one large scene:\\n\\n\" & state{\"reply\"}.getStr()"
+        },
+        "height": 195,
+        "id": "cad29f31-d678-45a2-8294-1f4b0ffd6f9b",
+        "position": {
+          "x": -134.60592926856071,
+          "y": -147.80633421777526
+        },
+        "selected": false,
+        "style": {
+          "height": 195,
+          "width": 384
+        },
+        "type": "code",
+        "width": 384,
+        "resizing": false
+      }
+    ],
+    "settings": {
+      "backgroundColor": "#ffffff",
+      "refreshInterval": 60
+    }
+  }
+]
