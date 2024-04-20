@@ -17,7 +17,8 @@
       {
         "data": {
           "config": {},
-          "keyword": "frameOSGallery"
+          "keyword": "frameOSGallery",
+          "cacheSeconds": "60"
         },
         "dragging": false,
         "height": 178,
@@ -50,7 +51,7 @@
     ],
     "settings": {
       "backgroundColor": "#000000",
-      "refreshInterval": 600
+      "refreshInterval": 3600
     }
   }
 ]

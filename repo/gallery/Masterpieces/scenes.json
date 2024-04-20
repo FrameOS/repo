@@ -17,7 +17,8 @@
       {
         "data": {
           "config": {
-            "category": "masterpieces"
+            "category": "masterpieces",
+            "cacheSeconds": "60"
           },
           "keyword": "frameOSGallery"
         },
@@ -52,7 +53,7 @@
     ],
     "settings": {
       "backgroundColor": "#000000",
-      "refreshInterval": 600
+      "refreshInterval": 3600
     },
     "default": false
   }

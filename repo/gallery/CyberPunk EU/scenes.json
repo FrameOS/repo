@@ -18,7 +18,8 @@
       {
         "data": {
           "config": {
-            "category": "cyberpunk-europe"
+            "category": "cyberpunk-europe",
+            "cacheSeconds": "60"
           },
           "keyword": "frameOSGallery"
         },
@@ -59,7 +60,7 @@
     ],
     "settings": {
       "backgroundColor": "#000000",
-      "refreshInterval": 600
+      "refreshInterval": 3600
     }
   }
 ]
