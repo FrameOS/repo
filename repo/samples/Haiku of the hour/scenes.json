@@ -1,0 +1,226 @@
+[
+  {
+    "default": true,
+    "edges": [
+      {
+        "id": "e8952e53-b18c-470c-a8a5-59f1b6d8ca93",
+        "source": "e8952e53-b18c-470c-a8a5-59f1b6d8ca93",
+        "sourceHandle": "fieldOutput",
+        "target": "fa3ff544-fd8a-4098-b5bf-2e0d6fa74fc6",
+        "targetHandle": "fieldInput/user",
+        "type": "edge"
+      },
+      {
+        "id": "4f8e56ac-600f-4b14-83c1-33b02eb48e42",
+        "source": "fa3ff544-fd8a-4098-b5bf-2e0d6fa74fc6",
+        "sourceHandle": "next",
+        "target": "4f7af328-2d2b-41d9-9107-c607451024be",
+        "targetHandle": "prev",
+        "type": "edge"
+      },
+      {
+        "id": "ca4b30ff-36f3-455a-b2a2-02d66a028f07",
+        "source": "ca4b30ff-36f3-455a-b2a2-02d66a028f07",
+        "sourceHandle": "fieldOutput",
+        "target": "4f7af328-2d2b-41d9-9107-c607451024be",
+        "targetHandle": "fieldInput/text",
+        "type": "edge"
+      },
+      {
+        "id": "2d235008-6464-44f7-9c49-cad88cda977c",
+        "source": "2d235008-6464-44f7-9c49-cad88cda977c",
+        "sourceHandle": "fieldOutput",
+        "target": "02a10076-82d9-4bf7-aa5f-8617d308d928",
+        "targetHandle": "fieldInput/prompt",
+        "type": "edge"
+      },
+      {
+        "id": "f282044c-7ec0-449d-b879-494e3dc6d98f",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "next",
+        "target": "02a10076-82d9-4bf7-aa5f-8617d308d928",
+        "targetHandle": "prev",
+        "type": "edge"
+      },
+      {
+        "id": "c754a98d-75a6-4f9d-ae69-e072066b4dd7",
+        "source": "02a10076-82d9-4bf7-aa5f-8617d308d928",
+        "sourceHandle": "next",
+        "target": "fa3ff544-fd8a-4098-b5bf-2e0d6fa74fc6",
+        "targetHandle": "prev",
+        "type": "edge"
+      }
+    ],
+    "fields": [
+      {
+        "access": "private",
+        "label": "reply",
+        "name": "reply",
+        "persist": "disk",
+        "type": "string"
+      }
+    ],
+    "id": "c045fec2-c910-4980-b13b-ae30d136faa1",
+    "name": "Haiku of the hour",
+    "nodes": [
+      {
+        "data": {
+          "keyword": "render"
+        },
+        "dragging": false,
+        "height": 72,
+        "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "position": {
+          "x": -250.52699995489016,
+          "y": -120.92477266589496
+        },
+        "positionAbsolute": {
+          "x": -250.52699995489016,
+          "y": -120.92477266589496
+        },
+        "selected": false,
+        "type": "event",
+        "width": 147
+      },
+      {
+        "data": {
+          "config": {
+            "cacheSeconds": "3600"
+          },
+          "keyword": "openaiText"
+        },
+        "dragging": false,
+        "height": 310,
+        "id": "fa3ff544-fd8a-4098-b5bf-2e0d6fa74fc6",
+        "position": {
+          "x": 772.935873840035,
+          "y": -100.26488095789924
+        },
+        "positionAbsolute": {
+          "x": 772.935873840035,
+          "y": -100.26488095789924
+        },
+        "selected": false,
+        "type": "app",
+        "width": 467
+      },
+      {
+        "data": {
+          "code": "\"Generate a Haiku based on the current hour of the current day (24h): \" & now().format(\"dddd, yyyy-MM-dd HH\") & \" Include at least the hour (\" & now().format(\"HH\") & \") as a word in the reply.\""
+        },
+        "dragging": false,
+        "height": 223,
+        "id": "e8952e53-b18c-470c-a8a5-59f1b6d8ca93",
+        "position": {
+          "x": 181.50013345515475,
+          "y": 317.48498080678013
+        },
+        "positionAbsolute": {
+          "x": 181.50013345515475,
+          "y": 317.48498080678013
+        },
+        "resizing": false,
+        "selected": false,
+        "style": {
+          "height": 223,
+          "width": 448
+        },
+        "type": "code",
+        "width": 448
+      },
+      {
+        "data": {
+          "config": {
+            "fontSize": "64"
+          },
+          "keyword": "text"
+        },
+        "dragging": false,
+        "height": 308,
+        "id": "4f7af328-2d2b-41d9-9107-c607451024be",
+        "position": {
+          "x": 1344.9643483982543,
+          "y": -71.39382287472662
+        },
+        "positionAbsolute": {
+          "x": 1344.9643483982543,
+          "y": -71.39382287472662
+        },
+        "selected": false,
+        "type": "app",
+        "width": 294
+      },
+      {
+        "data": {
+          "code": "state{\"reply\"}.getStr()"
+        },
+        "dragging": false,
+        "height": 130,
+        "id": "ca4b30ff-36f3-455a-b2a2-02d66a028f07",
+        "position": {
+          "x": 950.5091588355872,
+          "y": 337.66863355218953
+        },
+        "positionAbsolute": {
+          "x": 950.5091588355872,
+          "y": 337.66863355218953
+        },
+        "selected": false,
+        "style": {
+          "height": 130,
+          "width": 300
+        },
+        "type": "code",
+        "width": 300
+      },
+      {
+        "data": {
+          "config": {},
+          "keyword": "openai"
+        },
+        "dragging": false,
+        "height": 246,
+        "id": "02a10076-82d9-4bf7-aa5f-8617d308d928",
+        "position": {
+          "x": 133.44144822691442,
+          "y": -101.46626939970696
+        },
+        "positionAbsolute": {
+          "x": 133.44144822691442,
+          "y": -101.46626939970696
+        },
+        "selected": false,
+        "type": "app",
+        "width": 456
+      },
+      {
+        "data": {
+          "code": "\"Generate an abstract full screen background image best suited for the current hour of the current day (24h format) in the northern hemisphere: \" & now().format(\"dddd, yyyy-MM-dd HH\")"
+        },
+        "dragging": false,
+        "height": 205,
+        "id": "2d235008-6464-44f7-9c49-cad88cda977c",
+        "position": {
+          "x": -422.6190087357876,
+          "y": 46.53391194222314
+        },
+        "positionAbsolute": {
+          "x": -422.6190087357876,
+          "y": 46.53391194222314
+        },
+        "resizing": false,
+        "selected": false,
+        "style": {
+          "height": 205,
+          "width": 373
+        },
+        "type": "code",
+        "width": 373
+      }
+    ],
+    "settings": {
+      "backgroundColor": "#000000",
+      "refreshInterval": 60
+    }
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "name": "Haiku of the hour",
+  "description": "OpenAI background and haiku about the current hour",
+  "config": null,
+  "image": "./image.jpg",
+  "imageWidth": 480,
+  "imageHeight": 800,
+  "scenes": "./scenes.json"
+}
