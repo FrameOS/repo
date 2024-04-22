@@ -11,14 +11,6 @@
         "type": "edge"
       },
       {
-        "id": "4f8e56ac-600f-4b14-83c1-33b02eb48e42",
-        "source": "fa3ff544-fd8a-4098-b5bf-2e0d6fa74fc6",
-        "sourceHandle": "next",
-        "target": "4f7af328-2d2b-41d9-9107-c607451024be",
-        "targetHandle": "prev",
-        "type": "edge"
-      },
-      {
         "id": "ca4b30ff-36f3-455a-b2a2-02d66a028f07",
         "source": "ca4b30ff-36f3-455a-b2a2-02d66a028f07",
         "sourceHandle": "fieldOutput",
@@ -35,19 +27,43 @@
         "type": "edge"
       },
       {
-        "id": "f282044c-7ec0-449d-b879-494e3dc6d98f",
+        "id": "54b29591-58c4-473b-96c7-e50ff09f462b",
         "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "next",
+        "target": "fa3ff544-fd8a-4098-b5bf-2e0d6fa74fc6",
+        "targetHandle": "prev",
+        "type": "edge"
+      },
+      {
+        "id": "d0a5ce55-3ac0-415e-92dd-66c094b6bb10",
+        "source": "fa3ff544-fd8a-4098-b5bf-2e0d6fa74fc6",
         "sourceHandle": "next",
         "target": "02a10076-82d9-4bf7-aa5f-8617d308d928",
         "targetHandle": "prev",
         "type": "edge"
       },
       {
-        "id": "c754a98d-75a6-4f9d-ae69-e072066b4dd7",
+        "id": "d99858ad-814c-487f-aa6e-08e428ad076a",
         "source": "02a10076-82d9-4bf7-aa5f-8617d308d928",
         "sourceHandle": "next",
-        "target": "fa3ff544-fd8a-4098-b5bf-2e0d6fa74fc6",
+        "target": "4f7af328-2d2b-41d9-9107-c607451024be",
         "targetHandle": "prev",
+        "type": "edge"
+      },
+      {
+        "id": "6b36f01a-3565-47f1-8ef1-08cce7b5945f",
+        "target": "4f7af328-2d2b-41d9-9107-c607451024be",
+        "targetHandle": "fieldInput/fontSize",
+        "source": "6b36f01a-3565-47f1-8ef1-08cce7b5945f",
+        "sourceHandle": "fieldOutput",
+        "type": "edge"
+      },
+      {
+        "id": "1e6b6a25-c473-4c03-b516-15588627b921",
+        "target": "fa3ff544-fd8a-4098-b5bf-2e0d6fa74fc6",
+        "targetHandle": "fieldInput/system",
+        "source": "1e6b6a25-c473-4c03-b516-15588627b921",
+        "sourceHandle": "fieldOutput",
         "type": "edge"
       }
     ],
@@ -58,6 +74,43 @@
         "name": "reply",
         "persist": "disk",
         "type": "string"
+      },
+      {
+        "name": "textType",
+        "label": "Text type",
+        "type": "text",
+        "persist": "disk",
+        "access": "public",
+        "value": "A witty and punny Haiku, but don't use the word \"pun\""
+      },
+      {
+        "name": "fontSize",
+        "label": "Font size",
+        "type": "float",
+        "persist": "disk",
+        "access": "public",
+        "value": "64"
+      },
+      {
+        "name": "clockType",
+        "label": "Clock type",
+        "type": "select",
+        "persist": "disk",
+        "access": "public",
+        "options": [
+          "12h",
+          "24h"
+        ],
+        "value": "24h"
+      },
+      {
+        "name": "location",
+        "label": "Your location (helps with seasons)",
+        "type": "string",
+        "persist": "disk",
+        "access": "public",
+        "value": "the northern hemisphere",
+        "placeholder": ""
       }
     ],
     "id": "c045fec2-c910-4980-b13b-ae30d136faa1",
@@ -68,19 +121,19 @@
           "keyword": "render"
         },
         "dragging": false,
-        "height": 72,
+        "height": 168,
         "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
         "position": {
-          "x": -250.52699995489016,
-          "y": -120.92477266589496
+          "x": -245.67716192926449,
+          "y": -280.969427511542
         },
         "positionAbsolute": {
-          "x": -250.52699995489016,
-          "y": -120.92477266589496
+          "x": -245.67716192926449,
+          "y": -280.969427511542
         },
         "selected": false,
         "type": "event",
-        "width": 147
+        "width": 182
       },
       {
         "data": {
@@ -90,43 +143,43 @@
           "keyword": "openaiText"
         },
         "dragging": false,
-        "height": 310,
+        "height": 190,
         "id": "fa3ff544-fd8a-4098-b5bf-2e0d6fa74fc6",
         "position": {
-          "x": 772.935873840035,
-          "y": -100.26488095789924
+          "x": 124.12277162929206,
+          "y": -94.18225812467355
         },
         "positionAbsolute": {
-          "x": 772.935873840035,
-          "y": -100.26488095789924
+          "x": 124.12277162929206,
+          "y": -94.18225812467355
         },
         "selected": false,
         "type": "app",
-        "width": 467
+        "width": 421
       },
       {
         "data": {
-          "code": "\"Generate a Haiku based on the current hour of the current day (24h): \" & now().format(\"dddd, yyyy-MM-dd HH\") & \" Include at least the hour (\" & now().format(\"HH\") & \") as a word in the reply.\""
+          "code": "\"Generate: \" & state{\"textType\"}.getStr()"
         },
         "dragging": false,
-        "height": 223,
+        "height": 152,
         "id": "e8952e53-b18c-470c-a8a5-59f1b6d8ca93",
         "position": {
-          "x": 181.50013345515475,
-          "y": 317.48498080678013
+          "x": -349.148362897237,
+          "y": 314.8051525340424
         },
         "positionAbsolute": {
-          "x": 181.50013345515475,
-          "y": 317.48498080678013
+          "x": -349.148362897237,
+          "y": 314.8051525340424
         },
         "resizing": false,
         "selected": false,
         "style": {
-          "height": 223,
-          "width": 448
+          "height": 152,
+          "width": 366
         },
         "type": "code",
-        "width": 448
+        "width": 366
       },
       {
         "data": {
@@ -139,12 +192,12 @@
         "height": 308,
         "id": "4f7af328-2d2b-41d9-9107-c607451024be",
         "position": {
-          "x": 1344.9643483982543,
-          "y": -71.39382287472662
+          "x": 1422.563155740252,
+          "y": -86.91358434312613
         },
         "positionAbsolute": {
-          "x": 1344.9643483982543,
-          "y": -71.39382287472662
+          "x": 1422.563155740252,
+          "y": -86.91358434312613
         },
         "selected": false,
         "type": "app",
@@ -158,12 +211,12 @@
         "height": 130,
         "id": "ca4b30ff-36f3-455a-b2a2-02d66a028f07",
         "position": {
-          "x": 950.5091588355872,
-          "y": 337.66863355218953
+          "x": 954.9433763979871,
+          "y": 229.03030327339297
         },
         "positionAbsolute": {
-          "x": 950.5091588355872,
-          "y": 337.66863355218953
+          "x": 954.9433763979871,
+          "y": 229.03030327339297
         },
         "selected": false,
         "style": {
@@ -182,12 +235,12 @@
         "height": 246,
         "id": "02a10076-82d9-4bf7-aa5f-8617d308d928",
         "position": {
-          "x": 133.44144822691442,
-          "y": -101.46626939970696
+          "x": 770.0893047712057,
+          "y": -83.21840090002985
         },
         "positionAbsolute": {
-          "x": 133.44144822691442,
-          "y": -101.46626939970696
+          "x": 770.0893047712057,
+          "y": -83.21840090002985
         },
         "selected": false,
         "type": "app",
@@ -195,27 +248,74 @@
       },
       {
         "data": {
-          "code": "\"Generate an abstract full screen background image best suited for the current hour of the current day (24h format) in the northern hemisphere: \" & now().format(\"dddd, yyyy-MM-dd HH\")"
+          "code": "\"Generate an abstract full screen background image best suited for the current hour of the current day (24h format): \" & now().format(\"dddd, yyyy-MM-dd HH\") & \"\\nWe're located in: \" & state{\"location\"}.getStr() & \"\\nAlso take inspiration from this \" & state{\"textType\"}.getStr() & \":\\n\\n\" & state{\"reply\"}.getStr()"
         },
         "dragging": false,
-        "height": 205,
+        "height": 286,
         "id": "2d235008-6464-44f7-9c49-cad88cda977c",
         "position": {
-          "x": -422.6190087357876,
-          "y": 46.53391194222314
+          "x": 116.80618313421803,
+          "y": 257.39551042413245
         },
         "positionAbsolute": {
-          "x": -422.6190087357876,
-          "y": 46.53391194222314
+          "x": 116.80618313421803,
+          "y": 257.39551042413245
         },
         "resizing": false,
         "selected": false,
         "style": {
-          "height": 205,
-          "width": 373
+          "height": 286,
+          "width": 671
         },
         "type": "code",
-        "width": 373
+        "width": 671
+      },
+      {
+        "id": "6b36f01a-3565-47f1-8ef1-08cce7b5945f",
+        "position": {
+          "x": 969.6602019539212,
+          "y": 425.2151463512152
+        },
+        "type": "code",
+        "data": {
+          "code": "state{\"fontSize\"}.getFloat()"
+        },
+        "style": {
+          "width": 300,
+          "height": 130
+        },
+        "width": 300,
+        "height": 130,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 969.6602019539212,
+          "y": 425.2151463512152
+        },
+        "dragging": false
+      },
+      {
+        "id": "1e6b6a25-c473-4c03-b516-15588627b921",
+        "position": {
+          "x": -671.3419053122639,
+          "y": -52.14295583019586
+        },
+        "type": "code",
+        "data": {
+          "code": "\"Generate the following plain text (no quotes) based on the current hour of the current day (given in 24h format): \" & now().format(\"dddd, yyyy-MM-dd HH\") & \":00. Include at least the hour as a word in the reply. \" & (if state{\"clockType\"}.getStr() == \"12h\": \"Use the \" & now().format(\"tt\") & \" format of the hour as a word in the text: \" & now().format(\"hh\") else: \"Use the 24h format of the hour as a word in the text: \" & now().format(\"HH\")) & \"\\n. Use calendar seasonality for: \" & state{\"location\"}.getStr()"
+        },
+        "style": {
+          "width": 617,
+          "height": 287
+        },
+        "width": 617,
+        "height": 287,
+        "selected": false,
+        "resizing": false,
+        "positionAbsolute": {
+          "x": -671.3419053122639,
+          "y": -52.14295583019586
+        },
+        "dragging": false
       }
     ],
     "settings": {
