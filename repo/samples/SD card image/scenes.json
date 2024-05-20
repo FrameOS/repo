@@ -1,0 +1,147 @@
+[
+  {
+    "edges": [
+      {
+        "id": "bdfab099-a7c0-4aa1-b20f-bbd5b393800a",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "next",
+        "target": "935aed45-c8d5-4925-9224-ad813a339047",
+        "targetHandle": "prev",
+        "type": "edge"
+      },
+      {
+        "id": "4c52d51e-8b9c-4633-b7d4-7bd83fe2302b",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "code/state{\"imageFolder\"}.getStr()",
+        "target": "935aed45-c8d5-4925-9224-ad813a339047",
+        "targetHandle": "fieldInput/path",
+        "type": "edge"
+      },
+      {
+        "id": "3175e7ad-126f-40fc-882a-7bbf4ce00953",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "code/state{\"imageOrder\"}.getStr()",
+        "target": "935aed45-c8d5-4925-9224-ad813a339047",
+        "targetHandle": "fieldInput/order",
+        "type": "edge"
+      },
+      {
+        "id": "638c978f-01c0-490a-b08f-acaca3a12a8b",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "code/state{\"seconds\"}.getFloat()",
+        "target": "935aed45-c8d5-4925-9224-ad813a339047",
+        "targetHandle": "fieldInput/seconds",
+        "type": "edge"
+      },
+      {
+        "id": "06bdf336-e0d5-4f90-a69f-c1b94c769d24",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "code/state{\"scalingMode\"}.getStr()",
+        "target": "935aed45-c8d5-4925-9224-ad813a339047",
+        "targetHandle": "fieldInput/scalingMode",
+        "type": "edge"
+      }
+    ],
+    "fields": [
+      {
+        "access": "public",
+        "label": "Image folder",
+        "name": "imageFolder",
+        "persist": "disk",
+        "type": "string",
+        "value": "/srv/images"
+      },
+      {
+        "access": "public",
+        "label": "Image order",
+        "name": "imageOrder",
+        "options": [
+          "random",
+          "alphabetical"
+        ],
+        "persist": "disk",
+        "type": "select",
+        "value": "random"
+      },
+      {
+        "access": "public",
+        "label": "Seconds to show one image",
+        "name": "seconds",
+        "persist": "disk",
+        "type": "float",
+        "value": "900"
+      },
+      {
+        "access": "public",
+        "label": "Scaling mode",
+        "name": "scalingMode",
+        "options": [
+          "cover",
+          "contain",
+          "stretch",
+          "center"
+        ],
+        "persist": "disk",
+        "type": "select",
+        "value": "cover"
+      },
+      {
+        "access": "private",
+        "label": "counter",
+        "name": "counter",
+        "persist": "disk",
+        "type": "integer",
+        "value": "0"
+      }
+    ],
+    "id": "88f88a1b-6b17-4de0-88fb-8ecedc8b2d17",
+    "name": "SD card image",
+    "nodes": [
+      {
+        "data": {
+          "keyword": "render"
+        },
+        "dragging": false,
+        "height": 168,
+        "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "position": {
+          "x": -182,
+          "y": 88
+        },
+        "positionAbsolute": {
+          "x": -182,
+          "y": 88
+        },
+        "selected": false,
+        "type": "event",
+        "width": 203
+      },
+      {
+        "data": {
+          "config": {
+            "counterStateKey": "counter"
+          },
+          "keyword": "localImage"
+        },
+        "dragging": false,
+        "height": 190,
+        "id": "935aed45-c8d5-4925-9224-ad813a339047",
+        "position": {
+          "x": 174,
+          "y": 84
+        },
+        "positionAbsolute": {
+          "x": 174,
+          "y": 84
+        },
+        "selected": false,
+        "type": "app",
+        "width": 455
+      }
+    ],
+    "settings": {
+      "backgroundColor": "#000000",
+      "refreshInterval": 60
+    }
+  }
+]
