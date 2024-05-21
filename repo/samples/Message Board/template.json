@@ -1,0 +1,9 @@
+{
+  "name": "Message Board",
+  "description": "A simple message board. Scan the QR code, and update the text with your phone.",
+  "config": null,
+  "image": "./image.jpg",
+  "image_width": 480,
+  "image_height": 800,
+  "scenes": "./scenes.json"
+}
