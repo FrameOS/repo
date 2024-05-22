@@ -1,6 +1,5 @@
 [
   {
-    "default": true,
     "edges": [
       {
         "id": "578a95b3-83c8-4d32-9b71-e37f95472a99",
@@ -8,7 +7,7 @@
         "sourceHandle": "fieldOutput",
         "target": "a825a9fc-175b-4ea6-b07b-f433e7e63b51",
         "targetHandle": "fieldInput/text",
-        "type": "edge"
+        "type": "codeNodeEdge"
       },
       {
         "id": "cf4e98d0-a947-4d15-bd4a-1b413688b5c2",
@@ -16,7 +15,7 @@
         "sourceHandle": "next",
         "target": "1889b055-884c-4db5-851c-1689c1c9cf61",
         "targetHandle": "prev",
-        "type": "edge"
+        "type": "appNodeEdge"
       },
       {
         "id": "c68a46f3-46c8-40f0-8f59-aab1f50e7117",
@@ -24,7 +23,7 @@
         "sourceHandle": "next",
         "target": "e3ace93d-5d20-41f0-818e-6f2d57e8cede",
         "targetHandle": "prev",
-        "type": "edge"
+        "type": "appNodeEdge"
       },
       {
         "id": "84210713-9cb1-4074-b912-75797d430573",
@@ -32,7 +31,7 @@
         "sourceHandle": "next",
         "target": "a825a9fc-175b-4ea6-b07b-f433e7e63b51",
         "targetHandle": "prev",
-        "type": "edge"
+        "type": "appNodeEdge"
       },
       {
         "id": "b3a7f0fd-5fba-4529-8f77-efef3f8d6fbd",
@@ -40,7 +39,7 @@
         "sourceHandle": "fieldOutput",
         "target": "1889b055-884c-4db5-851c-1689c1c9cf61",
         "targetHandle": "fieldInput/user",
-        "type": "edge"
+        "type": "codeNodeEdge"
       },
       {
         "id": "cad29f31-d678-45a2-8294-1f4b0ffd6f9b",
@@ -48,7 +47,7 @@
         "sourceHandle": "fieldOutput",
         "target": "e3ace93d-5d20-41f0-818e-6f2d57e8cede",
         "targetHandle": "fieldInput/prompt",
-        "type": "edge"
+        "type": "codeNodeEdge"
       },
       {
         "id": "18fd72db-86ee-4502-bb00-b038c068834a",
@@ -56,7 +55,7 @@
         "sourceHandle": "next",
         "target": "2cb416a5-b0a0-447d-8998-3b9aeab9aff7",
         "targetHandle": "prev",
-        "type": "edge"
+        "type": "appNodeEdge"
       }
     ],
     "fields": [
@@ -68,7 +67,7 @@
         "type": "text"
       }
     ],
-    "id": "2fbbab06-46da-4b65-b341-7257d015415a",
+    "id": "7f3294c9-b773-46d4-adb8-2bfcd19def6b",
     "name": "GPT History",
     "nodes": [
       {
@@ -79,12 +78,12 @@
         "height": 72,
         "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
         "position": {
-          "x": -600.0866991040164,
-          "y": 130.17197083609256
+          "x": -490.8477441897778,
+          "y": 60.65627225430438
         },
         "positionAbsolute": {
-          "x": -600.0866991040164,
-          "y": 130.17197083609256
+          "x": -490.8477441897778,
+          "y": 60.65627225430438
         },
         "selected": false,
         "type": "event",
@@ -124,7 +123,7 @@
           "keyword": "text"
         },
         "dragging": false,
-        "height": 308,
+        "height": 336,
         "id": "a825a9fc-175b-4ea6-b07b-f433e7e63b51",
         "position": {
           "x": 963.7030255952195,
@@ -136,31 +135,31 @@
         },
         "selected": false,
         "type": "app",
-        "width": 294
+        "width": 300
       },
       {
         "data": {
           "code": "\"On this day in history, \" & now().format(\"yyyy-MM-dd\") & \"\\n\\n\" & state{\"reply\"}.getStr()"
         },
         "dragging": false,
-        "height": 130,
+        "height": 177,
         "id": "578a95b3-83c8-4d32-9b71-e37f95472a99",
         "position": {
-          "x": 409.159702611513,
-          "y": 193.78113878275371
+          "x": 945.4236630995931,
+          "y": -141.38383652229638
         },
         "positionAbsolute": {
-          "x": 409.159702611513,
-          "y": 193.78113878275371
+          "x": 945.4236630995931,
+          "y": -141.38383652229638
         },
         "resizing": false,
         "selected": false,
         "style": {
-          "height": 130,
-          "width": 382
+          "height": 177,
+          "width": 401
         },
         "type": "code",
-        "width": 382
+        "width": 401
       },
       {
         "data": {
@@ -199,12 +198,12 @@
         "height": 246,
         "id": "e3ace93d-5d20-41f0-818e-6f2d57e8cede",
         "position": {
-          "x": 374.1226082421439,
-          "y": -105.18424953248223
+          "x": 386.53612584603457,
+          "y": 95.91473565054787
         },
         "positionAbsolute": {
-          "x": 374.1226082421439,
-          "y": -105.18424953248223
+          "x": 386.53612584603457,
+          "y": 95.91473565054787
         },
         "selected": false,
         "type": "app",
@@ -218,12 +217,12 @@
         "height": 173,
         "id": "b3a7f0fd-5fba-4529-8f77-efef3f8d6fbd",
         "position": {
-          "x": -579.9472695389513,
-          "y": 341.51933595586377
+          "x": -242.29959071312302,
+          "y": -159.9867752413221
         },
         "positionAbsolute": {
-          "x": -579.9472695389513,
-          "y": 341.51933595586377
+          "x": -242.29959071312302,
+          "y": -159.9867752413221
         },
         "resizing": false,
         "selected": false,
@@ -241,9 +240,10 @@
         "height": 195,
         "id": "cad29f31-d678-45a2-8294-1f4b0ffd6f9b",
         "position": {
-          "x": -134.60592926856071,
-          "y": -147.80633421777526
+          "x": 361.934774887069,
+          "y": -160.2198518216659
         },
+        "resizing": false,
         "selected": false,
         "style": {
           "height": 195,
@@ -251,7 +251,11 @@
         },
         "type": "code",
         "width": 384,
-        "resizing": false
+        "positionAbsolute": {
+          "x": 361.934774887069,
+          "y": -160.2198518216659
+        },
+        "dragging": false
       }
     ],
     "settings": {
