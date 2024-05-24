@@ -1,4 +1,4 @@
-{
+[{
   "edges": [
     {
       "id": "2717601d-33bb-45e9-8b1b-dc1149899fa7",
@@ -269,4 +269,4 @@
     "backgroundColor": "#ffffff",
     "refreshInterval": 60
   }
-}
+}]
