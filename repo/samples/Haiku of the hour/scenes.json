@@ -1,71 +1,11 @@
 [
   {
-    "edges": [
-      {
-        "id": "e8952e53-b18c-470c-a8a5-59f1b6d8ca93",
-        "source": "e8952e53-b18c-470c-a8a5-59f1b6d8ca93",
-        "sourceHandle": "fieldOutput",
-        "target": "fa3ff544-fd8a-4098-b5bf-2e0d6fa74fc6",
-        "targetHandle": "fieldInput/user",
-        "type": "codeNodeEdge"
-      },
-      {
-        "id": "ca4b30ff-36f3-455a-b2a2-02d66a028f07",
-        "source": "ca4b30ff-36f3-455a-b2a2-02d66a028f07",
-        "sourceHandle": "fieldOutput",
-        "target": "4f7af328-2d2b-41d9-9107-c607451024be",
-        "targetHandle": "fieldInput/text",
-        "type": "codeNodeEdge"
-      },
-      {
-        "id": "2d235008-6464-44f7-9c49-cad88cda977c",
-        "source": "2d235008-6464-44f7-9c49-cad88cda977c",
-        "sourceHandle": "fieldOutput",
-        "target": "02a10076-82d9-4bf7-aa5f-8617d308d928",
-        "targetHandle": "fieldInput/prompt",
-        "type": "codeNodeEdge"
-      },
-      {
-        "id": "54b29591-58c4-473b-96c7-e50ff09f462b",
-        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
-        "sourceHandle": "next",
-        "target": "fa3ff544-fd8a-4098-b5bf-2e0d6fa74fc6",
-        "targetHandle": "prev",
-        "type": "appNodeEdge"
-      },
-      {
-        "id": "d0a5ce55-3ac0-415e-92dd-66c094b6bb10",
-        "source": "fa3ff544-fd8a-4098-b5bf-2e0d6fa74fc6",
-        "sourceHandle": "next",
-        "target": "02a10076-82d9-4bf7-aa5f-8617d308d928",
-        "targetHandle": "prev",
-        "type": "appNodeEdge"
-      },
-      {
-        "id": "d99858ad-814c-487f-aa6e-08e428ad076a",
-        "source": "02a10076-82d9-4bf7-aa5f-8617d308d928",
-        "sourceHandle": "next",
-        "target": "4f7af328-2d2b-41d9-9107-c607451024be",
-        "targetHandle": "prev",
-        "type": "appNodeEdge"
-      },
-      {
-        "id": "6b36f01a-3565-47f1-8ef1-08cce7b5945f",
-        "source": "6b36f01a-3565-47f1-8ef1-08cce7b5945f",
-        "sourceHandle": "fieldOutput",
-        "target": "4f7af328-2d2b-41d9-9107-c607451024be",
-        "targetHandle": "fieldInput/fontSize",
-        "type": "codeNodeEdge"
-      },
-      {
-        "id": "1e6b6a25-c473-4c03-b516-15588627b921",
-        "source": "1e6b6a25-c473-4c03-b516-15588627b921",
-        "sourceHandle": "fieldOutput",
-        "target": "fa3ff544-fd8a-4098-b5bf-2e0d6fa74fc6",
-        "targetHandle": "fieldInput/system",
-        "type": "codeNodeEdge"
-      }
-    ],
+    "id": "a905fc64-9baf-4dd5-9f6d-0286d700bb6d",
+    "name": "Haiku of the hour",
+    "settings": {
+      "backgroundColor": "#000000",
+      "refreshInterval": 60
+    },
     "fields": [
       {
         "access": "private",
@@ -81,14 +21,6 @@
         "persist": "disk",
         "type": "text",
         "value": "A witty and punny Haiku, but don't use the word \"pun\""
-      },
-      {
-        "access": "public",
-        "label": "Font size",
-        "name": "fontSize",
-        "persist": "disk",
-        "type": "float",
-        "value": "64"
       },
       {
         "access": "public",
@@ -112,214 +44,385 @@
         "value": "the northern hemisphere"
       }
     ],
-    "id": "67df15c4-c9fb-4453-86ac-c57cd66d2b5c",
-    "name": "Haiku of the hour",
     "nodes": [
       {
         "data": {
           "keyword": "render"
         },
         "dragging": false,
-        "height": 168,
+        "height": 161,
         "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
         "position": {
-          "x": -245.67716192926449,
-          "y": -280.969427511542
+          "x": -144.10871172903896,
+          "y": 108.13787466396982
         },
         "positionAbsolute": {
-          "x": -245.67716192926449,
-          "y": -280.969427511542
+          "x": -144.10871172903896,
+          "y": 108.13787466396982
         },
         "selected": false,
         "type": "event",
-        "width": 182
+        "width": 212
       },
       {
-        "data": {
-          "config": {
-            "cacheSeconds": "3600"
-          },
-          "keyword": "openaiText"
-        },
-        "dragging": false,
-        "height": 190,
-        "id": "fa3ff544-fd8a-4098-b5bf-2e0d6fa74fc6",
+        "id": "d9f36ed0-30e4-406b-9f58-e7e0c954223e",
         "position": {
-          "x": 124.12277162929206,
-          "y": -94.18225812467355
+          "x": 773.2632299199217,
+          "y": 161.06641145752388
         },
-        "positionAbsolute": {
-          "x": 124.12277162929206,
-          "y": -94.18225812467355
+        "data": {
+          "keyword": "render/image",
+          "config": {}
         },
-        "selected": false,
         "type": "app",
-        "width": 421
-      },
-      {
-        "data": {
-          "code": "\"Generate: \" & state{\"textType\"}.getStr()"
-        },
-        "dragging": false,
-        "height": 152,
-        "id": "e8952e53-b18c-470c-a8a5-59f1b6d8ca93",
-        "position": {
-          "x": 100.6187303303281,
-          "y": -306.0689870300963
-        },
-        "positionAbsolute": {
-          "x": 100.6187303303281,
-          "y": -306.0689870300963
-        },
-        "resizing": false,
+        "width": 311,
+        "height": 106,
         "selected": false,
-        "style": {
-          "height": 152,
-          "width": 366
-        },
-        "type": "code",
-        "width": 366
-      },
-      {
-        "data": {
-          "config": {
-            "fontSize": "64"
-          },
-          "keyword": "text"
-        },
-        "dragging": false,
-        "height": 336,
-        "id": "4f7af328-2d2b-41d9-9107-c607451024be",
-        "position": {
-          "x": 1422.563155740252,
-          "y": -86.91358434312613
-        },
         "positionAbsolute": {
-          "x": 1422.563155740252,
-          "y": -86.91358434312613
+          "x": 773.2632299199217,
+          "y": 161.06641145752388
         },
-        "selected": false,
-        "type": "app",
-        "width": 294
+        "dragging": false
       },
       {
-        "data": {
-          "code": "state{\"reply\"}.getStr()"
-        },
-        "dragging": false,
-        "height": 130,
-        "id": "ca4b30ff-36f3-455a-b2a2-02d66a028f07",
+        "id": "21fb03cb-a86e-4f9c-a3b6-0a7df144d05c",
         "position": {
-          "x": 1355.8227421008169,
-          "y": -484.73051858774295
+          "x": 740.2792218620955,
+          "y": -117.25779349802325
         },
-        "positionAbsolute": {
-          "x": 1355.8227421008169,
-          "y": -484.73051858774295
-        },
-        "selected": false,
-        "style": {
-          "height": 130,
-          "width": 300
-        },
-        "type": "code",
-        "width": 300
-      },
-      {
         "data": {
+          "keyword": "data/openaiImage",
           "config": {},
-          "keyword": "openai"
+          "cache": {
+            "duration": "3600",
+            "durationEnabled": true,
+            "enabled": true,
+            "inputEnabled": true
+          }
         },
-        "dragging": false,
-        "height": 246,
-        "id": "02a10076-82d9-4bf7-aa5f-8617d308d928",
-        "position": {
-          "x": 770.0893047712057,
-          "y": -83.21840090002985
-        },
-        "positionAbsolute": {
-          "x": 770.0893047712057,
-          "y": -83.21840090002985
-        },
-        "selected": false,
         "type": "app",
-        "width": 456
+        "width": 321,
+        "height": 224,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 740.2792218620955,
+          "y": -117.25779349802325
+        },
+        "dragging": false
       },
       {
+        "id": "b64e55b6-5516-458b-9d50-861af448277a",
+        "position": {
+          "x": 701.6545999549674,
+          "y": -487.4902217044924
+        },
         "data": {
-          "code": "\"Generate an abstract full screen background image best suited for the current hour of the current day (24h format): \" & now().format(\"dddd, yyyy-MM-dd HH\") & \"\\nWe're located in: \" & state{\"location\"}.getStr() & \"\\nAlso take inspiration from this \" & state{\"textType\"}.getStr() & \":\\n\\n\" & state{\"reply\"}.getStr()"
+          "code": "\"Generate an abstract full screen background image best suited for the current hour of the current day (24h format): \" & now().format(\"dddd, yyyy-MM-dd HH\") & \"\\nWe're located in: \" & state{\"location\"}.getStr() & \"\\nAlso take inspiration from this \" & state{\"textType\"}.getStr() & \":\\n\\n\" & reply",
+          "codeArgs": [
+            {
+              "name": "reply",
+              "type": "string"
+            }
+          ],
+          "codeOutputs": [
+            {
+              "name": "prompt",
+              "type": "string"
+            }
+          ]
+        },
+        "type": "code",
+        "style": {
+          "width": 455,
+          "height": 323
+        },
+        "width": 455,
+        "height": 323,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 701.6545999549674,
+          "y": -487.4902217044924
         },
         "dragging": false,
-        "height": 336,
-        "id": "2d235008-6464-44f7-9c49-cad88cda977c",
+        "resizing": false
+      },
+      {
+        "id": "0dbd1558-6ead-49ae-b1bc-d4b65ab905e4",
         "position": {
-          "x": 680.6446405861656,
-          "y": -501.99385712675644
+          "x": 287.1423214616442,
+          "y": 138.38162752157436
         },
+        "data": {
+          "keyword": "logic/setAsState",
+          "config": {
+            "stateKey": "reply"
+          }
+        },
+        "type": "app",
+        "width": 333,
+        "height": 134,
+        "selected": false
+      },
+      {
+        "id": "ae956e18-ba45-445c-a9e6-272125ecfff2",
+        "position": {
+          "x": 189.5207242974921,
+          "y": -99.95338622452337
+        },
+        "data": {
+          "keyword": "data/openaiText",
+          "config": {},
+          "cache": {
+            "duration": "3600",
+            "durationEnabled": true,
+            "enabled": true,
+            "inputEnabled": true
+          }
+        },
+        "type": "app",
+        "width": 285,
+        "height": 168,
+        "selected": false,
         "positionAbsolute": {
-          "x": 680.6446405861656,
-          "y": -501.99385712675644
+          "x": 189.5207242974921,
+          "y": -99.95338622452337
         },
+        "dragging": false
+      },
+      {
+        "id": "666daaf6-eaa4-4d25-9c3c-5bcaa747e8f3",
+        "position": {
+          "x": 150.8961023903641,
+          "y": -263.4626399748705
+        },
+        "data": {
+          "code": "\"Generate: \" & state{\"textType\"}.getStr()",
+          "codeArgs": [],
+          "codeOutputs": [
+            {
+              "name": "user",
+              "type": "string"
+            }
+          ]
+        },
+        "type": "code",
+        "style": {
+          "width": 300,
+          "height": 119
+        },
+        "width": 300,
+        "height": 119,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 150.8961023903641,
+          "y": -263.4626399748705
+        },
+        "dragging": false
+      },
+      {
+        "id": "7db2055a-2846-44e1-9194-2fa7b2a2396b",
+        "position": {
+          "x": 30.73061201263249,
+          "y": -629.6812773165286
+        },
+        "data": {
+          "code": "\"Generate the following plain text (no quotes) based on the current hour of the current day (given in 24h format): \" & now().format(\"dddd, yyyy-MM-dd HH\") & \":00. Include at least the hour as a word in the reply. \" & (if state{\"clockType\"}.getStr() == \"12h\": \"Use the \" & now().format(\"tt\") & \" format of the hour as a word in the text: \" & now().format(\"hh\") else: \"Use the 24h format of the hour as a word in the text: \" & now().format(\"HH\")) & \"\\n. Use calendar seasonality for: \" & state{\"location\"}.getStr()",
+          "codeArgs": [],
+          "codeOutputs": [
+            {
+              "name": "system",
+              "type": "string"
+            }
+          ]
+        },
+        "type": "code",
+        "style": {
+          "width": 589,
+          "height": 323
+        },
+        "width": 589,
+        "height": 323,
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "positionAbsolute": {
+          "x": 30.73061201263249,
+          "y": -629.6812773165286
+        }
+      },
+      {
+        "id": "0e874d55-fda4-466e-aabc-b1196fa31b07",
+        "position": {
+          "x": 700.2516401324734,
+          "y": -650.3513048087241
+        },
+        "data": {
+          "code": "state{\"reply\"}.getStr()",
+          "codeArgs": [],
+          "codeOutputs": [
+            {
+              "name": "reply",
+              "type": "string"
+            }
+          ]
+        },
+        "type": "code",
+        "style": {
+          "width": 300,
+          "height": 119
+        },
+        "width": 300,
+        "height": 119,
+        "selected": false,
+        "dragging": false,
+        "positionAbsolute": {
+          "x": 700.2516401324734,
+          "y": -650.3513048087241
+        }
+      },
+      {
+        "id": "da24b58c-5b42-4e92-a294-21ec11c9acf7",
+        "position": {
+          "x": 1221.32705710028,
+          "y": 113.42254541621432
+        },
+        "data": {
+          "keyword": "render/text",
+          "config": {
+            "fontSize": "90"
+          }
+        },
+        "type": "app",
+        "width": 338,
+        "height": 364,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 1221.32705710028,
+          "y": 113.42254541621432
+        },
+        "dragging": false
+      },
+      {
+        "id": "f57756bb-be33-4dc5-9422-b18d5cb4105c",
+        "position": {
+          "x": 1186.073220542144,
+          "y": -68.36635539866104
+        },
+        "data": {
+          "code": "state{\"reply\"}.getStr()",
+          "codeArgs": [],
+          "codeOutputs": [
+            {
+              "name": "text",
+              "type": "string"
+            }
+          ]
+        },
+        "type": "code",
+        "style": {
+          "width": 300,
+          "height": 119
+        },
+        "width": 300,
+        "height": 119,
         "resizing": false,
         "selected": false,
-        "style": {
-          "height": 336,
-          "width": 589
-        },
-        "type": "code",
-        "width": 589
-      },
-      {
-        "data": {
-          "code": "state{\"fontSize\"}.getFloat()"
-        },
-        "dragging": false,
-        "height": 130,
-        "id": "6b36f01a-3565-47f1-8ef1-08cce7b5945f",
-        "position": {
-          "x": 1394.9834314191185,
-          "y": -314.6191301897796
-        },
         "positionAbsolute": {
-          "x": 1394.9834314191185,
-          "y": -314.6191301897796
+          "x": 1186.073220542144,
+          "y": -68.36635539866104
         },
-        "selected": false,
-        "style": {
-          "height": 130,
-          "width": 300
-        },
-        "type": "code",
-        "width": 300
-      },
-      {
-        "data": {
-          "code": "\"Generate the following plain text (no quotes) based on the current hour of the current day (given in 24h format): \" & now().format(\"dddd, yyyy-MM-dd HH\") & \":00. Include at least the hour as a word in the reply. \" & (if state{\"clockType\"}.getStr() == \"12h\": \"Use the \" & now().format(\"tt\") & \" format of the hour as a word in the text: \" & now().format(\"hh\") else: \"Use the 24h format of the hour as a word in the text: \" & now().format(\"HH\")) & \"\\n. Use calendar seasonality for: \" & state{\"location\"}.getStr()"
-        },
-        "dragging": false,
-        "height": 341,
-        "id": "1e6b6a25-c473-4c03-b516-15588627b921",
-        "position": {
-          "x": 23.88568595238553,
-          "y": -691.5671652741744
-        },
-        "positionAbsolute": {
-          "x": 23.88568595238553,
-          "y": -637.5671652741744
-        },
-        "resizing": false,
-        "selected": false,
-        "style": {
-          "height": 341,
-          "width": 618
-        },
-        "type": "code",
-        "width": 618
+        "dragging": false
       }
     ],
-    "settings": {
-      "backgroundColor": "#000000",
-      "refreshInterval": 60
-    }
+    "edges": [
+      {
+        "id": "eb7c87bd-ebd1-4547-916e-d10952195a8d",
+        "target": "d9f36ed0-30e4-406b-9f58-e7e0c954223e",
+        "targetHandle": "fieldInput/image",
+        "source": "21fb03cb-a86e-4f9c-a3b6-0a7df144d05c",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "6134c379-6ac0-4d4a-ba98-8d8621913734",
+        "target": "21fb03cb-a86e-4f9c-a3b6-0a7df144d05c",
+        "targetHandle": "fieldInput/prompt",
+        "source": "b64e55b6-5516-458b-9d50-861af448277a",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "e415f1e1-577b-46a6-bcdf-e71a8c7bb89a",
+        "target": "d9f36ed0-30e4-406b-9f58-e7e0c954223e",
+        "targetHandle": "prev",
+        "source": "0dbd1558-6ead-49ae-b1bc-d4b65ab905e4",
+        "sourceHandle": "next",
+        "type": "appNodeEdge"
+      },
+      {
+        "id": "6be29c13-56b2-4c39-b8d2-0da2a272e0d1",
+        "target": "0dbd1558-6ead-49ae-b1bc-d4b65ab905e4",
+        "targetHandle": "fieldInput/valueString",
+        "source": "ae956e18-ba45-445c-a9e6-272125ecfff2",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "c4eb450d-a530-4829-bf0b-01aed8d6903d",
+        "target": "ae956e18-ba45-445c-a9e6-272125ecfff2",
+        "targetHandle": "fieldInput/user",
+        "source": "666daaf6-eaa4-4d25-9c3c-5bcaa747e8f3",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "1fb8e389-7e86-48c6-b491-85bc9617c804",
+        "target": "ae956e18-ba45-445c-a9e6-272125ecfff2",
+        "targetHandle": "fieldInput/system",
+        "source": "7db2055a-2846-44e1-9194-2fa7b2a2396b",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "679b6f8f-7635-47cd-bf57-a738ad894fb4",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "next",
+        "target": "0dbd1558-6ead-49ae-b1bc-d4b65ab905e4",
+        "targetHandle": "prev",
+        "type": "appNodeEdge"
+      },
+      {
+        "id": "68e39516-a4ae-4a72-b02c-2b0a39cd1f1f",
+        "target": "b64e55b6-5516-458b-9d50-861af448277a",
+        "targetHandle": "codeField/arg",
+        "source": "0e874d55-fda4-466e-aabc-b1196fa31b07",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "8575a0ce-7b40-4e5e-bae0-6d9fefa5368a",
+        "source": "d9f36ed0-30e4-406b-9f58-e7e0c954223e",
+        "sourceHandle": "next",
+        "target": "da24b58c-5b42-4e92-a294-21ec11c9acf7",
+        "targetHandle": "prev",
+        "type": "appNodeEdge"
+      },
+      {
+        "id": "9b88503d-ddbd-417e-b2c4-1300bdfa5e94",
+        "target": "da24b58c-5b42-4e92-a294-21ec11c9acf7",
+        "targetHandle": "fieldInput/text",
+        "source": "f57756bb-be33-4dc5-9422-b18d5cb4105c",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "d43a7659-b401-4596-b598-4a1fcae16e3a",
+        "source": "0e874d55-fda4-466e-aabc-b1196fa31b07",
+        "sourceHandle": "fieldOutput",
+        "target": "b64e55b6-5516-458b-9d50-861af448277a",
+        "targetHandle": "codeField/reply",
+        "type": "codeNodeEdge"
+      }
+    ]
   }
 ]
