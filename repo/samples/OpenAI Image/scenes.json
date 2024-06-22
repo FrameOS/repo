@@ -1,24 +1,11 @@
 [
   {
-    "default": true,
-    "edges": [
-      {
-        "id": "22bebb72-c22b-4853-957f-4c33bb96cc37",
-        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
-        "sourceHandle": "next",
-        "target": "47e8fc0b-f26f-4edd-bb76-ca8b9edd9ab0",
-        "targetHandle": "prev",
-        "type": "edge"
-      },
-      {
-        "id": "3af8dffe-e8f7-41f2-8eba-5d62037a05c8",
-        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
-        "sourceHandle": "code/state{\"prompt\"}.getStr()",
-        "target": "47e8fc0b-f26f-4edd-bb76-ca8b9edd9ab0",
-        "targetHandle": "fieldInput/prompt",
-        "type": "edge"
-      }
-    ],
+    "id": "5d35f967-0c5b-41c0-8062-1397c1e8cdad",
+    "name": "OpenAI Image",
+    "settings": {
+      "backgroundColor": "#ffffff",
+      "refreshInterval": 60
+    },
     "fields": [
       {
         "access": "public",
@@ -29,46 +16,128 @@
         "value": "Penguins having a winter barbecue"
       }
     ],
-    "id": "2bf20eac-5bac-4a9b-b095-bee4666c053e",
-    "name": "OpenAI Image",
     "nodes": [
       {
         "data": {
           "keyword": "render"
         },
-        "height": 72,
+        "height": 161,
         "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
         "position": {
-          "x": 121,
-          "y": 113
+          "x": 156,
+          "y": 44
         },
         "type": "event",
-        "width": 150
+        "width": 212,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 156,
+          "y": 44
+        },
+        "dragging": false
       },
       {
-        "data": {
-          "config": {},
-          "keyword": "openai"
-        },
-        "dragging": false,
-        "height": 246,
-        "id": "47e8fc0b-f26f-4edd-bb76-ca8b9edd9ab0",
+        "id": "3ebb104f-871b-4db0-95ca-4f1b67018036",
         "position": {
-          "x": 322.7111480865224,
-          "y": 109.97787900447611
+          "x": 456.3555740432612,
+          "y": 55.47787900447611
         },
-        "positionAbsolute": {
-          "x": 322.7111480865224,
-          "y": 109.97787900447611
+        "data": {
+          "keyword": "render/image",
+          "config": {}
         },
-        "selected": false,
         "type": "app",
-        "width": 396
+        "width": 311,
+        "height": 106,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 456.3555740432612,
+          "y": 55.47787900447611
+        },
+        "dragging": false
+      },
+      {
+        "id": "765e599e-e3ef-489f-a1ac-57c220712ebb",
+        "position": {
+          "x": 425.3555740432612,
+          "y": -217.5221209955239
+        },
+        "data": {
+          "keyword": "data/openaiImage",
+          "config": {},
+          "cache": {
+            "duration": "3600",
+            "durationEnabled": true,
+            "enabled": true,
+            "inputEnabled": true
+          }
+        },
+        "type": "app",
+        "width": 321,
+        "height": 224,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 425.3555740432612,
+          "y": -217.5221209955239
+        },
+        "dragging": false
+      },
+      {
+        "id": "0a09320c-59e1-460e-ad31-f832d42dc609",
+        "position": {
+          "x": 395.3555740432612,
+          "y": -357.5221209955239
+        },
+        "data": {
+          "code": "state{\"prompt\"}.getStr()",
+          "codeArgs": [],
+          "codeOutputs": [
+            {
+              "name": "prompt",
+              "type": "string"
+            }
+          ]
+        },
+        "type": "code",
+        "style": {
+          "width": 300,
+          "height": 119
+        },
+        "width": 300,
+        "height": 119,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 395.3555740432612,
+          "y": -357.5221209955239
+        },
+        "dragging": false
       }
     ],
-    "settings": {
-      "backgroundColor": "#ffffff",
-      "refreshInterval": 60
-    }
+    "edges": [
+      {
+        "id": "58c99150-10e2-4747-89ed-c3cf5b26e1a4",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "next",
+        "target": "3ebb104f-871b-4db0-95ca-4f1b67018036",
+        "targetHandle": "prev",
+        "type": "appNodeEdge"
+      },
+      {
+        "id": "c15ef34a-bff7-42b8-bd32-16c491d3f559",
+        "target": "3ebb104f-871b-4db0-95ca-4f1b67018036",
+        "targetHandle": "fieldInput/image",
+        "source": "765e599e-e3ef-489f-a1ac-57c220712ebb",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "604e0458-ab9b-407c-b678-4339604fbd46",
+        "target": "765e599e-e3ef-489f-a1ac-57c220712ebb",
+        "targetHandle": "fieldInput/prompt",
+        "source": "0a09320c-59e1-460e-ad31-f832d42dc609",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      }
+    ]
   }
 ]
