@@ -1,66 +1,98 @@
 [
   {
-    "default": true,
-    "edges": [
-      {
-        "id": "f8bc72f3-7108-42b8-9acc-651a4cbd00d5",
-        "source": "55d156f2-3b81-40ba-a5dd-eacff3ebd808",
-        "sourceHandle": "next",
-        "target": "b67f367a-5a5e-4102-95cf-fffb2d5e8fa3",
-        "targetHandle": "prev",
-        "type": "edge"
-      }
-    ],
+    "id": "7c351a65-1b3a-491a-a2fb-a4325a47cdf7",
+    "name": "Cyberpunk EU",
+    "settings": {
+      "backgroundColor": "#000000",
+      "refreshInterval": 3600
+    },
     "fields": [],
-    "id": "9b547436-7bd5-4c3e-beca-3119ec2ed76e",
-    "name": "CyberPunk EU",
     "nodes": [
-      {
-        "data": {
-          "config": {
-            "category": "cyberpunk-europe",
-            "cacheSeconds": "60"
-          },
-          "keyword": "frameOSGallery"
-        },
-        "dragging": false,
-        "height": 178,
-        "id": "b67f367a-5a5e-4102-95cf-fffb2d5e8fa3",
-        "position": {
-          "x": -281.31768507954644,
-          "y": 60.68339151728611
-        },
-        "positionAbsolute": {
-          "x": -281.31768507954644,
-          "y": 60.68339151728611
-        },
-        "selected": false,
-        "type": "app",
-        "width": 425
-      },
       {
         "data": {
           "keyword": "render"
         },
-        "dragging": false,
-        "height": 40,
-        "id": "55d156f2-3b81-40ba-a5dd-eacff3ebd808",
+        "height": 161,
+        "id": "9eb12a2c-9606-4663-80c5-b8a61fd23fa7",
         "position": {
-          "x": -519.278446318563,
-          "y": 65.30573121164576
+          "x": 210,
+          "y": 211
         },
-        "positionAbsolute": {
-          "x": -519.278446318563,
-          "y": 65.30573121164576
-        },
-        "selected": false,
         "type": "event",
-        "width": 99
+        "width": 212,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 210,
+          "y": 211
+        },
+        "dragging": false
+      },
+      {
+        "id": "fde55dc0-5e96-4048-a899-3510ebf42e63",
+        "position": {
+          "x": 521,
+          "y": 227
+        },
+        "data": {
+          "keyword": "render/image",
+          "config": {}
+        },
+        "type": "app",
+        "width": 311,
+        "height": 106,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 521,
+          "y": 227
+        },
+        "dragging": false
+      },
+      {
+        "id": "9f106977-5929-4c9a-884e-35b0bc7b51d4",
+        "position": {
+          "x": 487,
+          "y": 16
+        },
+        "data": {
+          "keyword": "data/frameOSGallery",
+          "config": {
+            "category": "cyberpunk-europe"
+          },
+          "cache": {
+            "duration": "60",
+            "durationEnabled": true,
+            "enabled": true,
+            "inputEnabled": true
+          }
+        },
+        "type": "app",
+        "width": 333,
+        "height": 156,
+        "selected": false,
+        "dragging": false,
+        "positionAbsolute": {
+          "x": 487,
+          "y": 16
+        }
       }
     ],
-    "settings": {
-      "backgroundColor": "#000000",
-      "refreshInterval": 3600
-    }
+    "edges": [
+      {
+        "id": "f9671947-579c-4b67-be4d-c346b2757c82",
+        "source": "9eb12a2c-9606-4663-80c5-b8a61fd23fa7",
+        "sourceHandle": "next",
+        "target": "fde55dc0-5e96-4048-a899-3510ebf42e63",
+        "targetHandle": "prev",
+        "type": "appNodeEdge"
+      },
+      {
+        "id": "6c1d6b53-d37e-49ed-847d-7cfaef52f573",
+        "target": "fde55dc0-5e96-4048-a899-3510ebf42e63",
+        "targetHandle": "fieldInput/image",
+        "source": "9f106977-5929-4c9a-884e-35b0bc7b51d4",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      }
+    ]
   }
 ]
