@@ -1,75 +1,138 @@
 [
   {
-    "id": "e8e57629-05a1-4e8d-8df7-4e8dd1176ddb",
+    "id": "a1a70230-506b-486b-a3e4-af6be8c2ecad",
     "name": "Unsplash image",
+    "settings": {
+      "backgroundColor": "#000000",
+      "refreshInterval": 600
+    },
+    "fields": [
+      {
+        "access": "public",
+        "label": "Search term",
+        "name": "search",
+        "persist": "disk",
+        "placeholder": "e.g. nature, fish, city",
+        "type": "string",
+        "value": "nature"
+      }
+    ],
     "nodes": [
       {
-        "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
-        "type": "event",
-        "position": {
-          "x": 121,
-          "y": 113
-        },
         "data": {
           "keyword": "render"
         },
-        "width": 157,
-        "height": 72
-      },
-      {
-        "id": "c027ae14-37ef-4dd6-aae3-b9b6f4a894da",
-        "type": "app",
+        "height": 161,
+        "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
         "position": {
-          "x": 394.5,
-          "y": 131
+          "x": 146,
+          "y": 79
         },
-        "data": {
-          "keyword": "unsplash",
-          "config": {}
-        },
-        "width": 396,
-        "height": 106,
+        "type": "event",
+        "width": 212,
         "selected": false,
         "positionAbsolute": {
-          "x": 394.5,
-          "y": 131
+          "x": 146,
+          "y": 79
+        },
+        "dragging": false
+      },
+      {
+        "id": "7d4ca5fe-cb1a-413c-8ac1-c7c12c8dcd12",
+        "position": {
+          "x": 472.75,
+          "y": 97
+        },
+        "data": {
+          "keyword": "render/image",
+          "config": {}
+        },
+        "type": "app",
+        "width": 311,
+        "height": 106
+      },
+      {
+        "id": "c03a1fe5-5806-45a4-8a61-16c9c0ce1bc8",
+        "position": {
+          "x": 448.75,
+          "y": -99
+        },
+        "data": {
+          "keyword": "data/unsplash",
+          "config": {},
+          "cache": {
+            "duration": "3600",
+            "durationEnabled": true,
+            "enabled": true,
+            "inputEnabled": true
+          }
+        },
+        "type": "app",
+        "width": 287,
+        "height": 140,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 448.75,
+          "y": -99
+        },
+        "dragging": false
+      },
+      {
+        "id": "70d7bb78-b000-4ef9-a378-133c484be9e6",
+        "position": {
+          "x": 420.75,
+          "y": -250
+        },
+        "data": {
+          "code": "state{\"search\"}.getStr()",
+          "codeArgs": [],
+          "codeOutputs": [
+            {
+              "name": "search",
+              "type": "string"
+            }
+          ]
+        },
+        "type": "code",
+        "style": {
+          "width": 300,
+          "height": 119
+        },
+        "width": 300,
+        "height": 119,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 420.75,
+          "y": -250
         },
         "dragging": false
       }
     ],
     "edges": [
       {
-        "id": "0a36c907-4bcd-4c28-81fc-3bf9bf905a1d",
+        "id": "7c54bcdb-f561-4483-b4fc-c8ae04635092",
         "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
         "sourceHandle": "next",
-        "target": "c027ae14-37ef-4dd6-aae3-b9b6f4a894da",
+        "target": "7d4ca5fe-cb1a-413c-8ac1-c7c12c8dcd12",
         "targetHandle": "prev",
-        "type": "edge"
+        "type": "appNodeEdge"
       },
       {
-        "id": "490bd1f2-d6ed-4943-aacd-160879d66e33",
-        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
-        "sourceHandle": "code/state{\"search\"}.getStr()",
-        "target": "c027ae14-37ef-4dd6-aae3-b9b6f4a894da",
-        "targetHandle": "fieldInput/keyword",
-        "type": "edge"
-      }
-    ],
-    "fields": [
+        "id": "38c71787-77e4-4026-b1c2-4962d362f19d",
+        "target": "7d4ca5fe-cb1a-413c-8ac1-c7c12c8dcd12",
+        "targetHandle": "fieldInput/image",
+        "source": "c03a1fe5-5806-45a4-8a61-16c9c0ce1bc8",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
       {
-        "name": "search",
-        "label": "Seach term (one word)",
-        "type": "string",
-        "persist": "disk",
-        "access": "public",
-        "value": "nature",
-        "placeholder": "e.g. nature, fish, city"
+        "id": "9906207c-0b00-4740-aec6-a51894e334be",
+        "target": "c03a1fe5-5806-45a4-8a61-16c9c0ce1bc8",
+        "targetHandle": "fieldInput/search",
+        "source": "70d7bb78-b000-4ef9-a378-133c484be9e6",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
       }
-    ],
-    "settings": {
-      "refreshInterval": 600,
-      "backgroundColor": "#000000"
-    },
-    "default": true
+    ]
   }
 ]

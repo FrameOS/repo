@@ -1,281 +1,356 @@
-[{
-  "edges": [
-    {
-      "id": "a9bf1ea8-137d-4ba0-92d0-7fd3322fea1e",
-      "source": "a9bf1ea8-137d-4ba0-92d0-7fd3322fea1e",
-      "sourceHandle": "fieldOutput",
-      "target": "7bae8fb3-f31c-4966-ab75-3b77fba06f79",
-      "targetHandle": "fieldInput/text",
-      "type": "codeNodeEdge"
+[
+  {
+    "id": "2a666040-b9ff-40e7-8f7b-e092ff952aeb",
+    "name": "Github Stars",
+    "settings": {
+      "backgroundColor": "#000000",
+      "refreshInterval": 60
     },
-    {
-      "id": "e981d9ce-22ca-4994-9319-d36d1b996938",
-      "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
-      "sourceHandle": "next",
-      "target": "22c56bc9-8e12-4f0a-a0cd-77fec8f96870",
-      "targetHandle": "prev",
-      "type": "appNodeEdge"
-    },
-    {
-      "id": "2a75cf32-8dbb-4964-b17f-f8317c3125d6",
-      "source": "22c56bc9-8e12-4f0a-a0cd-77fec8f96870",
-      "sourceHandle": "next",
-      "target": "2cee5e7b-e3b9-4e42-9dac-ef18a83e4122",
-      "targetHandle": "prev",
-      "type": "appNodeEdge"
-    },
-    {
-      "id": "442dbbf5-0898-44e7-9f05-448ea1d16f83",
-      "source": "442dbbf5-0898-44e7-9f05-448ea1d16f83",
-      "sourceHandle": "fieldOutput",
-      "target": "22c56bc9-8e12-4f0a-a0cd-77fec8f96870",
-      "targetHandle": "fieldInput/text",
-      "type": "codeNodeEdge"
-    },
-    {
-      "id": "48c7e948-d3dd-4a30-a3d9-b3aaf334019a",
-      "source": "2cee5e7b-e3b9-4e42-9dac-ef18a83e4122",
-      "sourceHandle": "next",
-      "target": "7bae8fb3-f31c-4966-ab75-3b77fba06f79",
-      "targetHandle": "prev",
-      "type": "appNodeEdge"
-    },
-    {
-      "id": "2b1268e7-f738-4e4a-acbb-9d6b4b26468e",
-      "source": "7bae8fb3-f31c-4966-ab75-3b77fba06f79",
-      "sourceHandle": "next",
-      "target": "bfc7a703-2a31-4078-81a3-518a0aa4dadd",
-      "targetHandle": "prev",
-      "type": "appNodeEdge"
-    },
-    {
-      "id": "155dc053-52ad-42a6-97de-2b63b8191dd7",
-      "source": "155dc053-52ad-42a6-97de-2b63b8191dd7",
-      "sourceHandle": "fieldOutput",
-      "target": "a9bf1ea8-137d-4ba0-92d0-7fd3322fea1e",
-      "targetHandle": "codeField/stars",
-      "type": "codeNodeEdge"
-    },
-    {
-      "id": "d6732a92-312e-4a10-8e33-53801763d29a",
-      "source": "442dbbf5-0898-44e7-9f05-448ea1d16f83",
-      "sourceHandle": "fieldOutput",
-      "target": "2cee5e7b-e3b9-4e42-9dac-ef18a83e4122",
-      "targetHandle": "fieldInput/repo",
-      "type": "codeNodeEdge"
-    }
-  ],
-  "fields": [
-    {
-      "access": "public",
-      "label": "Repository",
-      "name": "repository",
-      "persist": "disk",
-      "placeholder": "user/repo",
-      "type": "string",
-      "value": "FrameOS/frameos"
-    },
-    {
-      "access": "private",
-      "label": "Stars",
-      "name": "stars",
-      "persist": "disk",
-      "type": "integer",
-      "value": "0"
-    }
-  ],
-  "id": "903de523-7aec-48db-9af0-dd8fc8c76624",
-  "name": "Github Stars",
-  "nodes": [
-    {
-      "data": {
-        "keyword": "render"
+    "fields": [
+      {
+        "access": "public",
+        "label": "Repository",
+        "name": "repository",
+        "persist": "disk",
+        "placeholder": "user/repo",
+        "type": "string",
+        "value": "FrameOS/frameos"
       },
-      "dragging": false,
-      "height": 96,
-      "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
-      "position": {
-        "x": 24.069306644944845,
-        "y": -17.176915634223434
-      },
-      "positionAbsolute": {
-        "x": 24.069306644944845,
-        "y": -17.176915634223434
-      },
-      "selected": false,
-      "type": "event",
-      "width": 183
-    },
-    {
-      "data": {
-        "config": {},
-        "keyword": "code",
-        "sources": {
-          "app.nim": "import json, strformat\nimport pixie, httpclient\nimport times\nimport frameos/types\n\ntype\n  AppConfig* = object\n    repo*: string\n    stateKey*: string\n    interval*: int\n\n  App* = ref object\n    nodeId*: NodeId\n    scene*: FrameScene\n    frameConfig*: FrameConfig\n    appConfig*: AppConfig\n    lastFetchAt*: float\n    lastStarCount*: int\n\nproc init*(nodeId: NodeId, scene: FrameScene, appConfig: AppConfig): App =\n  result = App(\n    nodeId: nodeId,\n    scene: scene,\n    frameConfig: scene.frameConfig,\n    appConfig: appConfig,\n  )\n\nproc log*(self: App, message: string) =\n  self.scene.logger.log(%*{\"event\": &\"{self.nodeId}:log\", \"message\": message})\n\nproc error*(self: App, message: string) =\n  self.scene.logger.log(%*{\"event\": &\"{self.nodeId}:error\", \"error\": message})\n\nproc getGitHubRepoStars(repo: string, authToken: string): int =\n  let client = newHttpClient()\n  if authToken != \"\":\n    client.headers = newHttpHeaders([(\"Authorization\", \"token \" & authToken)])\n  let url = \"https://api.github.com/repos/\" & repo\n  try:\n    let response = client.getContent(url)\n    let parsed = parseJson(response)\n    return parsed[\"stargazers_count\"].getInt\n  except:\n    return -1\n\nproc run*(self: App, context: ExecutionContext) =\n  var stars = self.lastStarCount\n  if self.lastFetchAt < epochTime() - float(self.appConfig.interval):\n    let authToken = self.frameConfig.settings{\"github\"}{\"api_key\"}.getStr()\n    stars = getGitHubRepoStars(self.appConfig.repo, authToken)\n    self.lastFetchAt = epochTime()\n    if stars > -1:\n      self.lastStarCount = stars\n      self.log(&\"Found {stars} stars for repository: {self.appConfig.repo}\")\n      self.scene.state[\"stars\"] = %*(stars)\n    else:\n      self.log(&\"Error fetching stars for repository {self.appConfig.repo}\")\n\n",
-          "config.json": "{\n  \"name\": \"Github Stars to State\",\n  \"description\": \"Save a repository's state count to a state variable\",\n  \"version\": \"1.0.0\",\n  \"fields\": [\n    {\n      \"name\": \"repo\",\n      \"label\": \"Repository\",\n      \"type\": \"string\",\n      \"value\": \"FrameOS/frameos\",\n      \"required\": true\n    },\n    {\n      \"name\": \"stateKey\",\n      \"label\": \"State Key\",\n      \"type\": \"string\",\n      \"value\": \"stars\",\n      \"required\": true\n    },\n    {\n      \"name\": \"interval\",\n      \"label\": \"Fetch interval in seconds\",\n      \"type\": \"integer\",\n      \"value\": \"60\",\n      \"required\": true\n    }\n  ]\n}"
-        }
-      },
-      "dragging": false,
-      "height": 134,
-      "id": "2cee5e7b-e3b9-4e42-9dac-ef18a83e4122",
-      "position": {
-        "x": 700.3594753005418,
-        "y": 38.507836103526984
-      },
-      "positionAbsolute": {
-        "x": 700.3594753005418,
-        "y": 38.507836103526984
-      },
-      "selected": false,
-      "type": "app",
-      "width": 376
-    },
-    {
-      "data": {
-        "config": {},
-        "keyword": "text"
-      },
-      "dragging": false,
-      "height": 336,
-      "id": "7bae8fb3-f31c-4966-ab75-3b77fba06f79",
-      "position": {
-        "x": 1211.9276375806458,
-        "y": 72.21705598804891
-      },
-      "positionAbsolute": {
-        "x": 1211.9276375806458,
-        "y": 72.21705598804891
-      },
-      "selected": false,
-      "type": "app",
-      "width": 294
-    },
-    {
-      "data": {
-        "code": "if stars >= 0: $stars & \" star\" & (if stars == 1: \"\" else: \"s\") else: \"Error fetching stars\"",
-        "codeFields": [
-          "stars"
-        ]
-      },
-      "dragging": false,
-      "height": 155,
-      "id": "a9bf1ea8-137d-4ba0-92d0-7fd3322fea1e",
-      "position": {
-        "x": 1176.1050179723645,
-        "y": -145.72800911630532
-      },
-      "positionAbsolute": {
-        "x": 1176.1050179723645,
-        "y": -145.72800911630532
-      },
-      "resizing": false,
-      "selected": false,
-      "style": {
-        "height": 155,
-        "width": 505
-      },
-      "type": "code",
-      "width": 505
-    },
-    {
-      "data": {
-        "config": {
-          "fontSize": "16",
-          "format": "yyyy-MM-dd",
-          "position": "bottom-right"
+      {
+        "access": "private",
+        "label": "Stars",
+        "name": "stars",
+        "persist": "disk",
+        "type": "integer",
+        "value": "0"
+      }
+    ],
+    "nodes": [
+      {
+        "data": {
+          "keyword": "render"
         },
-        "keyword": "clock"
-      },
-      "dragging": false,
-      "height": 380,
-      "id": "bfc7a703-2a31-4078-81a3-518a0aa4dadd",
-      "position": {
-        "x": 1661.1906865190413,
-        "y": 69.8404807016272
-      },
-      "positionAbsolute": {
-        "x": 1661.1906865190413,
-        "y": 69.8404807016272
-      },
-      "selected": false,
-      "type": "app",
-      "width": 372
-    },
-    {
-      "data": {
-        "config": {
-          "fontSize": "16",
-          "position": "top-left"
+        "dragging": false,
+        "height": 161,
+        "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "position": {
+          "x": 24.069306644944845,
+          "y": -17.176915634223434
         },
-        "keyword": "text"
+        "positionAbsolute": {
+          "x": 24.069306644944845,
+          "y": -17.176915634223434
+        },
+        "selected": false,
+        "type": "event",
+        "width": 212
       },
-      "dragging": false,
-      "height": 336,
-      "id": "22c56bc9-8e12-4f0a-a0cd-77fec8f96870",
-      "position": {
-        "x": 298.0615807735932,
-        "y": 11.102980613753402
+      {
+        "data": {
+          "config": {},
+          "keyword": "code",
+          "sources": {
+            "app.nim": "import json, strformat\nimport pixie, httpclient\nimport times\nimport frameos/types\n\ntype\n  AppConfig* = object\n    repo*: string\n    stateKey*: string\n    interval*: int\n\n  App* = ref object\n    nodeId*: NodeId\n    scene*: FrameScene\n    frameConfig*: FrameConfig\n    appConfig*: AppConfig\n    lastFetchAt*: float\n    lastStarCount*: int\n\nproc init*(nodeId: NodeId, scene: FrameScene, appConfig: AppConfig): App =\n  result = App(\n    nodeId: nodeId,\n    scene: scene,\n    frameConfig: scene.frameConfig,\n    appConfig: appConfig,\n  )\n\nproc log*(self: App, message: string) =\n  self.scene.logger.log(%*{\"event\": &\"{self.nodeId}:log\", \"message\": message})\n\nproc error*(self: App, message: string) =\n  self.scene.logger.log(%*{\"event\": &\"{self.nodeId}:error\", \"error\": message})\n\nproc getGitHubRepoStars(repo: string, authToken: string): int =\n  let client = newHttpClient()\n  if authToken != \"\":\n    client.headers = newHttpHeaders([(\"Authorization\", \"token \" & authToken)])\n  let url = \"https://api.github.com/repos/\" & repo\n  try:\n    let response = client.getContent(url)\n    let parsed = parseJson(response)\n    return parsed[\"stargazers_count\"].getInt\n  except:\n    return -1\n\nproc run*(self: App, context: ExecutionContext) =\n  var stars = self.lastStarCount\n  if self.lastFetchAt < epochTime() - float(self.appConfig.interval):\n    let authToken = self.frameConfig.settings{\"github\"}{\"api_key\"}.getStr()\n    stars = getGitHubRepoStars(self.appConfig.repo, authToken)\n    self.lastFetchAt = epochTime()\n    if stars > -1:\n      self.lastStarCount = stars\n      self.log(&\"Found {stars} stars for repository: {self.appConfig.repo}\")\n      self.scene.state[\"stars\"] = %*(stars)\n    else:\n      self.log(&\"Error fetching stars for repository {self.appConfig.repo}\")\n\n",
+            "config.json": "{\n  \"name\": \"Github Stars to State\",\n  \"description\": \"Save a repository's state count to a state variable\",\n  \"version\": \"1.0.0\",\n  \"fields\": [\n    {\n      \"name\": \"repo\",\n      \"label\": \"Repository\",\n      \"type\": \"string\",\n      \"value\": \"FrameOS/frameos\",\n      \"required\": true\n    },\n    {\n      \"name\": \"stateKey\",\n      \"label\": \"State Key\",\n      \"type\": \"string\",\n      \"value\": \"stars\",\n      \"required\": true\n    },\n    {\n      \"name\": \"interval\",\n      \"label\": \"Fetch interval in seconds\",\n      \"type\": \"integer\",\n      \"value\": \"60\",\n      \"required\": true\n    }\n  ]\n}"
+          }
+        },
+        "dragging": false,
+        "height": 134,
+        "id": "2cee5e7b-e3b9-4e42-9dac-ef18a83e4122",
+        "position": {
+          "x": 724.6911448109834,
+          "y": 6.065610089604917
+        },
+        "positionAbsolute": {
+          "x": 724.6911448109834,
+          "y": 6.065610089604917
+        },
+        "selected": false,
+        "type": "app",
+        "width": 422
       },
-      "positionAbsolute": {
-        "x": 298.0615807735932,
-        "y": 11.102980613753402
+      {
+        "data": {
+          "config": {},
+          "keyword": "render/text"
+        },
+        "dragging": false,
+        "height": 364,
+        "id": "7bae8fb3-f31c-4966-ab75-3b77fba06f79",
+        "position": {
+          "x": 1232.2040288393468,
+          "y": 33.01603288789306
+        },
+        "positionAbsolute": {
+          "x": 1232.2040288393468,
+          "y": 33.01603288789306
+        },
+        "selected": false,
+        "type": "app",
+        "width": 338
       },
-      "selected": false,
-      "type": "app",
-      "width": 294
-    },
-    {
-      "data": {
-        "code": "state{\"repository\"}.getStr()"
+      {
+        "data": {
+          "config": {
+            "fontSize": "16",
+            "position": "top-left",
+            "vAlign": "top"
+          },
+          "keyword": "render/text"
+        },
+        "dragging": false,
+        "height": 364,
+        "id": "22c56bc9-8e12-4f0a-a0cd-77fec8f96870",
+        "position": {
+          "x": 311.57917494606073,
+          "y": -3.7663729759609055
+        },
+        "positionAbsolute": {
+          "x": 311.57917494606073,
+          "y": -3.7663729759609055
+        },
+        "selected": false,
+        "type": "app",
+        "width": 338
       },
-      "dragging": false,
-      "height": 130,
-      "id": "442dbbf5-0898-44e7-9f05-448ea1d16f83",
-      "position": {
-        "x": 635.0244904679896,
-        "y": -174.21946053658314
+      {
+        "data": {
+          "config": {
+            "fontSize": "16",
+            "position": "right",
+            "vAlign": "bottom"
+          },
+          "keyword": "render/text"
+        },
+        "dragging": false,
+        "height": 364,
+        "id": "a5ec0784-99ef-45bc-b7fb-1350bcfed5fa",
+        "position": {
+          "x": 1814.8085157283153,
+          "y": 108.10822513645098
+        },
+        "positionAbsolute": {
+          "x": 1814.8085157283153,
+          "y": 108.10822513645098
+        },
+        "selected": false,
+        "type": "app",
+        "width": 338
       },
-      "positionAbsolute": {
-        "x": 635.0244904679896,
-        "y": -174.21946053658314
+      {
+        "data": {
+          "config": {
+            "format": "yyyy-MM-dd"
+          },
+          "keyword": "data/clock"
+        },
+        "dragging": false,
+        "height": 156,
+        "id": "3a48f3b9-2c00-4547-95e4-64ac1429b05e",
+        "position": {
+          "x": 1779.4513976568862,
+          "y": -113.32031024017279
+        },
+        "positionAbsolute": {
+          "x": 1779.4513976568862,
+          "y": -113.32031024017279
+        },
+        "selected": false,
+        "type": "app",
+        "width": 354
       },
-      "resizing": false,
-      "selected": false,
-      "style": {
-        "height": 130,
-        "width": 304
+      {
+        "id": "e5b00bfb-18ee-4eeb-bff6-ee877d9e13de",
+        "position": {
+          "x": 696.0729180756535,
+          "y": -159.09067684218144
+        },
+        "data": {
+          "code": "state{\"repository\"}.getStr()",
+          "codeArgs": [],
+          "codeOutputs": [
+            {
+              "name": "repo",
+              "type": "string"
+            }
+          ]
+        },
+        "type": "code",
+        "style": {
+          "width": 300,
+          "height": 119
+        },
+        "width": 300,
+        "height": 119
       },
-      "type": "code",
-      "width": 304
-    },
-    {
-      "data": {
-        "code": "state{\"stars\"}.getInt()",
-        "codeFields": []
+      {
+        "id": "3300601a-8da8-4aeb-9a4f-cdc45aa80b39",
+        "position": {
+          "x": 283.7862958153938,
+          "y": -156.38715800768796
+        },
+        "data": {
+          "code": "state{\"repository\"}.getStr()",
+          "codeArgs": [],
+          "codeOutputs": [
+            {
+              "name": "text",
+              "type": "string"
+            }
+          ]
+        },
+        "type": "code",
+        "style": {
+          "width": 300,
+          "height": 119
+        },
+        "width": 300,
+        "height": 119
       },
-      "dragging": false,
-      "height": 130,
-      "id": "155dc053-52ad-42a6-97de-2b63b8191dd7",
-      "position": {
-        "x": 1175.590605360396,
-        "y": -322.4433166380863
+      {
+        "id": "aafa48a0-4b6a-4023-9ed1-18e443a539fa",
+        "position": {
+          "x": 1170.5404735292639,
+          "y": -146.92484208696067
+        },
+        "data": {
+          "code": "if stars >= 0: &\"{stars} star\" & (if stars == 1: \"\" else: \"s\") else: \"Error fetching stars\"",
+          "codeArgs": [
+            {
+              "name": "stars",
+              "type": "integer"
+            }
+          ],
+          "codeOutputs": [
+            {
+              "name": "text",
+              "type": "string"
+            }
+          ]
+        },
+        "type": "code",
+        "style": {
+          "width": 486,
+          "height": 146
+        },
+        "width": 486,
+        "height": 146,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 1170.5404735292639,
+          "y": -146.92484208696067
+        },
+        "dragging": false,
+        "resizing": false
       },
-      "positionAbsolute": {
-        "x": 1175.590605360396,
-        "y": -322.4433166380863
+      {
+        "id": "ff07a0fc-f09e-4e84-8ef6-b524ca3c01fb",
+        "position": {
+          "x": 1161.0781576085367,
+          "y": -290.21134031511656
+        },
+        "data": {
+          "code": "state{\"stars\"}.getInt()",
+          "codeArgs": [],
+          "codeOutputs": [
+            {
+              "name": "stars",
+              "type": "integer"
+            }
+          ]
+        },
+        "type": "code",
+        "style": {
+          "width": 300,
+          "height": 119
+        },
+        "width": 300,
+        "height": 119,
+        "selected": false,
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "e981d9ce-22ca-4994-9319-d36d1b996938",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "next",
+        "target": "22c56bc9-8e12-4f0a-a0cd-77fec8f96870",
+        "targetHandle": "prev",
+        "type": "appNodeEdge"
       },
-      "resizing": false,
-      "selected": false,
-      "style": {
-        "height": 130,
-        "width": 290
+      {
+        "id": "2a75cf32-8dbb-4964-b17f-f8317c3125d6",
+        "source": "22c56bc9-8e12-4f0a-a0cd-77fec8f96870",
+        "sourceHandle": "next",
+        "target": "2cee5e7b-e3b9-4e42-9dac-ef18a83e4122",
+        "targetHandle": "prev",
+        "type": "appNodeEdge"
       },
-      "type": "code",
-      "width": 290
-    }
-  ],
-  "settings": {
-    "backgroundColor": "#000000",
-    "refreshInterval": 60
+      {
+        "id": "48c7e948-d3dd-4a30-a3d9-b3aaf334019a",
+        "source": "2cee5e7b-e3b9-4e42-9dac-ef18a83e4122",
+        "sourceHandle": "next",
+        "target": "7bae8fb3-f31c-4966-ab75-3b77fba06f79",
+        "targetHandle": "prev",
+        "type": "appNodeEdge"
+      },
+      {
+        "id": "60e138de-d1a1-4b4e-8669-63bee13579dc",
+        "source": "7bae8fb3-f31c-4966-ab75-3b77fba06f79",
+        "sourceHandle": "next",
+        "target": "a5ec0784-99ef-45bc-b7fb-1350bcfed5fa",
+        "targetHandle": "prev",
+        "type": "appNodeEdge"
+      },
+      {
+        "id": "0f9ed7b3-0c57-483b-9d3e-39f697fa8865",
+        "source": "3a48f3b9-2c00-4547-95e4-64ac1429b05e",
+        "sourceHandle": "fieldOutput",
+        "target": "a5ec0784-99ef-45bc-b7fb-1350bcfed5fa",
+        "targetHandle": "fieldInput/text",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "800df712-90dd-4028-bfa9-30c5fb1675ff",
+        "target": "2cee5e7b-e3b9-4e42-9dac-ef18a83e4122",
+        "targetHandle": "fieldInput/repo",
+        "source": "e5b00bfb-18ee-4eeb-bff6-ee877d9e13de",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "b5e2c89d-d592-4a4b-91c7-efac9455df93",
+        "target": "22c56bc9-8e12-4f0a-a0cd-77fec8f96870",
+        "targetHandle": "fieldInput/text",
+        "source": "3300601a-8da8-4aeb-9a4f-cdc45aa80b39",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "5cc91f90-4523-4e89-b696-358d06a84772",
+        "target": "7bae8fb3-f31c-4966-ab75-3b77fba06f79",
+        "targetHandle": "fieldInput/text",
+        "source": "aafa48a0-4b6a-4023-9ed1-18e443a539fa",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "0bb39d3b-7d7c-4f19-a078-04174f55f2fe",
+        "target": "aafa48a0-4b6a-4023-9ed1-18e443a539fa",
+        "targetHandle": "codeField/arg",
+        "source": "ff07a0fc-f09e-4e84-8ef6-b524ca3c01fb",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "746acf01-771a-4813-8241-91a73fb9faa3",
+        "source": "ff07a0fc-f09e-4e84-8ef6-b524ca3c01fb",
+        "sourceHandle": "fieldOutput",
+        "target": "aafa48a0-4b6a-4023-9ed1-18e443a539fa",
+        "targetHandle": "codeField/stars",
+        "type": "codeNodeEdge"
+      }
+    ]
   }
-}]
+]

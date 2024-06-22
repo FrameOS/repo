@@ -1,272 +1,274 @@
-[{
-  "edges": [
-    {
-      "id": "2717601d-33bb-45e9-8b1b-dc1149899fa7",
-      "source": "1889b055-884c-4db5-851c-1689c1c9cf61",
-      "sourceHandle": "next",
-      "target": "a825a9fc-175b-4ea6-b07b-f433e7e63b51",
-      "targetHandle": "prev",
-      "type": "appNodeEdge"
+[
+  {
+    "id": "a019fa35-68c8-40d6-b094-4523541a2954",
+    "name": "MiniGPT",
+    "settings": {
+      "backgroundColor": "#ffffff",
+      "refreshInterval": 60
     },
-    {
-      "id": "578a95b3-83c8-4d32-9b71-e37f95472a99",
-      "source": "578a95b3-83c8-4d32-9b71-e37f95472a99",
-      "sourceHandle": "fieldOutput",
-      "target": "a825a9fc-175b-4ea6-b07b-f433e7e63b51",
-      "targetHandle": "fieldInput/text",
-      "type": "codeNodeEdge"
-    },
-    {
-      "id": "9d6d042d-2853-4d9e-9482-5e3222eb06e7",
-      "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
-      "sourceHandle": "next",
-      "target": "1889b055-884c-4db5-851c-1689c1c9cf61",
-      "targetHandle": "prev",
-      "type": "appNodeEdge"
-    },
-    {
-      "id": "96efcebe-62ef-43f9-b1a4-dd098d4d7f9c",
-      "source": "a825a9fc-175b-4ea6-b07b-f433e7e63b51",
-      "sourceHandle": "next",
-      "target": "ca6aa3d0-c47d-4075-a16d-315e5d462e3b",
-      "targetHandle": "prev",
-      "type": "appNodeEdge"
-    },
-    {
-      "id": "0f082e5c-cbeb-406a-9f56-1ff47583a69d",
-      "source": "ca6aa3d0-c47d-4075-a16d-315e5d462e3b",
-      "sourceHandle": "next",
-      "target": "2cb416a5-b0a0-447d-8998-3b9aeab9aff7",
-      "targetHandle": "prev",
-      "type": "appNodeEdge"
-    },
-    {
-      "id": "b31c6854-7313-47fe-b178-c8c73febf7f8",
-      "source": "b31c6854-7313-47fe-b178-c8c73febf7f8",
-      "sourceHandle": "fieldOutput",
-      "target": "a825a9fc-175b-4ea6-b07b-f433e7e63b51",
-      "targetHandle": "fieldInput/fontSize",
-      "type": "codeNodeEdge"
-    },
-    {
-      "id": "7f19422b-3647-4860-b597-9afc5ebde55c",
-      "source": "3f4e1f13-19ff-487f-a97b-a5c464a864fc",
-      "sourceHandle": "fieldOutput",
-      "target": "1889b055-884c-4db5-851c-1689c1c9cf61",
-      "targetHandle": "fieldInput/user",
-      "type": "codeNodeEdge"
-    }
-  ],
-  "fields": [
-    {
-      "access": "public",
-      "label": "Prompt",
-      "name": "prompt",
-      "persist": "disk",
-      "placeholder": "Type your question here",
-      "type": "text",
-      "value": "Generate ideas for a smart e-ink display around the house."
-    },
-    {
-      "access": "private",
-      "label": "Reply",
-      "name": "reply",
-      "persist": "disk",
-      "type": "text"
-    }
-  ],
-  "id": "e16b8257-a0d0-4ea7-a4f7-41cec210841b",
-  "name": "MiniGPT",
-  "nodes": [
-    {
-      "data": {
-        "keyword": "render"
+    "fields": [
+      {
+        "access": "public",
+        "label": "Prompt",
+        "name": "prompt",
+        "persist": "disk",
+        "placeholder": "Type your question here",
+        "type": "text",
+        "value": "Generate ideas for a smart e-ink display around the house."
       },
-      "dragging": false,
-      "height": 96,
-      "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
-      "position": {
-        "x": 57.33018152646365,
-        "y": 103.05711945361679
-      },
-      "positionAbsolute": {
-        "x": 57.33018152646365,
-        "y": 103.05711945361679
-      },
-      "selected": false,
-      "type": "event",
-      "width": 150
-    },
-    {
-      "data": {
-        "config": {},
-        "keyword": "openaiText"
-      },
-      "dragging": false,
-      "height": 310,
-      "id": "1889b055-884c-4db5-851c-1689c1c9cf61",
-      "position": {
-        "x": 342.5649010312125,
-        "y": 73.19235611540444
-      },
-      "positionAbsolute": {
-        "x": 342.5649010312125,
-        "y": 73.19235611540444
-      },
-      "selected": false,
-      "type": "app",
-      "width": 467
-    },
-    {
-      "data": {
-        "config": {
-          "borderWidth": "0",
-          "fontColor": "#000000",
-          "fontSize": "32",
-          "position": "top-left"
+      {
+        "access": "private",
+        "label": "Reply",
+        "name": "reply",
+        "persist": "disk",
+        "type": "text"
+      }
+    ],
+    "nodes": [
+      {
+        "data": {
+          "keyword": "render"
         },
-        "keyword": "text"
-      },
-      "dragging": false,
-      "height": 336,
-      "id": "a825a9fc-175b-4ea6-b07b-f433e7e63b51",
-      "position": {
-        "x": 963.7030255952195,
-        "y": 92.84111016544779
-      },
-      "positionAbsolute": {
-        "x": 963.7030255952195,
-        "y": 92.84111016544779
-      },
-      "selected": false,
-      "type": "app",
-      "width": 300
-    },
-    {
-      "data": {
-        "code": "\"> \" & state{\"prompt\"}.getStr() & \"\\n\\n\" & state{\"reply\"}.getStr()"
-      },
-      "dragging": false,
-      "height": 148,
-      "id": "578a95b3-83c8-4d32-9b71-e37f95472a99",
-      "position": {
-        "x": 882.226376711297,
-        "y": -279.76819257143495
-      },
-      "positionAbsolute": {
-        "x": 882.226376711297,
-        "y": -279.76819257143495
-      },
-      "resizing": false,
-      "selected": false,
-      "style": {
-        "height": 148,
-        "width": 388
-      },
-      "type": "code",
-      "width": 388
-    },
-    {
-      "data": {
-        "config": {
-          "offsetX": "0",
-          "offsetY": "0",
-          "position": "bottom-right"
+        "dragging": false,
+        "height": 161,
+        "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "position": {
+          "x": 609.7521646377853,
+          "y": 91.39649711881316
         },
-        "keyword": "qr"
-      },
-      "dragging": false,
-      "height": 420,
-      "id": "ca6aa3d0-c47d-4075-a16d-315e5d462e3b",
-      "position": {
-        "x": 1309.4296106781665,
-        "y": 90.45901479206913
-      },
-      "positionAbsolute": {
-        "x": 1309.4296106781665,
-        "y": 90.45901479206913
-      },
-      "selected": false,
-      "type": "app",
-      "width": 430
-    },
-    {
-      "data": {
-        "config": {
-          "borderColor": "#ffffff",
-          "fontColor": "#000000",
-          "fontSize": "16",
-          "format": "yyyy-MM-dd",
-          "position": "bottom-left"
+        "positionAbsolute": {
+          "x": 609.7521646377853,
+          "y": 91.39649711881316
         },
-        "keyword": "clock"
+        "selected": false,
+        "type": "event",
+        "width": 212
       },
-      "dragging": false,
-      "height": 380,
-      "id": "2cb416a5-b0a0-447d-8998-3b9aeab9aff7",
-      "position": {
-        "x": 1793.9244678025211,
-        "y": 100.11699638568459
+      {
+        "data": {
+          "config": {
+            "borderWidth": "0",
+            "fontColor": "#000000",
+            "fontSize": "32",
+            "position": "top-left",
+            "borderColor": "#ffffff",
+            "vAlign": "top"
+          },
+          "keyword": "render/text"
+        },
+        "dragging": false,
+        "height": 364,
+        "id": "a825a9fc-175b-4ea6-b07b-f433e7e63b51",
+        "position": {
+          "x": 963.7030255952195,
+          "y": 92.84111016544779
+        },
+        "positionAbsolute": {
+          "x": 963.7030255952195,
+          "y": 92.84111016544779
+        },
+        "selected": false,
+        "type": "app",
+        "width": 345
       },
-      "positionAbsolute": {
-        "x": 1793.9244678025211,
-        "y": 100.11699638568459
+      {
+        "data": {
+          "code": "\"> \" & prompt & \"\\n\\n\" & reply",
+          "codeArgs": [
+            {
+              "name": "prompt",
+              "type": "string"
+            },
+            {
+              "name": "reply",
+              "type": "string"
+            }
+          ]
+        },
+        "dragging": false,
+        "height": 119,
+        "id": "578a95b3-83c8-4d32-9b71-e37f95472a99",
+        "position": {
+          "x": 925.9537104668107,
+          "y": -78.28446163478942
+        },
+        "positionAbsolute": {
+          "x": 925.9537104668107,
+          "y": -78.28446163478942
+        },
+        "resizing": false,
+        "selected": false,
+        "style": {
+          "height": 119,
+          "width": 357
+        },
+        "type": "code",
+        "width": 357
       },
-      "selected": false,
-      "type": "app",
-      "width": 372
-    },
-    {
-      "data": {
-        "code": "if len(state{\"reply\"}.getStr()) > 200: 24 elif len(state{\"reply\"}.getStr()) > 500: 16 else: 32"
+      {
+        "id": "9c7fc0b3-cc49-4a5b-a08a-dcc8a316b350",
+        "position": {
+          "x": 925.7324646469515,
+          "y": -600.1826750013092
+        },
+        "data": {
+          "code": "state{\"prompt\"}.getStr()",
+          "codeArgs": [],
+          "codeOutputs": [
+            {
+              "name": "prompt",
+              "type": "string"
+            }
+          ]
+        },
+        "type": "code",
+        "style": {
+          "width": 300,
+          "height": 119
+        },
+        "width": 300,
+        "height": 119,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 925.7324646469515,
+          "y": -600.1826750013092
+        },
+        "dragging": false
       },
-      "dragging": false,
-      "height": 148,
-      "id": "b31c6854-7313-47fe-b178-c8c73febf7f8",
-      "position": {
-        "x": 916.6855592404527,
-        "y": -103.09457947840767
+      {
+        "id": "b1fd8c5b-c2ec-4c8d-8031-d9b90be0273d",
+        "position": {
+          "x": 1054.510206309392,
+          "y": -427.1008646987811
+        },
+        "data": {
+          "keyword": "data/openaiText",
+          "config": {},
+          "cache": {
+            "duration": "3600",
+            "durationEnabled": true,
+            "enabled": true,
+            "inputEnabled": true
+          }
+        },
+        "type": "app",
+        "width": 394,
+        "height": 288,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 1054.510206309392,
+          "y": -427.1008646987811
+        },
+        "dragging": false
       },
-      "positionAbsolute": {
-        "x": 916.6855592404527,
-        "y": -103.09457947840767
+      {
+        "id": "f2e326b1-a913-40a8-822b-9db4c3f621ca",
+        "position": {
+          "x": 1526.2545148893385,
+          "y": 82.84844173887186
+        },
+        "data": {
+          "keyword": "render/text",
+          "config": {
+            "borderColor": "#ffffff",
+            "fontColor": "#000000",
+            "position": "right",
+            "vAlign": "bottom"
+          }
+        },
+        "type": "app",
+        "width": 338,
+        "height": 364,
+        "selected": false
       },
-      "resizing": false,
-      "selected": false,
-      "style": {
-        "height": 148,
-        "width": 488
+      {
+        "id": "ff68a0c8-7ca4-44ec-bf75-13a8d3769554",
+        "position": {
+          "x": 1498.5605368441798,
+          "y": -151.28498110254804
+        },
+        "data": {
+          "keyword": "data/clock",
+          "config": {
+            "format": "yyyy-MM-dd"
+          }
+        },
+        "type": "app",
+        "width": 354,
+        "height": 156,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 1498.5605368441798,
+          "y": -151.28498110254804
+        },
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "578a95b3-83c8-4d32-9b71-e37f95472a99",
+        "source": "578a95b3-83c8-4d32-9b71-e37f95472a99",
+        "sourceHandle": "fieldOutput",
+        "target": "a825a9fc-175b-4ea6-b07b-f433e7e63b51",
+        "targetHandle": "fieldInput/text",
+        "type": "codeNodeEdge"
       },
-      "type": "code",
-      "width": 488
-    },
-    {
-      "id": "3f4e1f13-19ff-487f-a97b-a5c464a864fc",
-      "type": "code",
-      "position": {
-        "x": 285.8054753849099,
-        "y": -130.10713656397945
+      {
+        "id": "5fdac566-25cc-46be-b110-5d713819a942",
+        "target": "578a95b3-83c8-4d32-9b71-e37f95472a99",
+        "targetHandle": "codeField/arg",
+        "source": "9c7fc0b3-cc49-4a5b-a08a-dcc8a316b350",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
       },
-      "data": {
-        "code": "state{\"prompt\"}.getStr()"
+      {
+        "id": "c814aed6-a55d-4499-ad22-5397e4ff437d",
+        "target": "578a95b3-83c8-4d32-9b71-e37f95472a99",
+        "targetHandle": "codeField/reply",
+        "source": "b1fd8c5b-c2ec-4c8d-8031-d9b90be0273d",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
       },
-      "width": 274,
-      "height": 130,
-      "selected": false,
-      "positionAbsolute": {
-        "x": 285.8054753849099,
-        "y": -130.10713656397945
+      {
+        "id": "6dbba8ed-8817-4487-b3c0-05b269d22113",
+        "source": "9c7fc0b3-cc49-4a5b-a08a-dcc8a316b350",
+        "sourceHandle": "fieldOutput",
+        "target": "b1fd8c5b-c2ec-4c8d-8031-d9b90be0273d",
+        "targetHandle": "fieldInput/user",
+        "type": "codeNodeEdge"
       },
-      "dragging": false,
-      "style": {
-        "width": 274,
-        "height": 130
+      {
+        "id": "976ba010-e034-4758-b439-8057b39a8d89",
+        "source": "9c7fc0b3-cc49-4a5b-a08a-dcc8a316b350",
+        "sourceHandle": "fieldOutput",
+        "target": "578a95b3-83c8-4d32-9b71-e37f95472a99",
+        "targetHandle": "codeField/prompt",
+        "type": "codeNodeEdge"
       },
-      "resizing": false
-    }
-  ],
-  "settings": {
-    "backgroundColor": "#ffffff",
-    "refreshInterval": 60
+      {
+        "id": "3c6f9fdd-6bac-42a5-a280-09d7f320ac94",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "next",
+        "target": "a825a9fc-175b-4ea6-b07b-f433e7e63b51",
+        "targetHandle": "prev",
+        "type": "appNodeEdge"
+      },
+      {
+        "id": "da42bf41-5378-4ea8-9513-a7e29314b9c9",
+        "source": "a825a9fc-175b-4ea6-b07b-f433e7e63b51",
+        "sourceHandle": "next",
+        "target": "f2e326b1-a913-40a8-822b-9db4c3f621ca",
+        "targetHandle": "prev",
+        "type": "appNodeEdge"
+      },
+      {
+        "id": "e00c1983-4311-4fd6-8995-ab31b62b5173",
+        "target": "f2e326b1-a913-40a8-822b-9db4c3f621ca",
+        "targetHandle": "fieldInput/text",
+        "source": "ff68a0c8-7ca4-44ec-bf75-13a8d3769554",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      }
+    ]
   }
-}]
+]
