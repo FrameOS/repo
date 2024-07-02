@@ -3,8 +3,8 @@
     "id": "5d35f967-0c5b-41c0-8062-1397c1e8cdad",
     "name": "OpenAI Image",
     "settings": {
-      "backgroundColor": "#ffffff",
-      "refreshInterval": 60
+      "backgroundColor": "#000000",
+      "refreshInterval": 3600
     },
     "fields": [
       {
