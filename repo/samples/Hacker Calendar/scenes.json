@@ -1,0 +1,273 @@
+[
+  {
+    "edges": [
+      {
+        "id": "9f341a95-c907-4b54-8958-11649cfdeedb",
+        "source": "fd800601-5eb3-44d0-9e88-e075cbe06571",
+        "sourceHandle": "fieldOutput",
+        "target": "15b4d501-7833-4088-a0b0-178eb24bbac9",
+        "targetHandle": "fieldInput/url",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "a71ca34c-067c-4954-a21c-c75fa856f9ad",
+        "source": "99fb264d-3d50-4c2d-90a2-213be192dbd1",
+        "sourceHandle": "fieldOutput",
+        "target": "38541584-fef2-4306-ba02-c3d77bd316b4",
+        "targetHandle": "fieldInput/text",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "f8487f74-483d-4997-b03a-22c88fbd9183",
+        "source": "38541584-fef2-4306-ba02-c3d77bd316b4",
+        "sourceHandle": "next",
+        "target": "b7e19c2f-d91c-423d-9730-ec2b3363d1d2",
+        "targetHandle": "prev",
+        "type": "appNodeEdge"
+      },
+      {
+        "id": "ac001c8c-e89c-47f8-b973-b6de8dd82227",
+        "source": "54849e17-05d1-4c12-a103-12c81475f892",
+        "sourceHandle": "fieldOutput",
+        "target": "b7e19c2f-d91c-423d-9730-ec2b3363d1d2",
+        "targetHandle": "fieldInput/text",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "86f566f5-b478-45df-bed8-7e251049fce5",
+        "source": "15b4d501-7833-4088-a0b0-178eb24bbac9",
+        "sourceHandle": "fieldOutput",
+        "target": "6db1ffd3-e809-42db-8416-9e048df66788",
+        "targetHandle": "fieldInput/ical",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "f47836d4-71f5-432e-86a4-092674d8a9ab",
+        "source": "6db1ffd3-e809-42db-8416-9e048df66788",
+        "sourceHandle": "fieldOutput",
+        "target": "99fb264d-3d50-4c2d-90a2-213be192dbd1",
+        "targetHandle": "fieldInput/json",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "7170e2b5-dbe7-4720-a856-ee4cf98c29f7",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "next",
+        "target": "38541584-fef2-4306-ba02-c3d77bd316b4",
+        "targetHandle": "prev",
+        "type": "appNodeEdge"
+      }
+    ],
+    "fields": [
+      {
+        "access": "public",
+        "label": "iCal URL",
+        "name": "iCalURL",
+        "persist": "disk",
+        "type": "string"
+      }
+    ],
+    "id": "4c2e6e22-7011-433f-b501-4515a4e49348",
+    "name": "Hacker Calendar",
+    "nodes": [
+      {
+        "data": {
+          "keyword": "render"
+        },
+        "dragging": false,
+        "height": 199,
+        "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "position": {
+          "x": 42.25617817172642,
+          "y": 394.16688387192823
+        },
+        "positionAbsolute": {
+          "x": 42.25617817172642,
+          "y": 394.16688387192823
+        },
+        "selected": false,
+        "type": "event",
+        "width": 212
+      },
+      {
+        "data": {
+          "config": {
+            "borderColor": "#000000",
+            "borderWidth": "4",
+            "fontColor": "#ffffff",
+            "fontSize": "20",
+            "overflow": "visible",
+            "position": "left",
+            "vAlign": "top"
+          },
+          "keyword": "render/text"
+        },
+        "dragging": false,
+        "height": 364,
+        "id": "38541584-fef2-4306-ba02-c3d77bd316b4",
+        "position": {
+          "x": 516.4348490683578,
+          "y": 401.0458953011645
+        },
+        "positionAbsolute": {
+          "x": 516.4348490683578,
+          "y": 401.0458953011645
+        },
+        "selected": false,
+        "type": "app",
+        "width": 345
+      },
+      {
+        "data": {
+          "cache": {
+            "duration": "300",
+            "durationEnabled": true,
+            "enabled": true,
+            "inputEnabled": true
+          },
+          "config": {},
+          "keyword": "data/downloadUrl"
+        },
+        "dragging": false,
+        "height": 112,
+        "id": "15b4d501-7833-4088-a0b0-178eb24bbac9",
+        "position": {
+          "x": 405.17853636399184,
+          "y": -264.42317968791394
+        },
+        "positionAbsolute": {
+          "x": 405.17853636399184,
+          "y": -264.42317968791394
+        },
+        "selected": false,
+        "type": "app",
+        "width": 244
+      },
+      {
+        "data": {
+          "code": "state{\"iCalURL\"}.getStr()",
+          "codeArgs": [],
+          "codeOutputs": [
+            {
+              "name": "iCalURL",
+              "type": "string"
+            }
+          ]
+        },
+        "dragging": false,
+        "height": 119,
+        "id": "fd800601-5eb3-44d0-9e88-e075cbe06571",
+        "position": {
+          "x": 355.2975059349973,
+          "y": -438.49396274226024
+        },
+        "positionAbsolute": {
+          "x": 355.2975059349973,
+          "y": -438.49396274226024
+        },
+        "selected": false,
+        "style": {
+          "height": 119,
+          "width": 300
+        },
+        "type": "code",
+        "width": 300
+      },
+      {
+        "data": {
+          "config": {},
+          "keyword": "data/prettyJson"
+        },
+        "dragging": false,
+        "height": 140,
+        "id": "99fb264d-3d50-4c2d-90a2-213be192dbd1",
+        "position": {
+          "x": 481.0270323580054,
+          "y": 203.17186939264758
+        },
+        "positionAbsolute": {
+          "x": 481.0270323580054,
+          "y": 203.17186939264758
+        },
+        "selected": false,
+        "type": "app",
+        "width": 292
+      },
+      {
+        "data": {
+          "config": {
+            "borderColor": "#000000",
+            "fontColor": "#ffffff",
+            "offsetX": "-71",
+            "offsetY": "7",
+            "position": "right",
+            "vAlign": "top"
+          },
+          "keyword": "render/text"
+        },
+        "height": 364,
+        "id": "b7e19c2f-d91c-423d-9730-ec2b3363d1d2",
+        "position": {
+          "x": 1126.888808772077,
+          "y": 396.8357727890504
+        },
+        "selected": false,
+        "type": "app",
+        "width": 338
+      },
+      {
+        "data": {
+          "config": {
+            "format": "yyyy-MM-dd"
+          },
+          "keyword": "data/clock"
+        },
+        "dragging": false,
+        "height": 140,
+        "id": "54849e17-05d1-4c12-a103-12c81475f892",
+        "position": {
+          "x": 1101.3536821432963,
+          "y": 165.9443169819579
+        },
+        "positionAbsolute": {
+          "x": 1101.3536821432963,
+          "y": 165.9443169819579
+        },
+        "selected": false,
+        "type": "app",
+        "width": 354
+      },
+      {
+        "data": {
+          "cache": {
+            "enabled": true,
+            "inputEnabled": true
+          },
+          "config": {
+            "exportCount": "20"
+          },
+          "keyword": "data/icalJson"
+        },
+        "dragging": false,
+        "height": 252,
+        "id": "6db1ffd3-e809-42db-8416-9e048df66788",
+        "position": {
+          "x": 426.1347246830926,
+          "y": -109.13847365144687
+        },
+        "positionAbsolute": {
+          "x": 426.1347246830926,
+          "y": -109.13847365144687
+        },
+        "selected": false,
+        "type": "app",
+        "width": 561
+      }
+    ],
+    "settings": {
+      "backgroundColor": "#000000",
+      "refreshInterval": 3600
+    },
+    "default": false
+  }
+]
