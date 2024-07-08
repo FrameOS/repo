@@ -1,6 +1,6 @@
 {
   "name": "SD card image",
-  "description": "Slideshow of images from the local SD card, defaults to /srv/images.",
+  "description": "Slideshow of images from the local SD card, by default from: /srv/assets",
   "config": null,
   "image": "./image.jpg",
   "imageWidth": 1304,

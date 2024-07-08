@@ -13,7 +13,7 @@
         "name": "imageFolder",
         "persist": "disk",
         "type": "string",
-        "value": "/srv/images"
+        "value": "/srv/assets"
       },
       {
         "access": "public",
