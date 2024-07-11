@@ -1,6 +1,6 @@
 [
   {
-    "id": "a3ddb8c9-e012-4474-90b8-5f7521d461a2",
+    "id": "133ef98b-858f-4b5e-86c6-1f2e02652c31",
     "name": "GPT History",
     "settings": {
       "backgroundColor": "#000000",
@@ -60,11 +60,17 @@
         },
         "selected": false,
         "type": "app",
-        "width": 345
+        "width": 341
       },
       {
         "data": {
-          "code": "\"On this day in history, \" & now().format(\"yyyy-MM-dd\") & \"\\n\\n\" & state{\"reply\"}.getStr()"
+          "code": "\"On this day in history, \" & now().format(\"yyyy-MM-dd\") & \"\\n\\n\" & reply",
+          "codeArgs": [
+            {
+              "name": "reply",
+              "type": "string"
+            }
+          ]
         },
         "dragging": false,
         "height": 177,
@@ -112,7 +118,13 @@
       },
       {
         "data": {
-          "code": "\"Generate a background image to illustrate this text. Make it in the style of a movie poster with all activities together in one large scene:\\n\\n\" & state{\"reply\"}.getStr()"
+          "code": "\"Generate a background image to illustrate this text. Make it in the style of a movie poster with all activities together in one large scene:\\n\\n\" & reply",
+          "codeArgs": [
+            {
+              "name": "reply",
+              "type": "string"
+            }
+          ]
         },
         "dragging": false,
         "height": 201,
@@ -158,7 +170,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 394
+        "width": 388
       },
       {
         "data": {
@@ -180,7 +192,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 333
+        "width": 329
       },
       {
         "data": {
@@ -188,7 +200,7 @@
           "keyword": "render/image"
         },
         "dragging": false,
-        "height": 106,
+        "height": 134,
         "id": "5694c224-865c-4b20-9984-7105a194a284",
         "position": {
           "x": 401.8466014752432,
@@ -200,7 +212,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 311
+        "width": 324
       },
       {
         "data": {
@@ -214,7 +226,7 @@
           "keyword": "data/openaiImage"
         },
         "dragging": false,
-        "height": 224,
+        "height": 252,
         "id": "4d6951a8-dfe3-4ca8-8f05-68b73ed3cc5b",
         "position": {
           "x": 338.3235480526093,
@@ -226,7 +238,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 321
+        "width": 364
       },
       {
         "data": {
@@ -252,7 +264,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 338
+        "width": 334
       },
       {
         "data": {
@@ -262,7 +274,7 @@
           "keyword": "data/clock"
         },
         "dragging": false,
-        "height": 156,
+        "height": 140,
         "id": "82dbaa67-154b-494a-a7aa-3bddc9805fc7",
         "position": {
           "x": 1270.9881797327598,
@@ -275,6 +287,44 @@
         "selected": false,
         "type": "app",
         "width": 354
+      },
+      {
+        "id": "74380526-aea5-4b88-9ecb-53b480a1db2f",
+        "position": {
+          "x": 265.34066895410587,
+          "y": -450.21676633776235
+        },
+        "data": {
+          "keyword": "reply"
+        },
+        "type": "state",
+        "width": 146,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 265.34066895410587,
+          "y": -450.21676633776235
+        },
+        "dragging": false
+      },
+      {
+        "id": "de9bbe13-8ef9-47aa-a40b-7363feacab56",
+        "position": {
+          "x": 789.471729910562,
+          "y": -187.3085814206976
+        },
+        "data": {
+          "keyword": "reply"
+        },
+        "type": "state",
+        "width": 146,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 789.471729910562,
+          "y": -187.3085814206976
+        },
+        "dragging": false
       }
     ],
     "edges": [
@@ -356,6 +406,22 @@
         "sourceHandle": "fieldOutput",
         "target": "fe498206-94a7-486e-875f-8e4e4775f928",
         "targetHandle": "fieldInput/text",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "9cef660d-1bd4-48da-be2d-d4ff7eba13f6",
+        "target": "cad29f31-d678-45a2-8294-1f4b0ffd6f9b",
+        "targetHandle": "codeField/reply",
+        "source": "74380526-aea5-4b88-9ecb-53b480a1db2f",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "6fec98eb-b232-43a4-9bc8-7967ba9c3a0c",
+        "target": "578a95b3-83c8-4d32-9b71-e37f95472a99",
+        "targetHandle": "codeField/reply",
+        "source": "de9bbe13-8ef9-47aa-a40b-7363feacab56",
+        "sourceHandle": "fieldOutput",
         "type": "codeNodeEdge"
       }
     ]

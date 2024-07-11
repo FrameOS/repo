@@ -1,6 +1,6 @@
 [
   {
-    "id": "b3689acb-6293-42ba-8180-8133b1ca3de3",
+    "id": "3cc77a8e-3de2-41a6-853d-733c75035dc9",
     "name": "Message Board",
     "settings": {
       "backgroundColor": "#000000",
@@ -66,158 +66,136 @@
         },
         "selected": false,
         "type": "app",
-        "width": 345
+        "width": 341
       },
       {
+        "data": {
+          "config": {},
+          "keyword": "render/image"
+        },
+        "dragging": false,
+        "height": 134,
         "id": "a79fd056-118f-4e94-9794-82497cd6a46a",
         "position": {
           "x": 329.3514370955975,
           "y": 282.6687579534606
         },
-        "data": {
-          "keyword": "render/image",
-          "config": {}
-        },
-        "type": "app",
-        "width": 311,
-        "height": 106,
-        "selected": false,
         "positionAbsolute": {
           "x": 329.3514370955975,
           "y": 282.6687579534606
         },
-        "dragging": false
+        "selected": false,
+        "type": "app",
+        "width": 324
       },
       {
-        "id": "106c8fc5-df79-4b5c-978d-e7f2a9445bb7",
-        "position": {
-          "x": 311.46309213379726,
-          "y": 91.8545165572396
-        },
         "data": {
-          "keyword": "data/unsplash",
-          "config": {},
           "cache": {
             "duration": "900",
             "durationEnabled": true,
             "enabled": true,
             "inputEnabled": true
-          }
+          },
+          "config": {},
+          "keyword": "data/unsplash"
         },
-        "type": "app",
-        "width": 287,
-        "height": 140,
-        "selected": false,
+        "dragging": false,
+        "height": 168,
+        "id": "106c8fc5-df79-4b5c-978d-e7f2a9445bb7",
+        "position": {
+          "x": 311.46309213379726,
+          "y": 91.8545165572396
+        },
         "positionAbsolute": {
           "x": 311.46309213379726,
           "y": 91.8545165572396
         },
-        "dragging": false
-      },
-      {
-        "id": "54a9611f-374f-4bff-85fa-15e0920fc33c",
-        "position": {
-          "x": 270.5803155465162,
-          "y": -73.88043676916772
-        },
-        "data": {
-          "code": "state{\"background\"}.getStr()",
-          "codeArgs": [],
-          "codeOutputs": [
-            {
-              "name": "search",
-              "type": "string"
-            }
-          ]
-        },
-        "type": "code",
-        "style": {
-          "width": 300,
-          "height": 119
-        },
-        "width": 300,
-        "height": 119,
         "selected": false,
-        "positionAbsolute": {
-          "x": 270.5803155465162,
-          "y": -73.88043676916772
-        },
-        "dragging": false
+        "type": "app",
+        "width": 299
       },
       {
-        "id": "f4e649a3-6a87-4e09-b14f-b9361e054cca",
-        "position": {
-          "x": 750.2582426149847,
-          "y": 122.65211120888063
-        },
         "data": {
-          "code": "state{\"text\"}.getStr()",
-          "codeArgs": [],
-          "codeOutputs": [
-            {
-              "name": "text",
-              "type": "string"
-            }
-          ]
+          "config": {
+            "fontSize": "24",
+            "padding": "5",
+            "position": "right",
+            "vAlign": "top"
+          },
+          "keyword": "render/text"
         },
-        "type": "code",
-        "style": {
-          "width": 300,
-          "height": 119
-        },
-        "width": 300,
-        "height": 119,
-        "selected": false,
-        "positionAbsolute": {
-          "x": 750.2582426149847,
-          "y": 122.65211120888063
-        },
-        "dragging": false
-      },
-      {
+        "dragging": false,
+        "height": 364,
         "id": "e096ca13-bbab-45e3-8e8c-c34b2f2ac450",
         "position": {
           "x": 1197.629849594364,
           "y": 269.95732979979834
         },
-        "data": {
-          "keyword": "render/text",
-          "config": {
-            "vAlign": "top",
-            "position": "right",
-            "padding": "5",
-            "fontSize": "24"
-          }
-        },
-        "type": "app",
-        "width": 338,
-        "height": 364,
-        "selected": false,
         "positionAbsolute": {
           "x": 1197.629849594364,
           "y": 269.95732979979834
         },
-        "dragging": false
+        "selected": false,
+        "type": "app",
+        "width": 334
       },
       {
+        "data": {
+          "config": {
+            "format": "HH:mm:ss"
+          },
+          "keyword": "data/clock"
+        },
+        "dragging": false,
+        "height": 140,
         "id": "59df2876-6c74-49df-8090-e62cbbd7f8ff",
         "position": {
           "x": 1146.7730975282718,
           "y": 45.91520833414032
         },
-        "data": {
-          "keyword": "data/clock",
-          "config": {
-            "format": "HH:mm:ss"
-          }
-        },
-        "type": "app",
-        "width": 351,
-        "height": 156,
-        "selected": false,
         "positionAbsolute": {
           "x": 1146.7730975282718,
           "y": 45.91520833414032
+        },
+        "selected": false,
+        "type": "app",
+        "width": 351
+      },
+      {
+        "id": "f4280494-f122-4880-b1b7-a3bc29b5cb60",
+        "position": {
+          "x": 271.3205040972592,
+          "y": 6.356991919457727
+        },
+        "data": {
+          "keyword": "background"
+        },
+        "type": "state",
+        "width": 375,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 271.3205040972592,
+          "y": 6.356991919457727
+        },
+        "dragging": false
+      },
+      {
+        "id": "0aee5313-ddd7-446c-9d8f-20c0a99341ab",
+        "position": {
+          "x": 746.3279249427724,
+          "y": 188.83784860790996
+        },
+        "data": {
+          "keyword": "text"
+        },
+        "type": "state",
+        "width": 225,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 746.3279249427724,
+          "y": 188.83784860790996
         },
         "dragging": false
       }
@@ -233,18 +211,10 @@
       },
       {
         "id": "6c924b75-ca57-42b7-9830-9f30ebf65eb9",
-        "target": "a79fd056-118f-4e94-9794-82497cd6a46a",
-        "targetHandle": "fieldInput/image",
         "source": "106c8fc5-df79-4b5c-978d-e7f2a9445bb7",
         "sourceHandle": "fieldOutput",
-        "type": "codeNodeEdge"
-      },
-      {
-        "id": "02d61a93-fc38-40a6-b7be-32173a083f07",
-        "target": "106c8fc5-df79-4b5c-978d-e7f2a9445bb7",
-        "targetHandle": "fieldInput/search",
-        "source": "54a9611f-374f-4bff-85fa-15e0920fc33c",
-        "sourceHandle": "fieldOutput",
+        "target": "a79fd056-118f-4e94-9794-82497cd6a46a",
+        "targetHandle": "fieldInput/image",
         "type": "codeNodeEdge"
       },
       {
@@ -256,14 +226,6 @@
         "type": "appNodeEdge"
       },
       {
-        "id": "86cb8946-0429-413c-8741-338d11604636",
-        "target": "eb54d359-2986-4012-8b49-a034437ebdeb",
-        "targetHandle": "fieldInput/text",
-        "source": "f4e649a3-6a87-4e09-b14f-b9361e054cca",
-        "sourceHandle": "fieldOutput",
-        "type": "codeNodeEdge"
-      },
-      {
         "id": "76d7d716-b6b4-4e27-92bc-97ac48af0ef0",
         "source": "eb54d359-2986-4012-8b49-a034437ebdeb",
         "sourceHandle": "next",
@@ -273,9 +235,25 @@
       },
       {
         "id": "e5c759dd-9014-48f3-858d-ba627ad96576",
+        "source": "59df2876-6c74-49df-8090-e62cbbd7f8ff",
+        "sourceHandle": "fieldOutput",
         "target": "e096ca13-bbab-45e3-8e8c-c34b2f2ac450",
         "targetHandle": "fieldInput/text",
-        "source": "59df2876-6c74-49df-8090-e62cbbd7f8ff",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "a1aba493-3dff-433e-900e-f694f9ad7c43",
+        "target": "106c8fc5-df79-4b5c-978d-e7f2a9445bb7",
+        "targetHandle": "fieldInput/search",
+        "source": "f4280494-f122-4880-b1b7-a3bc29b5cb60",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "5b0751f6-6e44-4ab2-b983-c3bb1b52e83f",
+        "target": "eb54d359-2986-4012-8b49-a034437ebdeb",
+        "targetHandle": "fieldInput/text",
+        "source": "0aee5313-ddd7-446c-9d8f-20c0a99341ab",
         "sourceHandle": "fieldOutput",
         "type": "codeNodeEdge"
       }

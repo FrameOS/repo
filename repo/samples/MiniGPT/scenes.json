@@ -1,10 +1,10 @@
 [
   {
-    "id": "a019fa35-68c8-40d6-b094-4523541a2954",
+    "id": "ca494ef1-4d07-4a0a-ac83-abea7833dbc8",
     "name": "MiniGPT",
     "settings": {
       "backgroundColor": "#ffffff",
-      "refreshInterval": 60
+      "refreshInterval": 3600
     },
     "fields": [
       {
@@ -47,11 +47,11 @@
       {
         "data": {
           "config": {
+            "borderColor": "#ffffff",
             "borderWidth": "0",
             "fontColor": "#000000",
             "fontSize": "32",
             "position": "top-left",
-            "borderColor": "#ffffff",
             "vAlign": "top"
           },
           "keyword": "render/text"
@@ -69,7 +69,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 345
+        "width": 341
       },
       {
         "data": {
@@ -106,100 +106,108 @@
         "width": 357
       },
       {
-        "id": "9c7fc0b3-cc49-4a5b-a08a-dcc8a316b350",
-        "position": {
-          "x": 925.7324646469515,
-          "y": -600.1826750013092
-        },
         "data": {
-          "code": "state{\"prompt\"}.getStr()",
-          "codeArgs": [],
-          "codeOutputs": [
-            {
-              "name": "prompt",
-              "type": "string"
-            }
-          ]
-        },
-        "type": "code",
-        "style": {
-          "width": 300,
-          "height": 119
-        },
-        "width": 300,
-        "height": 119,
-        "selected": false,
-        "positionAbsolute": {
-          "x": 925.7324646469515,
-          "y": -600.1826750013092
-        },
-        "dragging": false
-      },
-      {
-        "id": "b1fd8c5b-c2ec-4c8d-8031-d9b90be0273d",
-        "position": {
-          "x": 1054.510206309392,
-          "y": -427.1008646987811
-        },
-        "data": {
-          "keyword": "data/openaiText",
-          "config": {},
           "cache": {
             "duration": "3600",
             "durationEnabled": true,
             "enabled": true,
             "inputEnabled": true
-          }
+          },
+          "config": {},
+          "keyword": "data/openaiText"
         },
-        "type": "app",
-        "width": 394,
+        "dragging": false,
         "height": 288,
-        "selected": false,
+        "id": "b1fd8c5b-c2ec-4c8d-8031-d9b90be0273d",
+        "position": {
+          "x": 1054.510206309392,
+          "y": -427.1008646987811
+        },
         "positionAbsolute": {
           "x": 1054.510206309392,
           "y": -427.1008646987811
         },
-        "dragging": false
+        "selected": false,
+        "type": "app",
+        "width": 388
       },
       {
-        "id": "f2e326b1-a913-40a8-822b-9db4c3f621ca",
-        "position": {
-          "x": 1526.2545148893385,
-          "y": 82.84844173887186
-        },
         "data": {
-          "keyword": "render/text",
           "config": {
             "borderColor": "#ffffff",
             "fontColor": "#000000",
             "position": "right",
             "vAlign": "bottom"
-          }
+          },
+          "keyword": "render/text"
         },
-        "type": "app",
-        "width": 338,
         "height": 364,
-        "selected": false
+        "id": "f2e326b1-a913-40a8-822b-9db4c3f621ca",
+        "position": {
+          "x": 1526.2545148893385,
+          "y": 82.84844173887186
+        },
+        "selected": false,
+        "type": "app",
+        "width": 334
       },
       {
+        "data": {
+          "config": {
+            "format": "yyyy-MM-dd"
+          },
+          "keyword": "data/clock"
+        },
+        "dragging": false,
+        "height": 140,
         "id": "ff68a0c8-7ca4-44ec-bf75-13a8d3769554",
         "position": {
           "x": 1498.5605368441798,
           "y": -151.28498110254804
         },
-        "data": {
-          "keyword": "data/clock",
-          "config": {
-            "format": "yyyy-MM-dd"
-          }
-        },
-        "type": "app",
-        "width": 354,
-        "height": 156,
-        "selected": false,
         "positionAbsolute": {
           "x": 1498.5605368441798,
           "y": -151.28498110254804
+        },
+        "selected": false,
+        "type": "app",
+        "width": 354
+      },
+      {
+        "id": "0df3af8f-8ee5-4210-b870-02bfd5d88085",
+        "position": {
+          "x": 1012.1940030907762,
+          "y": -519.0210638340682
+        },
+        "data": {
+          "keyword": "prompt"
+        },
+        "type": "state",
+        "width": 162,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 1012.1940030907762,
+          "y": -519.0210638340682
+        },
+        "dragging": false
+      },
+      {
+        "id": "e7743cc7-060f-4d81-9b45-be911acbe649",
+        "position": {
+          "x": 849.9461898685558,
+          "y": -157.65093438457743
+        },
+        "data": {
+          "keyword": "prompt"
+        },
+        "type": "state",
+        "width": 162,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 849.9461898685558,
+          "y": -157.65093438457743
         },
         "dragging": false
       }
@@ -214,35 +222,11 @@
         "type": "codeNodeEdge"
       },
       {
-        "id": "5fdac566-25cc-46be-b110-5d713819a942",
-        "target": "578a95b3-83c8-4d32-9b71-e37f95472a99",
-        "targetHandle": "codeField/arg",
-        "source": "9c7fc0b3-cc49-4a5b-a08a-dcc8a316b350",
-        "sourceHandle": "fieldOutput",
-        "type": "codeNodeEdge"
-      },
-      {
         "id": "c814aed6-a55d-4499-ad22-5397e4ff437d",
-        "target": "578a95b3-83c8-4d32-9b71-e37f95472a99",
-        "targetHandle": "codeField/reply",
         "source": "b1fd8c5b-c2ec-4c8d-8031-d9b90be0273d",
         "sourceHandle": "fieldOutput",
-        "type": "codeNodeEdge"
-      },
-      {
-        "id": "6dbba8ed-8817-4487-b3c0-05b269d22113",
-        "source": "9c7fc0b3-cc49-4a5b-a08a-dcc8a316b350",
-        "sourceHandle": "fieldOutput",
-        "target": "b1fd8c5b-c2ec-4c8d-8031-d9b90be0273d",
-        "targetHandle": "fieldInput/user",
-        "type": "codeNodeEdge"
-      },
-      {
-        "id": "976ba010-e034-4758-b439-8057b39a8d89",
-        "source": "9c7fc0b3-cc49-4a5b-a08a-dcc8a316b350",
-        "sourceHandle": "fieldOutput",
         "target": "578a95b3-83c8-4d32-9b71-e37f95472a99",
-        "targetHandle": "codeField/prompt",
+        "targetHandle": "codeField/reply",
         "type": "codeNodeEdge"
       },
       {
@@ -263,9 +247,25 @@
       },
       {
         "id": "e00c1983-4311-4fd6-8995-ab31b62b5173",
+        "source": "ff68a0c8-7ca4-44ec-bf75-13a8d3769554",
+        "sourceHandle": "fieldOutput",
         "target": "f2e326b1-a913-40a8-822b-9db4c3f621ca",
         "targetHandle": "fieldInput/text",
-        "source": "ff68a0c8-7ca4-44ec-bf75-13a8d3769554",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "ea55e759-e8b0-40a0-a74a-f43c79181892",
+        "target": "b1fd8c5b-c2ec-4c8d-8031-d9b90be0273d",
+        "targetHandle": "fieldInput/user",
+        "source": "0df3af8f-8ee5-4210-b870-02bfd5d88085",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "2f9d08e6-44de-4fb0-93d1-0c312112e903",
+        "target": "578a95b3-83c8-4d32-9b71-e37f95472a99",
+        "targetHandle": "codeField/prompt",
+        "source": "e7743cc7-060f-4d81-9b45-be911acbe649",
         "sourceHandle": "fieldOutput",
         "type": "codeNodeEdge"
       }

@@ -1,6 +1,6 @@
 [
   {
-    "id": "2a666040-b9ff-40e7-8f7b-e092ff952aeb",
+    "id": "cbf8d3f0-fc8a-4642-851a-c5253828e951",
     "name": "Github Stars",
     "settings": {
       "backgroundColor": "#000000",
@@ -67,7 +67,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 422
+        "width": 418
       },
       {
         "data": {
@@ -87,7 +87,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 338
+        "width": 334
       },
       {
         "data": {
@@ -111,7 +111,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 338
+        "width": 334
       },
       {
         "data": {
@@ -135,7 +135,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 338
+        "width": 334
       },
       {
         "data": {
@@ -145,7 +145,7 @@
           "keyword": "data/clock"
         },
         "dragging": false,
-        "height": 156,
+        "height": 140,
         "id": "3a48f3b9-2c00-4547-95e4-64ac1429b05e",
         "position": {
           "x": 1779.4513976568862,
@@ -160,59 +160,6 @@
         "width": 354
       },
       {
-        "id": "e5b00bfb-18ee-4eeb-bff6-ee877d9e13de",
-        "position": {
-          "x": 696.0729180756535,
-          "y": -159.09067684218144
-        },
-        "data": {
-          "code": "state{\"repository\"}.getStr()",
-          "codeArgs": [],
-          "codeOutputs": [
-            {
-              "name": "repo",
-              "type": "string"
-            }
-          ]
-        },
-        "type": "code",
-        "style": {
-          "width": 300,
-          "height": 119
-        },
-        "width": 300,
-        "height": 119
-      },
-      {
-        "id": "3300601a-8da8-4aeb-9a4f-cdc45aa80b39",
-        "position": {
-          "x": 283.7862958153938,
-          "y": -156.38715800768796
-        },
-        "data": {
-          "code": "state{\"repository\"}.getStr()",
-          "codeArgs": [],
-          "codeOutputs": [
-            {
-              "name": "text",
-              "type": "string"
-            }
-          ]
-        },
-        "type": "code",
-        "style": {
-          "width": 300,
-          "height": 119
-        },
-        "width": 300,
-        "height": 119
-      },
-      {
-        "id": "aafa48a0-4b6a-4023-9ed1-18e443a539fa",
-        "position": {
-          "x": 1170.5404735292639,
-          "y": -146.92484208696067
-        },
         "data": {
           "code": "if stars >= 0: &\"{stars} star\" & (if stars == 1: \"\" else: \"s\") else: \"Error fetching stars\"",
           "codeArgs": [
@@ -228,45 +175,81 @@
             }
           ]
         },
-        "type": "code",
-        "style": {
-          "width": 486,
-          "height": 146
-        },
-        "width": 486,
+        "dragging": false,
         "height": 146,
-        "selected": false,
+        "id": "aafa48a0-4b6a-4023-9ed1-18e443a539fa",
+        "position": {
+          "x": 1170.5404735292639,
+          "y": -146.92484208696067
+        },
         "positionAbsolute": {
           "x": 1170.5404735292639,
           "y": -146.92484208696067
         },
-        "dragging": false,
-        "resizing": false
-      },
-      {
-        "id": "ff07a0fc-f09e-4e84-8ef6-b524ca3c01fb",
-        "position": {
-          "x": 1161.0781576085367,
-          "y": -290.21134031511656
-        },
-        "data": {
-          "code": "state{\"stars\"}.getInt()",
-          "codeArgs": [],
-          "codeOutputs": [
-            {
-              "name": "stars",
-              "type": "integer"
-            }
-          ]
+        "resizing": false,
+        "selected": false,
+        "style": {
+          "height": 146,
+          "width": 486
         },
         "type": "code",
-        "style": {
-          "width": 300,
-          "height": 119
+        "width": 486
+      },
+      {
+        "id": "e4740c02-cac4-4744-adc6-cbde64b81dc0",
+        "position": {
+          "x": 280.9309548134716,
+          "y": -79.98686465519832
         },
-        "width": 300,
-        "height": 119,
+        "data": {
+          "keyword": "repository"
+        },
+        "type": "state",
+        "width": 192,
+        "height": 48,
         "selected": false,
+        "positionAbsolute": {
+          "x": 280.9309548134716,
+          "y": -79.98686465519832
+        },
+        "dragging": false
+      },
+      {
+        "id": "f5c131fb-3b59-41b1-854c-f83d3e8e32a8",
+        "position": {
+          "x": 698.9119707308395,
+          "y": -73.98139028856947
+        },
+        "data": {
+          "keyword": "repository"
+        },
+        "type": "state",
+        "width": 192,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 698.9119707308395,
+          "y": -73.98139028856947
+        },
+        "dragging": false
+      },
+      {
+        "id": "ae79d8ed-f602-4a40-9b23-b9797072725a",
+        "position": {
+          "x": 1167.3389713278898,
+          "y": -228.92262894759378
+        },
+        "data": {
+          "keyword": "stars"
+        },
+        "type": "state",
+        "width": 147,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 1167.3389713278898,
+          "y": -228.92262894759378
+        },
         "dragging": false
       }
     ],
@@ -312,43 +295,35 @@
         "type": "codeNodeEdge"
       },
       {
-        "id": "800df712-90dd-4028-bfa9-30c5fb1675ff",
-        "target": "2cee5e7b-e3b9-4e42-9dac-ef18a83e4122",
-        "targetHandle": "fieldInput/repo",
-        "source": "e5b00bfb-18ee-4eeb-bff6-ee877d9e13de",
-        "sourceHandle": "fieldOutput",
-        "type": "codeNodeEdge"
-      },
-      {
-        "id": "b5e2c89d-d592-4a4b-91c7-efac9455df93",
-        "target": "22c56bc9-8e12-4f0a-a0cd-77fec8f96870",
-        "targetHandle": "fieldInput/text",
-        "source": "3300601a-8da8-4aeb-9a4f-cdc45aa80b39",
-        "sourceHandle": "fieldOutput",
-        "type": "codeNodeEdge"
-      },
-      {
         "id": "5cc91f90-4523-4e89-b696-358d06a84772",
-        "target": "7bae8fb3-f31c-4966-ab75-3b77fba06f79",
-        "targetHandle": "fieldInput/text",
         "source": "aafa48a0-4b6a-4023-9ed1-18e443a539fa",
         "sourceHandle": "fieldOutput",
+        "target": "7bae8fb3-f31c-4966-ab75-3b77fba06f79",
+        "targetHandle": "fieldInput/text",
         "type": "codeNodeEdge"
       },
       {
-        "id": "0bb39d3b-7d7c-4f19-a078-04174f55f2fe",
-        "target": "aafa48a0-4b6a-4023-9ed1-18e443a539fa",
-        "targetHandle": "codeField/arg",
-        "source": "ff07a0fc-f09e-4e84-8ef6-b524ca3c01fb",
+        "id": "2a978cfc-4578-4a61-9806-395baa9fc3ac",
+        "target": "22c56bc9-8e12-4f0a-a0cd-77fec8f96870",
+        "targetHandle": "fieldInput/text",
+        "source": "e4740c02-cac4-4744-adc6-cbde64b81dc0",
         "sourceHandle": "fieldOutput",
         "type": "codeNodeEdge"
       },
       {
-        "id": "746acf01-771a-4813-8241-91a73fb9faa3",
-        "source": "ff07a0fc-f09e-4e84-8ef6-b524ca3c01fb",
+        "id": "24054cd8-da92-4202-be5b-2a26b0c71a80",
+        "target": "2cee5e7b-e3b9-4e42-9dac-ef18a83e4122",
+        "targetHandle": "fieldInput/repo",
+        "source": "f5c131fb-3b59-41b1-854c-f83d3e8e32a8",
         "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "332e9787-292a-44b3-b82c-2c9ed8c9b7db",
         "target": "aafa48a0-4b6a-4023-9ed1-18e443a539fa",
         "targetHandle": "codeField/stars",
+        "source": "ae79d8ed-f602-4a40-9b23-b9797072725a",
+        "sourceHandle": "fieldOutput",
         "type": "codeNodeEdge"
       }
     ]

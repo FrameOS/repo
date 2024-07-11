@@ -1,6 +1,6 @@
 [
   {
-    "id": "e4cebad6-cc82-4751-830f-b7c2fd5890dd",
+    "id": "dfd36d4f-9d17-4324-a879-17e401dea83b",
     "name": "SD card image",
     "settings": {
       "backgroundColor": "#000000",
@@ -119,7 +119,7 @@
           "keyword": "data/localImage"
         },
         "dragging": false,
-        "height": 168,
+        "height": 196,
         "id": "90e0b322-3302-4b36-ae37-70c71183d722",
         "position": {
           "x": 160,
@@ -135,141 +135,97 @@
       },
       {
         "data": {
-          "code": "state{\"imageFolder\"}.getStr()",
-          "codeArgs": [],
-          "codeOutputs": [
-            {
-              "name": "path",
-              "type": "string"
-            }
-          ]
+          "config": {},
+          "keyword": "logic/nextSleepDuration"
         },
         "dragging": false,
-        "height": 119,
-        "id": "ba11eeaf-0839-4f25-a22a-0dea28a0f774",
-        "position": {
-          "x": 137,
-          "y": -350
-        },
-        "positionAbsolute": {
-          "x": 137,
-          "y": -350
-        },
-        "selected": false,
-        "style": {
-          "height": 119,
-          "width": 300
-        },
-        "type": "code",
-        "width": 300
-      },
-      {
-        "data": {
-          "code": "state{\"imageOrder\"}.getStr()",
-          "codeArgs": [],
-          "codeOutputs": [
-            {
-              "name": "order",
-              "type": "string"
-            }
-          ]
-        },
-        "dragging": false,
-        "height": 119,
-        "id": "7bcb3fd0-9e29-4dd8-9226-85e30bcdb980",
-        "position": {
-          "x": 113,
-          "y": -482.6
-        },
-        "positionAbsolute": {
-          "x": 113,
-          "y": -482.6
-        },
-        "selected": false,
-        "style": {
-          "height": 119,
-          "width": 300
-        },
-        "type": "code",
-        "width": 300
-      },
-      {
-        "data": {
-          "code": "state{\"scalingMode\"}.getStr()",
-          "codeArgs": [],
-          "codeOutputs": [
-            {
-              "name": "placement",
-              "type": "string"
-            }
-          ]
-        },
-        "dragging": false,
-        "height": 119,
-        "id": "5e74857f-ec6f-4ae2-ac31-7f6f28c0ea1b",
-        "position": {
-          "x": 192,
-          "y": -15.600000000000023
-        },
-        "positionAbsolute": {
-          "x": 192,
-          "y": -15.600000000000023
-        },
-        "selected": false,
-        "style": {
-          "height": 119,
-          "width": 300
-        },
-        "type": "code",
-        "width": 300
-      },
-      {
+        "height": 78,
         "id": "86d00a0b-0d58-4e06-b345-f662b4796ec3",
         "position": {
           "x": 710.2916548468124,
           "y": 143.69341505862138
         },
-        "data": {
-          "keyword": "logic/nextSleepDuration",
-          "config": {}
-        },
-        "type": "app",
-        "width": 289,
-        "height": 78,
-        "selected": false,
         "positionAbsolute": {
           "x": 710.2916548468124,
           "y": 143.69341505862138
         },
+        "selected": false,
+        "type": "app",
+        "width": 289
+      },
+      {
+        "id": "936017dc-922d-43f3-aab7-7ba996afd83d",
+        "position": {
+          "x": 206.81766899824183,
+          "y": 50.686622074619635
+        },
+        "data": {
+          "keyword": "scalingMode"
+        },
+        "type": "state",
+        "width": 218,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 206.81766899824183,
+          "y": 50.686622074619635
+        },
         "dragging": false
       },
       {
-        "id": "60c3f910-8886-459e-9a1a-f99ebdc8cf63",
+        "id": "3ea1c753-d7b8-43dd-a3d3-74df6c80066b",
         "position": {
-          "x": 683.9591312431648,
-          "y": -5.209843062438381
+          "x": 131.9451444933851,
+          "y": -287.13367068823794
         },
         "data": {
-          "code": "state{\"seconds\"}.getFloat()",
-          "codeArgs": [],
-          "codeOutputs": [
-            {
-              "name": "duration",
-              "type": "float"
-            }
-          ]
+          "keyword": "imageFolder"
         },
-        "type": "code",
-        "style": {
-          "width": 300,
-          "height": 119
-        },
-        "width": 300,
-        "height": 119,
+        "type": "state",
+        "width": 211,
+        "height": 48,
         "selected": false,
         "positionAbsolute": {
-          "x": 683.9591312431648,
-          "y": -5.209843062438381
+          "x": 131.9451444933851,
+          "y": -287.13367068823794
+        },
+        "dragging": false
+      },
+      {
+        "id": "b286d5fa-f93a-4616-ba8d-4936fa3d407e",
+        "position": {
+          "x": 101.23660773700254,
+          "y": -362.1989827593952
+        },
+        "data": {
+          "keyword": "imageOrder"
+        },
+        "type": "state",
+        "width": 206,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 101.23660773700254,
+          "y": -362.1989827593952
+        },
+        "dragging": false
+      },
+      {
+        "id": "ddc4be08-1995-48d3-881b-81fb0d78bf68",
+        "position": {
+          "x": 671.632792959911,
+          "y": 66.25911461494695
+        },
+        "data": {
+          "keyword": "seconds"
+        },
+        "type": "state",
+        "width": 343,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 671.632792959911,
+          "y": 66.25911461494695
         },
         "dragging": false
       }
@@ -292,30 +248,6 @@
         "type": "codeNodeEdge"
       },
       {
-        "id": "5111977d-7b54-43ce-a648-05571e953880",
-        "source": "ba11eeaf-0839-4f25-a22a-0dea28a0f774",
-        "sourceHandle": "fieldOutput",
-        "target": "90e0b322-3302-4b36-ae37-70c71183d722",
-        "targetHandle": "fieldInput/path",
-        "type": "codeNodeEdge"
-      },
-      {
-        "id": "6cf9ca93-dba9-4cbc-89e4-3856b329d301",
-        "source": "7bcb3fd0-9e29-4dd8-9226-85e30bcdb980",
-        "sourceHandle": "fieldOutput",
-        "target": "90e0b322-3302-4b36-ae37-70c71183d722",
-        "targetHandle": "fieldInput/order",
-        "type": "codeNodeEdge"
-      },
-      {
-        "id": "3d3d7840-91d7-4fe5-97f1-61982bc191ee",
-        "source": "5e74857f-ec6f-4ae2-ac31-7f6f28c0ea1b",
-        "sourceHandle": "fieldOutput",
-        "target": "e7cb0eec-b9db-48d5-8f19-21e443783833",
-        "targetHandle": "fieldInput/placement",
-        "type": "codeNodeEdge"
-      },
-      {
         "id": "c7217229-bdbd-47ed-af35-08b459159d7f",
         "source": "e7cb0eec-b9db-48d5-8f19-21e443783833",
         "sourceHandle": "next",
@@ -324,10 +256,34 @@
         "type": "appNodeEdge"
       },
       {
-        "id": "ff2a3027-fc6c-4a16-b345-f4cf411f0d19",
+        "id": "3d82d080-28c2-418f-9ae8-668a6c8155ee",
+        "target": "e7cb0eec-b9db-48d5-8f19-21e443783833",
+        "targetHandle": "fieldInput/placement",
+        "source": "936017dc-922d-43f3-aab7-7ba996afd83d",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "52db19f4-ccf1-4a10-bbf1-0a7a5a440b42",
+        "target": "90e0b322-3302-4b36-ae37-70c71183d722",
+        "targetHandle": "fieldInput/path",
+        "source": "3ea1c753-d7b8-43dd-a3d3-74df6c80066b",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "db942c13-4a92-4939-a710-7ca38dceb80d",
+        "target": "90e0b322-3302-4b36-ae37-70c71183d722",
+        "targetHandle": "fieldInput/order",
+        "source": "b286d5fa-f93a-4616-ba8d-4936fa3d407e",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "3505a1c7-8965-44e2-8394-b43d76e40dc2",
         "target": "86d00a0b-0d58-4e06-b345-f662b4796ec3",
         "targetHandle": "fieldInput/duration",
-        "source": "60c3f910-8886-459e-9a1a-f99ebdc8cf63",
+        "source": "ddc4be08-1995-48d3-881b-81fb0d78bf68",
         "sourceHandle": "fieldOutput",
         "type": "codeNodeEdge"
       }

@@ -1,6 +1,6 @@
 [
   {
-    "id": "5d35f967-0c5b-41c0-8062-1397c1e8cdad",
+    "id": "20b0a47b-14fc-421d-9ced-daa5c61672fa",
     "name": "OpenAI Image",
     "settings": {
       "backgroundColor": "#000000",
@@ -21,94 +21,83 @@
         "data": {
           "keyword": "render"
         },
+        "dragging": false,
         "height": 161,
         "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
         "position": {
           "x": 156,
           "y": 44
         },
-        "type": "event",
-        "width": 212,
-        "selected": false,
         "positionAbsolute": {
           "x": 156,
           "y": 44
         },
-        "dragging": false
+        "selected": false,
+        "type": "event",
+        "width": 212
       },
       {
+        "data": {
+          "config": {},
+          "keyword": "render/image"
+        },
+        "dragging": false,
+        "height": 134,
         "id": "3ebb104f-871b-4db0-95ca-4f1b67018036",
         "position": {
           "x": 456.3555740432612,
           "y": 55.47787900447611
         },
-        "data": {
-          "keyword": "render/image",
-          "config": {}
-        },
-        "type": "app",
-        "width": 311,
-        "height": 106,
-        "selected": false,
         "positionAbsolute": {
           "x": 456.3555740432612,
           "y": 55.47787900447611
         },
-        "dragging": false
+        "selected": false,
+        "type": "app",
+        "width": 324
       },
       {
-        "id": "765e599e-e3ef-489f-a1ac-57c220712ebb",
-        "position": {
-          "x": 425.3555740432612,
-          "y": -217.5221209955239
-        },
         "data": {
-          "keyword": "data/openaiImage",
-          "config": {},
           "cache": {
             "duration": "3600",
             "durationEnabled": true,
             "enabled": true,
             "inputEnabled": true
-          }
+          },
+          "config": {},
+          "keyword": "data/openaiImage"
         },
-        "type": "app",
-        "width": 321,
-        "height": 224,
-        "selected": false,
+        "dragging": false,
+        "height": 252,
+        "id": "765e599e-e3ef-489f-a1ac-57c220712ebb",
+        "position": {
+          "x": 425.3555740432612,
+          "y": -217.5221209955239
+        },
         "positionAbsolute": {
           "x": 425.3555740432612,
           "y": -217.5221209955239
         },
-        "dragging": false
+        "selected": false,
+        "type": "app",
+        "width": 364
       },
       {
-        "id": "0a09320c-59e1-460e-ad31-f832d42dc609",
+        "id": "83108895-872d-4d9e-ba6e-9a5194cbd054",
         "position": {
-          "x": 395.3555740432612,
-          "y": -357.5221209955239
+          "x": 396.048043297249,
+          "y": -300.8832011551941
         },
         "data": {
-          "code": "state{\"prompt\"}.getStr()",
-          "codeArgs": [],
-          "codeOutputs": [
-            {
-              "name": "prompt",
-              "type": "string"
-            }
-          ]
+          "keyword": "prompt"
         },
-        "type": "code",
-        "style": {
-          "width": 300,
-          "height": 119
-        },
-        "width": 300,
-        "height": 119,
+        "type": "state",
+        "width": 162,
+        "height": 48,
         "selected": false,
         "positionAbsolute": {
-          "x": 395.3555740432612,
-          "y": -357.5221209955239
+          "x": 396.048043297249,
+          "y": -300.8832011551941
         },
         "dragging": false
       }
@@ -124,17 +113,17 @@
       },
       {
         "id": "c15ef34a-bff7-42b8-bd32-16c491d3f559",
-        "target": "3ebb104f-871b-4db0-95ca-4f1b67018036",
-        "targetHandle": "fieldInput/image",
         "source": "765e599e-e3ef-489f-a1ac-57c220712ebb",
         "sourceHandle": "fieldOutput",
+        "target": "3ebb104f-871b-4db0-95ca-4f1b67018036",
+        "targetHandle": "fieldInput/image",
         "type": "codeNodeEdge"
       },
       {
-        "id": "604e0458-ab9b-407c-b678-4339604fbd46",
+        "id": "5c3da2a6-bf67-4fea-9c7a-831b2335c75a",
         "target": "765e599e-e3ef-489f-a1ac-57c220712ebb",
         "targetHandle": "fieldInput/prompt",
-        "source": "0a09320c-59e1-460e-ad31-f832d42dc609",
+        "source": "83108895-872d-4d9e-ba6e-9a5194cbd054",
         "sourceHandle": "fieldOutput",
         "type": "codeNodeEdge"
       }
