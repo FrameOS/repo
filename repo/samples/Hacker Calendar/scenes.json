@@ -13,6 +13,30 @@
         "name": "iCalURL",
         "persist": "disk",
         "type": "string"
+      },
+      {
+        "access": "public",
+        "label": "Add Location",
+        "name": "addLocation",
+        "persist": "disk",
+        "type": "boolean",
+        "value": "true"
+      },
+      {
+        "access": "public",
+        "label": "Add URL",
+        "name": "addUrl",
+        "persist": "disk",
+        "type": "boolean",
+        "value": "true"
+      },
+      {
+        "access": "public",
+        "label": "Add Description",
+        "name": "addDescription",
+        "persist": "disk",
+        "type": "boolean",
+        "value": "false"
       }
     ],
     "nodes": [
@@ -78,12 +102,12 @@
         "height": 112,
         "id": "15b4d501-7833-4088-a0b0-178eb24bbac9",
         "position": {
-          "x": 405.17853636399184,
-          "y": -264.42317968791394
+          "x": 371.35115973836275,
+          "y": -282.46444722158276
         },
         "positionAbsolute": {
-          "x": 405.17853636399184,
-          "y": -264.42317968791394
+          "x": 371.35115973836275,
+          "y": -282.46444722158276
         },
         "selected": false,
         "type": "app",
@@ -98,12 +122,12 @@
         "height": 140,
         "id": "99fb264d-3d50-4c2d-90a2-213be192dbd1",
         "position": {
-          "x": 481.0270323580054,
-          "y": 203.17186939264758
+          "x": 474.2615570328795,
+          "y": 221.21313692631645
         },
         "positionAbsolute": {
-          "x": 481.0270323580054,
-          "y": 203.17186939264758
+          "x": 474.2615570328795,
+          "y": 221.21313692631645
         },
         "selected": false,
         "type": "app",
@@ -160,41 +184,99 @@
             "inputEnabled": true
           },
           "config": {
+            "addDescription": "true",
             "exportCount": "20"
           },
           "keyword": "data/icalJson"
         },
         "dragging": false,
-        "height": 253,
+        "height": 337,
         "id": "6db1ffd3-e809-42db-8416-9e048df66788",
         "position": {
-          "x": 426.1347246830926,
-          "y": -109.13847365144687
+          "x": 396.8176649408807,
+          "y": -142.96585027707596
         },
         "positionAbsolute": {
-          "x": 426.1347246830926,
-          "y": -109.13847365144687
+          "x": 396.8176649408807,
+          "y": -142.96585027707596
         },
         "selected": false,
         "type": "app",
-        "width": 561
+        "width": 610
       },
       {
-        "id": "1b06f419-8c86-427c-9a4c-962d7e561b6b",
-        "position": {
-          "x": 363.073222285717,
-          "y": -343.4021326444258
-        },
         "data": {
           "keyword": "iCalURL"
         },
+        "dragging": false,
+        "height": 48,
+        "id": "1b06f419-8c86-427c-9a4c-962d7e561b6b",
+        "position": {
+          "x": 329.24584566008787,
+          "y": -383.99498459518077
+        },
+        "positionAbsolute": {
+          "x": 329.24584566008787,
+          "y": -383.99498459518077
+        },
+        "selected": false,
         "type": "state",
-        "width": 172,
+        "width": 172
+      },
+      {
+        "id": "dff68b5b-3071-4f49-a35f-1c18854a595f",
+        "position": {
+          "x": 145.229308859522,
+          "y": -28.016177147557272
+        },
+        "data": {
+          "keyword": "addLocation"
+        },
+        "type": "state",
+        "width": 232,
         "height": 48,
         "selected": false,
         "positionAbsolute": {
-          "x": 363.073222285717,
-          "y": -343.4021326444258
+          "x": 145.229308859522,
+          "y": -28.016177147557272
+        },
+        "dragging": false
+      },
+      {
+        "id": "7bf09a62-84a1-43ba-9262-edeef5a01043",
+        "position": {
+          "x": -70.31579024436485,
+          "y": 11.654699988127419
+        },
+        "data": {
+          "keyword": "addUrl"
+        },
+        "type": "state",
+        "width": 192,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": -70.31579024436485,
+          "y": 11.654699988127419
+        },
+        "dragging": false
+      },
+      {
+        "id": "db519abb-12aa-4565-9580-488b157dd4f1",
+        "position": {
+          "x": 68.5322797305316,
+          "y": 96.2859045442548
+        },
+        "data": {
+          "keyword": "addDescription"
+        },
+        "type": "state",
+        "width": 258,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 68.5322797305316,
+          "y": 96.2859045442548
         },
         "dragging": false
       }
@@ -250,9 +332,33 @@
       },
       {
         "id": "daaaae49-ce1c-47a4-aeb1-dc20a88ccec8",
+        "source": "1b06f419-8c86-427c-9a4c-962d7e561b6b",
+        "sourceHandle": "fieldOutput",
         "target": "15b4d501-7833-4088-a0b0-178eb24bbac9",
         "targetHandle": "fieldInput/url",
-        "source": "1b06f419-8c86-427c-9a4c-962d7e561b6b",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "87535f9d-b3ae-4007-b0b1-4e269b0bacd5",
+        "target": "6db1ffd3-e809-42db-8416-9e048df66788",
+        "targetHandle": "fieldInput/addLocation",
+        "source": "dff68b5b-3071-4f49-a35f-1c18854a595f",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "cd4ade10-91b7-4937-b886-1a58cdd12579",
+        "target": "6db1ffd3-e809-42db-8416-9e048df66788",
+        "targetHandle": "fieldInput/addUrl",
+        "source": "7bf09a62-84a1-43ba-9262-edeef5a01043",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "50f53171-a3f4-41f2-a7f4-3c817236ccc2",
+        "target": "6db1ffd3-e809-42db-8416-9e048df66788",
+        "targetHandle": "fieldInput/addDescription",
+        "source": "db519abb-12aa-4565-9580-488b157dd4f1",
         "sourceHandle": "fieldOutput",
         "type": "codeNodeEdge"
       }
