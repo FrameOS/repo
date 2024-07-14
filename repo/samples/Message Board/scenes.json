@@ -119,7 +119,7 @@
           "config": {
             "fontSize": "24",
             "padding": "5",
-            "position": "right",
+            "position": "left",
             "vAlign": "top"
           },
           "keyword": "render/text"
