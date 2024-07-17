@@ -1,6 +1,6 @@
 {
   "name": "iCal Duo",
-  "description": "",
+  "description": "Show two iCal feeds as JSON on your wall. Like a tr00 h4x0r.",
   "config": null,
   "image": "./image.jpg",
   "imageWidth": 1280,
