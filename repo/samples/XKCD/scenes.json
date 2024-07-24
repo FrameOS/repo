@@ -1,0 +1,382 @@
+[
+  {
+    "edges": [
+      {
+        "id": "8a59fb3a-258f-44d3-be7c-a63b13fd72db",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "next",
+        "target": "01121465-5c4c-4261-b334-ac421d5a293a",
+        "targetHandle": "prev",
+        "type": "appNodeEdge"
+      },
+      {
+        "id": "ffbbd03a-a7c3-4798-8a30-b23cf36dfe09",
+        "source": "478791b6-50af-4f09-a52a-842f7487d375",
+        "sourceHandle": "fieldOutput",
+        "target": "01121465-5c4c-4261-b334-ac421d5a293a",
+        "targetHandle": "fieldInput/valueJson",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "0c8c7d9e-284a-48fb-9173-17cd810a973a",
+        "source": "c58d9419-c712-472d-83d4-c48e91d6edab",
+        "sourceHandle": "fieldOutput",
+        "target": "f0b00709-6bb7-4fd8-bd80-1edbe8dabe7d",
+        "targetHandle": "fieldInput/image",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "df93b0b0-74f2-418e-9fe3-babdeb9478df",
+        "source": "8c7d0b52-d0a2-4ed2-b9a0-37522164c3a5",
+        "sourceHandle": "fieldOutput",
+        "target": "c58d9419-c712-472d-83d4-c48e91d6edab",
+        "targetHandle": "fieldInput/url",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "18d23192-4a45-4fc1-ae64-1f1d031c36d7",
+        "source": "01121465-5c4c-4261-b334-ac421d5a293a",
+        "sourceHandle": "next",
+        "target": "503ff6b3-4fab-41ce-8db6-7e23e664f9b4",
+        "targetHandle": "prev",
+        "type": "appNodeEdge"
+      },
+      {
+        "id": "7feafd92-b8a8-41c9-b9a5-90c3b7936272",
+        "source": "503ff6b3-4fab-41ce-8db6-7e23e664f9b4",
+        "sourceHandle": "field/render_functions[2][1]",
+        "target": "f6996bc4-a737-4ad0-84a0-3aa5fe414037",
+        "targetHandle": "prev",
+        "type": "appNodeEdge"
+      },
+      {
+        "id": "f585938b-e4af-45f9-bc13-f9cc04225f3b",
+        "source": "a281a4e7-ef04-4a81-9e4a-ad06063c6ea3",
+        "sourceHandle": "fieldOutput",
+        "target": "f6996bc4-a737-4ad0-84a0-3aa5fe414037",
+        "targetHandle": "fieldInput/text",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "7e364243-f9c4-47df-a276-3a30cf3aca78",
+        "source": "503ff6b3-4fab-41ce-8db6-7e23e664f9b4",
+        "sourceHandle": "field/render_functions[1][1]",
+        "target": "f0b00709-6bb7-4fd8-bd80-1edbe8dabe7d",
+        "targetHandle": "prev",
+        "type": "appNodeEdge"
+      },
+      {
+        "id": "78d65c94-4f8b-43dc-b77d-194c7bd9f8be",
+        "target": "8c7d0b52-d0a2-4ed2-b9a0-37522164c3a5",
+        "targetHandle": "codeField/xkcd",
+        "source": "606d8eb8-9d30-4d62-87bd-a957f469fc85",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "c76f8eb3-6bbf-42ae-8968-7981880b134e",
+        "target": "a281a4e7-ef04-4a81-9e4a-ad06063c6ea3",
+        "targetHandle": "codeField/xkcd",
+        "source": "55a7e774-d320-4fbb-a975-d3eb950552e5",
+        "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      }
+    ],
+    "fields": [
+      {
+        "access": "private",
+        "label": "xkcd",
+        "name": "xkcd",
+        "persist": "disk",
+        "type": "json"
+      }
+    ],
+    "id": "090dacc9-a32d-488b-976c-c3f0cab05044",
+    "name": "XKCD",
+    "nodes": [
+      {
+        "data": {
+          "keyword": "render"
+        },
+        "dragging": false,
+        "height": 199,
+        "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "position": {
+          "x": 121,
+          "y": 113
+        },
+        "selected": false,
+        "type": "event",
+        "width": 212
+      },
+      {
+        "data": {
+          "config": {
+            "stateKey": "xkcd"
+          },
+          "keyword": "logic/setAsState"
+        },
+        "dragging": false,
+        "height": 134,
+        "id": "01121465-5c4c-4261-b334-ac421d5a293a",
+        "position": {
+          "x": 442.28546541797095,
+          "y": 190.93081123826028
+        },
+        "positionAbsolute": {
+          "x": 442.28546541797095,
+          "y": 190.93081123826028
+        },
+        "selected": false,
+        "type": "app",
+        "width": 350
+      },
+      {
+        "data": {
+          "cache": {
+            "duration": "3600",
+            "durationEnabled": true,
+            "enabled": true,
+            "inputEnabled": true
+          },
+          "config": {
+            "url": "https://xkcd.com/rss.xml"
+          },
+          "keyword": "data/downloadUrl",
+          "sources": {
+            "app.nim": "import options, os, streams, strutils, xmlparser, xmltree, json\nimport lib/httpclient\nimport frameos/apps\nimport frameos/types\n\ntype\n  AppConfig* = object\n\n  App* = ref object of AppRoot\n    appConfig*: AppConfig\n\nproc get*(self: App, context: ExecutionContext): JsonNode =\n  let url = \"https://xkcd.com/rss.xml\"\n  let client = newHttpClient(timeout = 30000)\n  try:\n    let feed = client.getContent(url)\n    let xml = parseXml(feed)\n    let descriptions = xml.findAll(\"description\")\n    let firstImage = descriptions[1].innerText()\n    let image = parseXml(firstImage)\n    self.log($image.attr(\"src\"))\n    self.log($image.attr(\"title\"))\n    return %*({\"src\": $image.attr(\"src\"), \"title\": $image.attr(\"title\")})\n  except CatchableError as e:\n    self.logError e.msg\n    return %*({\"src\": \"\", \"title\": e.msg })\n  finally:\n    client.close()\n",
+            "config.json": "{\n  \"name\": \"Get last XKCD\",\n  \"description\": \"\",\n  \"category\": \"data\",\n  \"version\": \"1.0.0\",\n  \"fields\": [{\"markdown\": \"`{ \\\"src\\\": \\\"http://.\\\", \\\"title\\\": .. }`\"}],\n  \"output\": [\n    {\n      \"name\": \"result\",\n      \"type\": \"json\"\n    }\n  ],\n  \"cache\": {\n    \"enabled\": true,\n    \"inputEnabled\": true,\n    \"durationEnabled\": true,\n    \"duration\": \"900\"\n  }\n}\n"
+          }
+        },
+        "dragging": false,
+        "height": 158,
+        "id": "478791b6-50af-4f09-a52a-842f7487d375",
+        "position": {
+          "x": 365.8970457475176,
+          "y": 13.224956359916746
+        },
+        "positionAbsolute": {
+          "x": 365.8970457475176,
+          "y": 13.224956359916746
+        },
+        "resizing": false,
+        "selected": false,
+        "style": {
+          "height": 158,
+          "width": 400
+        },
+        "type": "app",
+        "width": 400
+      },
+      {
+        "data": {
+          "config": {
+            "placement": "contain"
+          },
+          "keyword": "render/image"
+        },
+        "dragging": false,
+        "height": 134,
+        "id": "f0b00709-6bb7-4fd8-bd80-1edbe8dabe7d",
+        "position": {
+          "x": 1281.6705857910129,
+          "y": 53.96996136942272
+        },
+        "positionAbsolute": {
+          "x": 1281.6705857910129,
+          "y": 53.96996136942272
+        },
+        "selected": false,
+        "type": "app",
+        "width": 324
+      },
+      {
+        "data": {
+          "cache": {
+            "duration": "86400",
+            "durationEnabled": true,
+            "enabled": true,
+            "inputEnabled": true
+          },
+          "config": {},
+          "keyword": "data/downloadImage"
+        },
+        "dragging": false,
+        "height": 112,
+        "id": "c58d9419-c712-472d-83d4-c48e91d6edab",
+        "position": {
+          "x": 1253.9622137159104,
+          "y": -127.2240981619629
+        },
+        "positionAbsolute": {
+          "x": 1253.9622137159104,
+          "y": -127.2240981619629
+        },
+        "selected": false,
+        "type": "app",
+        "width": 246
+      },
+      {
+        "data": {
+          "code": "xkcd{\"src\"}.getStr()",
+          "codeArgs": [
+            {
+              "name": "xkcd",
+              "type": "json"
+            }
+          ],
+          "codeOutputs": [
+            {
+              "name": "url",
+              "type": "string"
+            }
+          ]
+        },
+        "dragging": false,
+        "height": 119,
+        "id": "8c7d0b52-d0a2-4ed2-b9a0-37522164c3a5",
+        "position": {
+          "x": 1214.5224754206886,
+          "y": -277.68112225902536
+        },
+        "positionAbsolute": {
+          "x": 1214.5224754206886,
+          "y": -277.68112225902536
+        },
+        "selected": false,
+        "style": {
+          "height": 119,
+          "width": 300
+        },
+        "type": "code",
+        "width": 300
+      },
+      {
+        "data": {
+          "config": {
+            "gap": "20",
+            "height_ratios": "85 15",
+            "margin": "20",
+            "rows": "2"
+          },
+          "keyword": "render/split"
+        },
+        "dragging": false,
+        "height": 359,
+        "id": "503ff6b3-4fab-41ce-8db6-7e23e664f9b4",
+        "position": {
+          "x": 873.7112260368733,
+          "y": 60.41741972507509
+        },
+        "positionAbsolute": {
+          "x": 873.7112260368733,
+          "y": 60.41741972507509
+        },
+        "selected": false,
+        "type": "app",
+        "width": 307
+      },
+      {
+        "data": {
+          "config": {
+            "borderColor": "#ffffff",
+            "borderWidth": "0",
+            "fontColor": "#000000"
+          },
+          "keyword": "render/text"
+        },
+        "dragging": false,
+        "height": 392,
+        "id": "f6996bc4-a737-4ad0-84a0-3aa5fe414037",
+        "position": {
+          "x": 1686.1860621008002,
+          "y": 220.0875912711261
+        },
+        "positionAbsolute": {
+          "x": 1686.1860621008002,
+          "y": 220.0875912711261
+        },
+        "selected": false,
+        "type": "app",
+        "width": 362
+      },
+      {
+        "data": {
+          "code": "xkcd{\"title\"}.getStr()",
+          "codeArgs": [
+            {
+              "name": "xkcd",
+              "type": "json"
+            }
+          ],
+          "codeOutputs": [
+            {
+              "name": "text",
+              "type": "string"
+            }
+          ]
+        },
+        "dragging": false,
+        "height": 119,
+        "id": "a281a4e7-ef04-4a81-9e4a-ad06063c6ea3",
+        "position": {
+          "x": 1662.291997148684,
+          "y": 21.26540395183872
+        },
+        "positionAbsolute": {
+          "x": 1662.291997148684,
+          "y": 21.26540395183872
+        },
+        "selected": false,
+        "style": {
+          "height": 119,
+          "width": 300
+        },
+        "type": "code",
+        "width": 300
+      },
+      {
+        "id": "606d8eb8-9d30-4d62-87bd-a957f469fc85",
+        "position": {
+          "x": 1210.2545769247251,
+          "y": -346.7843430984327
+        },
+        "data": {
+          "keyword": "xkcd"
+        },
+        "type": "state",
+        "width": 127,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 1210.2545769247251,
+          "y": -346.7843430984327
+        },
+        "dragging": false
+      },
+      {
+        "id": "55a7e774-d320-4fbb-a975-d3eb950552e5",
+        "position": {
+          "x": 1657.6734495452786,
+          "y": -72.08696828940762
+        },
+        "data": {
+          "keyword": "xkcd"
+        },
+        "type": "state",
+        "width": 127,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 1657.6734495452786,
+          "y": -72.08696828940762
+        },
+        "dragging": false
+      }
+    ],
+    "settings": {
+      "backgroundColor": "#ffffff",
+      "refreshInterval": 3600
+    }
+  }
+]
