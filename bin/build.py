@@ -6,6 +6,12 @@ import json
 src_path = "./repo"
 base_path = "./dist"
 
+# Tailwind CSS template for the index files
+tailwind_css = """
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+"""
+
+# Create base_path directory if it does not exist
 if not os.path.exists(base_path):
     os.makedirs(base_path)
 
@@ -66,20 +72,32 @@ for repo in repositories:
     # Create index.html for the repository
     index_html_path = os.path.join(repo, "index.html")
     with open(index_html_path, 'w') as ihf:
-        ihf.write(f"<html><body><h1>{repo_name}</h1>\n")
-        ihf.write(f'<a href="repository.json">repository.json</a><br>\n')
+        ihf.write(f"<html><head>{tailwind_css}</head><body class='p-6'>\n")
+        ihf.write(f"<h1 class='text-3xl font-bold mb-4'>{repo_name}</h1>\n")
+        ihf.write(f'<a href="repository.json" class="text-blue-500 underline mb-4 block">repository.json</a>\n')
+        ihf.write("<div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>\n")
         for data in existing_repo_data["templates"]:
-            ihf.write(f'<a href="{data["zip"]}">{data["name"]}.zip</a><br>\n')
-        ihf.write("</body></html>\n")
+            img_path = data.get("image", "https://via.placeholder.com/150")
+            ihf.write(f"""
+            <div class="border rounded-lg overflow-hidden shadow-lg">
+                <img src="{img_path}" alt="{data['name']}" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="font-semibold text-lg">{data['name']}</h2>
+                    <a href="{data['zip']}" class="text-blue-500 underline mt-2 block">Download</a>
+                </div>
+            </div>
+            """)
+        ihf.write("</div></body></html>\n")
 
     repo_links.append(repo_name)
 
 # Create index.html in the base path
 index_html_base_path = os.path.join(base_path, "index.html")
 with open(index_html_base_path, 'w') as ihf:
-    ihf.write("<html><body><h1>Repositories</h1>")
+    ihf.write(f"<html><head>{tailwind_css}</head><body class='p-6'>\n")
+    ihf.write("<h1 class='text-3xl font-bold mb-4'>Repositories</h1>\n")
     for link in repo_links:
-        ihf.write(f'<a href="{link}/">{link}</a><br>')
+        ihf.write(f'<a href="{link}/" class="text-blue-500 underline block mb-2">{link}</a>\n')
     ihf.write("</body></html>")
 
 print("Processing finished!")
