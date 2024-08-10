@@ -12,4 +12,4 @@ Hosted on CloudFlare Pages.
 4. Optionally create `repo/category/repository.json` to name your repository.
 5. Publish to CloudFlare Pages, Netlify, or wherever you host your static sites.
   - Run `bin/build.py` on deploy
-  - Publish the `repo/` folder
+  - Publish the `dist/` folder

@@ -3,7 +3,13 @@ import os
 import zipfile
 import json
 
-base_path = "./repo"
+src_path = "./repo"
+base_path = "./dist"
+
+if not os.path.exists(base_path):
+    os.makedirs(base_path)
+
+os.system(f"cp -r {src_path}/* {base_path}")
 
 repo_links = []
 
