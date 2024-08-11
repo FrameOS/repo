@@ -73,7 +73,7 @@ for repo in repositories:
     index_html_path = os.path.join(repo, "index.html")
     with open(index_html_path, 'w') as ihf:
         ihf.write(f"<html><head>{tailwind_css}</head><body class='p-6'>\n")
-        ihf.write(f"<h1 class='text-3xl font-bold mb-4'>{repo_name}</h1>\n")
+        ihf.write(f"<h1 class='text-3xl font-bold mb-4'>{existing_repo_data['name']}</h1>\n")
         ihf.write(f'<a href="repository.json" class="text-blue-500 underline mb-4 block">repository.json</a>\n')
         ihf.write("<div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>\n")
         for data in existing_repo_data["templates"]:
@@ -83,6 +83,7 @@ for repo in repositories:
                 <img src="{img_path}" alt="{data['name']}" class="w-full h-48 object-cover">
                 <div class="p-4">
                     <h2 class="font-semibold text-lg">{data['name']}</h2>
+                    <p class="text-sm text-gray-600">{data.get('description', '')}</p>
                     <a href="{data['zip']}" class="text-blue-500 underline mt-2 block">Download</a>
                 </div>
             </div>
@@ -91,13 +92,49 @@ for repo in repositories:
 
     repo_links.append(repo_name)
 
-# Create index.html in the base path
+# Create index.html in the base path with scrolling slideshows
 index_html_base_path = os.path.join(base_path, "index.html")
 with open(index_html_base_path, 'w') as ihf:
     ihf.write(f"<html><head>{tailwind_css}</head><body class='p-6'>\n")
-    ihf.write("<h1 class='text-3xl font-bold mb-4'>Repositories</h1>\n")
-    for link in repo_links:
-        ihf.write(f'<a href="{link}/" class="text-blue-500 underline block mb-2">{link}</a>\n')
+    for repo in repositories:
+        repo_name = os.path.basename(repo)
+        repo_json_path = os.path.join(repo, "repository.json")
+        
+        # Load the repository.json data
+        if os.path.exists(repo_json_path):
+            with open(repo_json_path, 'r') as f:
+                repo_data = json.load(f)
+            repo_title = repo_data.get("name", repo_name)
+            repo_description = repo_data.get("description", "")
+        else:
+            repo_title = repo_name
+            repo_description = ""
+
+        # Get the last 10 images by modification date
+        image_files = []
+        for root, dirs, files in os.walk(repo):
+            for file in files:
+                if file.lower().endswith(('.png', '.jpg', '.jpeg', '.gif')):
+                    file_path = os.path.join(root, file)
+                    image_files.append((file_path, os.path.getmtime(file_path)))
+        
+        # Sort images by modification date and take the last 10
+        image_files.sort(key=lambda x: x[1], reverse=True)
+        last_10_images = [img[0] for img in image_files[:10]]
+
+        # Create the scrolling slideshow HTML
+        ihf.write(f'<div class="mb-6">\n')
+        ihf.write(f'<h2 class="text-2xl font-bold">{repo_title}</h2>\n')
+        ihf.write(f'<p class="text-sm text-gray-600 mb-2">{repo_description}</p>\n')
+        ihf.write(f'<a href="{repo_name}/" class="text-blue-500 underline block mb-2">Open {repo_name}</a>\n')
+        ihf.write('<div class="relative overflow-hidden h-48">\n')
+        ihf.write('<div class="absolute inset-0 flex animate-scroll">\n')
+
+        for image in last_10_images:
+            ihf.write(f'<div class="flex-shrink-0 w-48 h-48"><img src="{os.path.relpath(image, base_path)}" class="w-full h-full object-cover"></div>\n')
+        
+        ihf.write('</div>\n</div>\n</div>\n')
+
     ihf.write("</body></html>")
 
 print("Processing finished!")
