@@ -139,10 +139,8 @@
             "enabled": true,
             "inputEnabled": true
           },
-          "config": {
-            "url": "https://xkcd.com/rss.xml"
-          },
-          "keyword": "data/downloadUrl",
+          "config": {},
+          "keyword": "xkcd",
           "sources": {
             "app.nim": "import options, os, streams, strutils, xmlparser, xmltree, json\nimport lib/httpclient\nimport frameos/apps\nimport frameos/types\n\ntype\n  AppConfig* = object\n\n  App* = ref object of AppRoot\n    appConfig*: AppConfig\n\nproc get*(self: App, context: ExecutionContext): JsonNode =\n  let url = \"https://xkcd.com/rss.xml\"\n  let client = newHttpClient(timeout = 30000)\n  try:\n    let feed = client.getContent(url)\n    let xml = parseXml(feed)\n    let descriptions = xml.findAll(\"description\")\n    let firstImage = descriptions[1].innerText()\n    let image = parseXml(firstImage)\n    self.log($image.attr(\"src\"))\n    self.log($image.attr(\"title\"))\n    return %*({\"src\": $image.attr(\"src\"), \"title\": $image.attr(\"title\")})\n  except CatchableError as e:\n    self.logError e.msg\n    return %*({\"src\": \"\", \"title\": e.msg })\n  finally:\n    client.close()\n",
             "config.json": "{\n  \"name\": \"Get last XKCD\",\n  \"description\": \"\",\n  \"category\": \"data\",\n  \"version\": \"1.0.0\",\n  \"fields\": [{\"markdown\": \"`{ \\\"src\\\": \\\"http://.\\\", \\\"title\\\": .. }`\"}],\n  \"output\": [\n    {\n      \"name\": \"result\",\n      \"type\": \"json\"\n    }\n  ],\n  \"cache\": {\n    \"enabled\": true,\n    \"inputEnabled\": true,\n    \"durationEnabled\": true,\n    \"duration\": \"900\"\n  }\n}\n"
