@@ -1,6 +1,6 @@
 [
   {
-    "id": "c059b4f8-a9ff-4edb-bf65-2bc88b8af82f",
+    "id": "6bdc8d72-d755-406e-855d-c83ead2190c5",
     "name": "Hacker Calendar",
     "settings": {
       "backgroundColor": "#000000",
@@ -68,12 +68,13 @@
             "fontSize": "20",
             "overflow": "visible",
             "position": "left",
-            "vAlign": "top"
+            "vAlign": "top",
+            "font": "CascadiaMono.ttf"
           },
           "keyword": "render/text"
         },
         "dragging": false,
-        "height": 364,
+        "height": 492,
         "id": "38541584-fef2-4306-ba02-c3d77bd316b4",
         "position": {
           "x": 516.4348490683578,
@@ -85,7 +86,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 341
+        "width": 459
       },
       {
         "data": {
@@ -131,7 +132,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 288
+        "width": 292
       },
       {
         "data": {
@@ -141,11 +142,12 @@
             "offsetX": "-71",
             "offsetY": "7",
             "position": "right",
-            "vAlign": "top"
+            "vAlign": "top",
+            "font": "CascadiaMonoItalic.ttf"
           },
           "keyword": "render/text"
         },
-        "height": 364,
+        "height": 492,
         "id": "b7e19c2f-d91c-423d-9730-ec2b3363d1d2",
         "position": {
           "x": 1126.888808772077,
@@ -153,7 +155,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 334
+        "width": 459
       },
       {
         "data": {
@@ -190,7 +192,7 @@
           "keyword": "data/icalJson"
         },
         "dragging": false,
-        "height": 337,
+        "height": 364,
         "id": "6db1ffd3-e809-42db-8416-9e048df66788",
         "position": {
           "x": 396.8176649408807,
@@ -202,7 +204,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 610
+        "width": 531
       },
       {
         "data": {

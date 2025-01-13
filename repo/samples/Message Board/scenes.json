@@ -1,6 +1,6 @@
 [
   {
-    "id": "3cc77a8e-3de2-41a6-853d-733c75035dc9",
+    "id": "9b799880-d237-4bb0-a5c0-3d4dbb5e665d",
     "name": "Message Board",
     "settings": {
       "backgroundColor": "#000000",
@@ -23,6 +23,13 @@
         "persist": "disk",
         "type": "text",
         "value": "Keep at it!"
+      },
+      {
+        "name": "font",
+        "label": "Font",
+        "type": "font",
+        "persist": "disk",
+        "access": "public"
       }
     ],
     "nodes": [
@@ -31,7 +38,7 @@
           "keyword": "render"
         },
         "dragging": false,
-        "height": 161,
+        "height": 199,
         "id": "8174a506-d5d4-4264-8472-8ae5a0b5f645",
         "position": {
           "x": 5.588973116178522,
@@ -54,19 +61,19 @@
           "keyword": "render/text"
         },
         "dragging": false,
-        "height": 364,
+        "height": 420,
         "id": "eb54d359-2986-4012-8b49-a034437ebdeb",
         "position": {
-          "x": 777.1611003728354,
-          "y": 269.86248790081424
+          "x": 711.8632198953902,
+          "y": 260.2598584188371
         },
         "positionAbsolute": {
-          "x": 777.1611003728354,
-          "y": 269.86248790081424
+          "x": 711.8632198953902,
+          "y": 260.2598584188371
         },
         "selected": false,
         "type": "app",
-        "width": 341
+        "width": 366
       },
       {
         "data": {
@@ -86,7 +93,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 324
+        "width": 325
       },
       {
         "data": {
@@ -112,7 +119,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 299
+        "width": 300
       },
       {
         "data": {
@@ -125,7 +132,7 @@
           "keyword": "render/text"
         },
         "dragging": false,
-        "height": 364,
+        "height": 420,
         "id": "e096ca13-bbab-45e3-8e8c-c34b2f2ac450",
         "position": {
           "x": 1197.629849594364,
@@ -137,7 +144,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 334
+        "width": 418
       },
       {
         "data": {
@@ -162,40 +169,59 @@
         "width": 351
       },
       {
+        "data": {
+          "keyword": "background"
+        },
+        "dragging": false,
+        "height": 48,
         "id": "f4280494-f122-4880-b1b7-a3bc29b5cb60",
         "position": {
           "x": 271.3205040972592,
           "y": 6.356991919457727
         },
-        "data": {
-          "keyword": "background"
-        },
-        "type": "state",
-        "width": 375,
-        "height": 48,
-        "selected": false,
         "positionAbsolute": {
           "x": 271.3205040972592,
           "y": 6.356991919457727
         },
-        "dragging": false
+        "selected": false,
+        "type": "state",
+        "width": 375
       },
       {
-        "id": "0aee5313-ddd7-446c-9d8f-20c0a99341ab",
-        "position": {
-          "x": 746.3279249427724,
-          "y": 188.83784860790996
-        },
         "data": {
           "keyword": "text"
         },
+        "dragging": false,
+        "height": 48,
+        "id": "0aee5313-ddd7-446c-9d8f-20c0a99341ab",
+        "position": {
+          "x": 684.8710962581179,
+          "y": 177.31469322953728
+        },
+        "positionAbsolute": {
+          "x": 684.8710962581179,
+          "y": 177.31469322953728
+        },
+        "selected": false,
         "type": "state",
-        "width": 225,
+        "width": 211
+      },
+      {
+        "id": "094087db-0b22-40e5-afb2-4dadcb283ac6",
+        "position": {
+          "x": 565.9078814770037,
+          "y": 446.2695034879481
+        },
+        "data": {
+          "keyword": "font"
+        },
+        "type": "state",
+        "width": 128,
         "height": 48,
         "selected": false,
         "positionAbsolute": {
-          "x": 746.3279249427724,
-          "y": 188.83784860790996
+          "x": 565.9078814770037,
+          "y": 446.2695034879481
         },
         "dragging": false
       }
@@ -243,18 +269,26 @@
       },
       {
         "id": "a1aba493-3dff-433e-900e-f694f9ad7c43",
-        "target": "106c8fc5-df79-4b5c-978d-e7f2a9445bb7",
-        "targetHandle": "fieldInput/search",
         "source": "f4280494-f122-4880-b1b7-a3bc29b5cb60",
         "sourceHandle": "fieldOutput",
+        "target": "106c8fc5-df79-4b5c-978d-e7f2a9445bb7",
+        "targetHandle": "fieldInput/search",
         "type": "codeNodeEdge"
       },
       {
         "id": "5b0751f6-6e44-4ab2-b983-c3bb1b52e83f",
-        "target": "eb54d359-2986-4012-8b49-a034437ebdeb",
-        "targetHandle": "fieldInput/text",
         "source": "0aee5313-ddd7-446c-9d8f-20c0a99341ab",
         "sourceHandle": "fieldOutput",
+        "target": "eb54d359-2986-4012-8b49-a034437ebdeb",
+        "targetHandle": "fieldInput/text",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "0e80deb2-1d7a-4742-9282-038747c86dba",
+        "source": "094087db-0b22-40e5-afb2-4dadcb283ac6",
+        "sourceHandle": "fieldOutput",
+        "target": "eb54d359-2986-4012-8b49-a034437ebdeb",
+        "targetHandle": "fieldInput/font",
         "type": "codeNodeEdge"
       }
     ]

@@ -1,6 +1,6 @@
 [
   {
-    "id": "dfd36d4f-9d17-4324-a879-17e401dea83b",
+    "id": "94856c0f-2efe-413f-99c6-35542f6d5f07",
     "name": "SD card image",
     "settings": {
       "backgroundColor": "#000000",
@@ -56,6 +56,13 @@
         "persist": "disk",
         "type": "integer",
         "value": "0"
+      },
+      {
+        "name": "search",
+        "label": "Search in filename",
+        "type": "string",
+        "persist": "disk",
+        "access": "public"
       }
     ],
     "nodes": [
@@ -131,7 +138,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 489
+        "width": 493
       },
       {
         "data": {
@@ -228,6 +235,25 @@
           "y": 66.25911461494695
         },
         "dragging": false
+      },
+      {
+        "id": "90278c45-a9df-45e9-84ad-de4c04def4e5",
+        "position": {
+          "x": 67.32112592522914,
+          "y": -427.72128113452743
+        },
+        "data": {
+          "keyword": "search"
+        },
+        "type": "state",
+        "width": 260,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 67.32112592522914,
+          "y": -427.72128113452743
+        },
+        "dragging": false
       }
     ],
     "edges": [
@@ -285,6 +311,14 @@
         "targetHandle": "fieldInput/duration",
         "source": "ddc4be08-1995-48d3-881b-81fb0d78bf68",
         "sourceHandle": "fieldOutput",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "64735605-bb68-4c6c-ad03-15a3112da395",
+        "source": "90278c45-a9df-45e9-84ad-de4c04def4e5",
+        "sourceHandle": "fieldOutput",
+        "target": "90e0b322-3302-4b36-ae37-70c71183d722",
+        "targetHandle": "fieldInput/search",
         "type": "codeNodeEdge"
       }
     ]

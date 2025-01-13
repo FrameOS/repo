@@ -1,6 +1,6 @@
 [
   {
-    "id": "42f4fe46-1b74-4db5-a9ae-8928060a4af3",
+    "id": "bb3d9f9d-9ccc-4372-b9ca-e35bb04e13ed",
     "name": "Haiku of the hour",
     "settings": {
       "backgroundColor": "#000000",
@@ -82,7 +82,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 324
+        "width": 325
       },
       {
         "data": {
@@ -169,7 +169,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 329,
+        "width": 333,
         "positionAbsolute": {
           "x": 287.1423214616442,
           "y": 164.1442134886737
@@ -200,7 +200,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 281
+        "width": 285
       },
       {
         "data": {
@@ -280,12 +280,13 @@
       {
         "data": {
           "config": {
-            "fontSize": "90"
+            "fontSize": "90",
+            "font": "ComicRelief.ttf"
           },
           "keyword": "render/text"
         },
         "dragging": false,
-        "height": 364,
+        "height": 492,
         "id": "da24b58c-5b42-4e92-a294-21ec11c9acf7",
         "position": {
           "x": 1221.32705710028,
@@ -297,7 +298,7 @@
         },
         "selected": false,
         "type": "app",
-        "width": 334
+        "width": 419
       },
       {
         "id": "a91590ee-e1fc-4e11-9c12-df2ea2efd0b8",
@@ -347,7 +348,7 @@
           "keyword": "textType"
         },
         "type": "state",
-        "width": 178,
+        "width": 164,
         "height": 48,
         "selected": false,
         "positionAbsolute": {
@@ -423,7 +424,7 @@
           "keyword": "textType"
         },
         "type": "state",
-        "width": 178,
+        "width": 164,
         "height": 48,
         "selected": false,
         "positionAbsolute": {
