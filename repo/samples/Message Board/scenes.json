@@ -1,6 +1,6 @@
 [
   {
-    "id": "9b799880-d237-4bb0-a5c0-3d4dbb5e665d",
+    "id": "350497f4-e022-4a10-85b5-53de8be63eb4",
     "name": "Message Board",
     "settings": {
       "backgroundColor": "#000000",
@@ -30,6 +30,14 @@
         "type": "font",
         "persist": "disk",
         "access": "public"
+      },
+      {
+        "name": "fontSize",
+        "label": "Font size",
+        "type": "float",
+        "persist": "disk",
+        "access": "public",
+        "value": "90"
       }
     ],
     "nodes": [
@@ -38,7 +46,7 @@
           "keyword": "render"
         },
         "dragging": false,
-        "height": 199,
+        "height": 198,
         "id": "8174a506-d5d4-4264-8472-8ae5a0b5f645",
         "position": {
           "x": 5.588973116178522,
@@ -64,12 +72,12 @@
         "height": 420,
         "id": "eb54d359-2986-4012-8b49-a034437ebdeb",
         "position": {
-          "x": 711.8632198953902,
-          "y": 260.2598584188371
+          "x": 777.1611003728354,
+          "y": 269.86248790081424
         },
         "positionAbsolute": {
-          "x": 711.8632198953902,
-          "y": 260.2598584188371
+          "x": 777.1611003728354,
+          "y": 269.86248790081424
         },
         "selected": false,
         "type": "app",
@@ -169,48 +177,48 @@
         "width": 351
       },
       {
-        "data": {
-          "keyword": "background"
-        },
-        "dragging": false,
-        "height": 48,
         "id": "f4280494-f122-4880-b1b7-a3bc29b5cb60",
         "position": {
           "x": 271.3205040972592,
           "y": 6.356991919457727
         },
+        "data": {
+          "keyword": "background"
+        },
+        "type": "state",
+        "width": 375,
+        "height": 48,
+        "selected": false,
         "positionAbsolute": {
           "x": 271.3205040972592,
           "y": 6.356991919457727
         },
-        "selected": false,
-        "type": "state",
-        "width": 375
+        "dragging": false
       },
       {
+        "id": "0aee5313-ddd7-446c-9d8f-20c0a99341ab",
+        "position": {
+          "x": 746.3279249427724,
+          "y": 188.83784860790996
+        },
         "data": {
           "keyword": "text"
         },
-        "dragging": false,
-        "height": 48,
-        "id": "0aee5313-ddd7-446c-9d8f-20c0a99341ab",
-        "position": {
-          "x": 684.8710962581179,
-          "y": 177.31469322953728
-        },
-        "positionAbsolute": {
-          "x": 684.8710962581179,
-          "y": 177.31469322953728
-        },
-        "selected": false,
         "type": "state",
-        "width": 211
+        "width": 211,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 746.3279249427724,
+          "y": 188.83784860790996
+        },
+        "dragging": false
       },
       {
-        "id": "094087db-0b22-40e5-afb2-4dadcb283ac6",
+        "id": "6e23a5e8-f3fc-47d9-8515-dadd03a33452",
         "position": {
-          "x": 565.9078814770037,
-          "y": 446.2695034879481
+          "x": 709.3377495215731,
+          "y": 123.13092305188974
         },
         "data": {
           "keyword": "font"
@@ -220,8 +228,27 @@
         "height": 48,
         "selected": false,
         "positionAbsolute": {
-          "x": 565.9078814770037,
-          "y": 446.2695034879481
+          "x": 709.3377495215731,
+          "y": 123.13092305188974
+        },
+        "dragging": false
+      },
+      {
+        "id": "c5062224-449e-4c87-b0dd-1d3b360071c6",
+        "position": {
+          "x": 679.7844179456829,
+          "y": 49.247594112164165
+        },
+        "data": {
+          "keyword": "fontSize"
+        },
+        "type": "state",
+        "width": 170,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 679.7844179456829,
+          "y": 49.247594112164165
         },
         "dragging": false
       }
@@ -269,26 +296,34 @@
       },
       {
         "id": "a1aba493-3dff-433e-900e-f694f9ad7c43",
-        "source": "f4280494-f122-4880-b1b7-a3bc29b5cb60",
-        "sourceHandle": "fieldOutput",
         "target": "106c8fc5-df79-4b5c-978d-e7f2a9445bb7",
         "targetHandle": "fieldInput/search",
+        "source": "f4280494-f122-4880-b1b7-a3bc29b5cb60",
+        "sourceHandle": "fieldOutput",
         "type": "codeNodeEdge"
       },
       {
         "id": "5b0751f6-6e44-4ab2-b983-c3bb1b52e83f",
-        "source": "0aee5313-ddd7-446c-9d8f-20c0a99341ab",
-        "sourceHandle": "fieldOutput",
         "target": "eb54d359-2986-4012-8b49-a034437ebdeb",
         "targetHandle": "fieldInput/text",
+        "source": "0aee5313-ddd7-446c-9d8f-20c0a99341ab",
+        "sourceHandle": "fieldOutput",
         "type": "codeNodeEdge"
       },
       {
-        "id": "0e80deb2-1d7a-4742-9282-038747c86dba",
-        "source": "094087db-0b22-40e5-afb2-4dadcb283ac6",
+        "id": "450ed0c4-19ec-4776-8707-361df9f4e67f",
+        "source": "6e23a5e8-f3fc-47d9-8515-dadd03a33452",
         "sourceHandle": "fieldOutput",
         "target": "eb54d359-2986-4012-8b49-a034437ebdeb",
         "targetHandle": "fieldInput/font",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "632d52e1-df91-4a26-a5e0-39f5cd8f0461",
+        "source": "c5062224-449e-4c87-b0dd-1d3b360071c6",
+        "sourceHandle": "fieldOutput",
+        "target": "eb54d359-2986-4012-8b49-a034437ebdeb",
+        "targetHandle": "fieldInput/fontSize",
         "type": "codeNodeEdge"
       }
     ]
