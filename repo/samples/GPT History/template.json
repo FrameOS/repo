@@ -1,9 +1,0 @@
-{
-  "name": "GPT History",
-  "description": "On this day in history, as interpreted by ChatGPT. Requires OpenAI API key and credits.",
-  "config": null,
-  "image": "./image.jpg",
-  "imageWidth": 480,
-  "imageHeight": 800,
-  "scenes": "./scenes.json"
-}

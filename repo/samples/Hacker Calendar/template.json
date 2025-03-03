@@ -1,9 +1,0 @@
-{
-  "name": "Hacker Calendar",
-  "description": "Show an iCal feed as JSON on your wall. Like a tr00 h4x0r.",
-  "config": null,
-  "image": "./image.jpg",
-  "imageWidth": 1304,
-  "imageHeight": 984,
-  "scenes": "./scenes.json"
-}
