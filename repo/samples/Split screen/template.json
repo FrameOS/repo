@@ -1,0 +1,9 @@
+{
+  "name": "Split screen",
+  "description": "Just an example on how to split the screen between different scenes",
+  "config": null,
+  "image": "./image.jpg",
+  "imageWidth": 1280,
+  "imageHeight": 720,
+  "scenes": "./scenes.json"
+}
