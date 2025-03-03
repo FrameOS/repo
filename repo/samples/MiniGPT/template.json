@@ -1,6 +1,6 @@
 {
   "name": "MiniGPT",
-  "description": "Scan the QR code to ask GPT4 a question. OpenAI API key and enough credits required.",
+  "description": "Ask GPT4 a question. OpenAI API key required.",
   "config": null,
   "image": "./image.jpg",
   "imageWidth": 480,
