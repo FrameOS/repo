@@ -1,0 +1,123 @@
+[
+  {
+    "id": "9507ade8-ba17-42e3-9df3-c11ac56bc0fa",
+    "name": "Browser snapshot",
+    "nodes": [
+      {
+        "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "type": "event",
+        "position": {
+          "x": 121,
+          "y": 113
+        },
+        "data": {
+          "keyword": "render"
+        },
+        "width": 212,
+        "height": 161
+      },
+      {
+        "id": "32a288c1-7a36-44fb-8c77-f540204311b2",
+        "position": {
+          "x": 512,
+          "y": 125
+        },
+        "data": {
+          "keyword": "render/image",
+          "config": {}
+        },
+        "type": "app",
+        "width": 324,
+        "height": 134
+      },
+      {
+        "id": "945a0cfb-05b8-43ef-946d-93caa73812e7",
+        "position": {
+          "x": 453,
+          "y": -225.80971044177826
+        },
+        "data": {
+          "keyword": "data/browserSnapshot",
+          "config": {},
+          "cache": {
+            "enabled": true,
+            "inputEnabled": true,
+            "durationEnabled": true,
+            "duration": "900",
+            "expressionEnabled": false,
+            "expression": null,
+            "expressionType": null
+          }
+        },
+        "type": "app",
+        "width": 455,
+        "height": 316,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 453,
+          "y": -225.80971044177826
+        },
+        "dragging": false
+      },
+      {
+        "id": "9221dd93-daf3-44a6-934b-bc2249579788",
+        "position": {
+          "x": 410.7541607428997,
+          "y": -303.4174685266914
+        },
+        "data": {
+          "keyword": "url"
+        },
+        "type": "state",
+        "width": 215,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 410.7541607428997,
+          "y": -303.4174685266914
+        },
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "e46c94a9-9169-46e4-81ea-94b50843e9e7",
+        "target": "32a288c1-7a36-44fb-8c77-f540204311b2",
+        "targetHandle": "prev",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "next",
+        "type": "appNodeEdge"
+      },
+      {
+        "id": "3635add9-6a9c-4e56-8586-7657f6d0679f",
+        "source": "945a0cfb-05b8-43ef-946d-93caa73812e7",
+        "sourceHandle": "fieldOutput",
+        "target": "32a288c1-7a36-44fb-8c77-f540204311b2",
+        "targetHandle": "fieldInput/image",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "a405ee83-4969-4feb-bd45-c0e51e8d692d",
+        "source": "9221dd93-daf3-44a6-934b-bc2249579788",
+        "sourceHandle": "fieldOutput",
+        "target": "945a0cfb-05b8-43ef-946d-93caa73812e7",
+        "targetHandle": "fieldInput/url",
+        "type": "codeNodeEdge"
+      }
+    ],
+    "fields": [
+      {
+        "name": "url",
+        "label": "URL to capture",
+        "type": "text",
+        "value": "https://frameos.net/",
+        "persist": "disk",
+        "access": "public"
+      }
+    ],
+    "settings": {
+      "refreshInterval": 3600,
+      "backgroundColor": "#000000"
+    }
+  }
+]

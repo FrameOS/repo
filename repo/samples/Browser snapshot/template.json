@@ -1,0 +1,9 @@
+{
+  "name": "Browser snapshot",
+  "description": "Take a screenshot with Chromium and Playwright. 64bit systems only.",
+  "config": null,
+  "image": "./image.jpg",
+  "imageWidth": 1280,
+  "imageHeight": 720,
+  "scenes": "./scenes.json"
+}
