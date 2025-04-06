@@ -1,6 +1,6 @@
 {
   "name": "Browser snapshot",
-  "description": "Take a screenshot with Chromium and Playwright. 64bit systems only.",
+  "description": "Take a screenshot with Chromium and Playwright. 64bit systems only. Slow to install.",
   "config": null,
   "image": "./image.jpg",
   "imageWidth": 1280,
