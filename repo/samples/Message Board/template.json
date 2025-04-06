@@ -1,6 +1,6 @@
 {
-  "name": "Message Board",
-  "description": "A simple message board. Scan the QR code, and update the text with your phone.",
+  "name": "Message board",
+  "description": "A simple message board, background from Unsplash.",
   "config": null,
   "image": "./image.jpg",
   "image_width": 480,

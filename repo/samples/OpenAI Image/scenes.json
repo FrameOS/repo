@@ -1,7 +1,7 @@
 [
   {
     "id": "20b0a47b-14fc-421d-9ced-daa5c61672fa",
-    "name": "OpenAI Image",
+    "name": "OpenAI image",
     "settings": {
       "backgroundColor": "#000000",
       "refreshInterval": 3600

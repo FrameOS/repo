@@ -1,6 +1,6 @@
 {
-  "name": "Agenda",
-  "description": "An iCal agenda. Perfect for light e-ink displays.",
+  "name": "iCal agenda",
+  "description": "Show the next events from a .ics file.",
   "config": null,
   "image": "./image.jpg",
   "imageWidth": 480,

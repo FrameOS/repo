@@ -1,6 +1,6 @@
 {
-  "name": "Cute Agenda",
-  "description": "A split screen sample",
+  "name": "Split agenda",
+  "description": "A split screen sample as a single large scene.",
   "config": null,
   "image": "./image.jpg",
   "imageWidth": 1304,
