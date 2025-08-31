@@ -1,0 +1,1141 @@
+[
+  {
+    "id": "473752a2-6c64-48c0-be6e-7911edfc4fc8",
+    "name": "Calendar",
+    "nodes": [
+      {
+        "id": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "type": "event",
+        "position": {
+          "x": 2697.8457560026236,
+          "y": 1534.1877862879119
+        },
+        "data": {
+          "keyword": "render"
+        },
+        "width": 212,
+        "height": 161,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2697.8457560026236,
+          "y": 1534.1877862879119
+        },
+        "dragging": false
+      },
+      {
+        "id": "489e12cc-ada4-4e66-800a-6aaf92b98490",
+        "position": {
+          "x": 3038.7158594482803,
+          "y": 1554.8864611317956
+        },
+        "data": {
+          "keyword": "render/image",
+          "config": {}
+        },
+        "type": "app",
+        "width": 324,
+        "height": 134,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 3038.7158594482803,
+          "y": 1554.8864611317956
+        },
+        "dragging": false
+      },
+      {
+        "id": "4aea23f6-1d19-4863-9e00-0bb2b351020e",
+        "position": {
+          "x": 2878.3858487188504,
+          "y": -180.70447152416727
+        },
+        "data": {
+          "keyword": "data/icalJson",
+          "config": {
+            "exportFrom": "last month",
+            "exportUntil": "next month",
+            "exportCount": "500"
+          },
+          "cache": {
+            "enabled": true,
+            "inputEnabled": true,
+            "durationEnabled": false,
+            "duration": null,
+            "expressionEnabled": false,
+            "expression": null,
+            "expressionType": null
+          }
+        },
+        "type": "app",
+        "width": 527,
+        "height": 364,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2878.3858487188504,
+          "y": -180.70447152416727
+        },
+        "dragging": false
+      },
+      {
+        "id": "ebbbbbf9-bdbc-4ddf-9554-4fe6fe17e13e",
+        "position": {
+          "x": 2864.1528889971873,
+          "y": -370.2922344412907
+        },
+        "data": {
+          "keyword": "data/downloadUrl",
+          "config": {
+            "url": ""
+          },
+          "cache": {
+            "enabled": true,
+            "inputEnabled": true,
+            "durationEnabled": true,
+            "duration": "900",
+            "expressionEnabled": false,
+            "expression": null,
+            "expressionType": null
+          }
+        },
+        "type": "app",
+        "width": 251,
+        "height": 112,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2864.1528889971873,
+          "y": -370.2922344412907
+        },
+        "dragging": false
+      },
+      {
+        "id": "eede0450-6c88-4ff2-997d-80b7c0e5aa94",
+        "position": {
+          "x": 2831.085191848816,
+          "y": -453.66632151281135
+        },
+        "data": {
+          "keyword": "url"
+        },
+        "type": "state",
+        "width": 158,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2831.085191848816,
+          "y": -453.66632151281135
+        },
+        "dragging": false
+      },
+      {
+        "id": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "type": "app",
+        "position": {
+          "x": 2935.7302544132613,
+          "y": 279.1866718301854
+        },
+        "data": {
+          "keyword": "render/calendar",
+          "config": {
+            "eventTimeColor": "#333333"
+          },
+          "cache": {}
+        },
+        "width": 474,
+        "height": 1011,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2935.7302544132613,
+          "y": 279.1866718301854
+        },
+        "dragging": false
+      },
+      {
+        "id": "fa525ced-91bb-4b4f-8aee-8c8f7baa4858",
+        "position": {
+          "x": 2567.1655062485556,
+          "y": 630.9650879551157
+        },
+        "data": {
+          "keyword": "titleFontSize"
+        },
+        "type": "state",
+        "width": 332,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2567.1655062485556,
+          "y": 630.9650879551157
+        },
+        "dragging": false
+      },
+      {
+        "id": "2279daca-0e38-4649-ae99-ebb4932904be",
+        "position": {
+          "x": 2552.269856957661,
+          "y": 739.2970827979881
+        },
+        "data": {
+          "keyword": "weekdayFontSize"
+        },
+        "type": "state",
+        "width": 291,
+        "height": 48
+      },
+      {
+        "id": "b8861a54-e264-467e-8f77-7c2d2414632d",
+        "position": {
+          "x": 2580.707005603915,
+          "y": 846.2749277053243
+        },
+        "data": {
+          "keyword": "dateFontSize"
+        },
+        "type": "state",
+        "width": 288,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2580.707005603915,
+          "y": 846.2749277053243
+        },
+        "dragging": false
+      },
+      {
+        "id": "72f477e8-b882-4a63-b8ad-c0387192c6a9",
+        "position": {
+          "x": 2605.0817044435616,
+          "y": 1056.16816771339
+        },
+        "data": {
+          "keyword": "eventFontSize"
+        },
+        "type": "state",
+        "width": 221,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2605.0817044435616,
+          "y": 1056.16816771339
+        },
+        "dragging": false
+      },
+      {
+        "id": "e5464510-690a-4e8f-9a7f-09fafd204613",
+        "position": {
+          "x": 2591.3688327276213,
+          "y": 399.73933857748773
+        },
+        "data": {
+          "keyword": "backgroundColor"
+        },
+        "type": "state",
+        "width": 322,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2591.3688327276213,
+          "y": 399.73933857748773
+        },
+        "dragging": false
+      },
+      {
+        "id": "6e4bc1b3-6099-45e5-baa0-8da5c7a19c58",
+        "position": {
+          "x": 2406.5647144980217,
+          "y": 453.64053972778754
+        },
+        "data": {
+          "keyword": "weekendBackgroundColor"
+        },
+        "type": "state",
+        "width": 510,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2406.5647144980217,
+          "y": 453.64053972778754
+        },
+        "dragging": false
+      },
+      {
+        "id": "d6a53867-4099-40b9-b9f7-ccff26ca494a",
+        "position": {
+          "x": 2523.3506503236713,
+          "y": 507.54174087808735
+        },
+        "data": {
+          "keyword": "todayStrokeColor"
+        },
+        "type": "state",
+        "width": 316,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2523.3506503236713,
+          "y": 507.54174087808735
+        },
+        "dragging": false
+      },
+      {
+        "id": "f2eda316-1a0f-4cef-9583-7e3683160f57",
+        "position": {
+          "x": 2495.1166878163713,
+          "y": 555.0261323676373
+        },
+        "data": {
+          "keyword": "dateTextColor"
+        },
+        "type": "state",
+        "width": 264,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2495.1166878163713,
+          "y": 555.0261323676373
+        },
+        "dragging": false
+      },
+      {
+        "id": "8517b1d9-5bdb-426f-8bea-846933378768",
+        "position": {
+          "x": 2321.6719943072503,
+          "y": 596.2595229338366
+        },
+        "data": {
+          "keyword": "eventTimeColor"
+        },
+        "type": "state",
+        "width": 241,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2321.6719943072503,
+          "y": 596.2595229338366
+        },
+        "dragging": false
+      },
+      {
+        "id": "5d6a5a89-c082-46b6-8c5c-fc6ead4d4753",
+        "position": {
+          "x": 2323.2432610254027,
+          "y": 657.5389249417757
+        },
+        "data": {
+          "keyword": "eventTitleColor"
+        },
+        "type": "state",
+        "width": 236,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2323.2432610254027,
+          "y": 657.5389249417757
+        },
+        "dragging": false
+      },
+      {
+        "id": "9de5b186-8b5d-4a31-8968-121b74d242a0",
+        "position": {
+          "x": 2359.382395542905,
+          "y": 721.9608603860191
+        },
+        "data": {
+          "keyword": "titleTextColor"
+        },
+        "type": "state",
+        "width": 224,
+        "height": 48
+      },
+      {
+        "id": "b0180128-2ddd-4da9-bebe-df8d9220ea67",
+        "position": {
+          "x": 2367.2387291336668,
+          "y": 784.8115291121105
+        },
+        "data": {
+          "keyword": "titleBackgroundColor"
+        },
+        "type": "state",
+        "width": 247,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2367.2387291336668,
+          "y": 784.8115291121105
+        },
+        "dragging": false
+      },
+      {
+        "id": "5ad381ea-ae8e-42f5-b714-80c3fe19200c",
+        "position": {
+          "x": 2366.3505472359193,
+          "y": 831.9910459034011
+        },
+        "data": {
+          "keyword": "weekdayTextColor"
+        },
+        "type": "state",
+        "width": 268,
+        "height": 48
+      },
+      {
+        "id": "55e37017-6d2c-4b7c-8a21-f71a02d8543b",
+        "position": {
+          "x": 2373.89730093271,
+          "y": 893.8744262170841
+        },
+        "data": {
+          "keyword": "weekdayBackgroundColor"
+        },
+        "type": "state",
+        "width": 290,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2373.89730093271,
+          "y": 893.8744262170841
+        },
+        "dragging": false
+      },
+      {
+        "id": "c43a2b4e-cd32-4c0d-b0eb-859b2c70c64e",
+        "position": {
+          "x": 2309.0002361094867,
+          "y": 1049.8490654199304
+        },
+        "data": {
+          "keyword": "padding"
+        },
+        "type": "state",
+        "width": 275,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2309.0002361094867,
+          "y": 1049.8490654199304
+        },
+        "dragging": false
+      },
+      {
+        "id": "08a24883-6ad1-4774-ace4-b09cd4a9bea0",
+        "position": {
+          "x": 2418.541476655072,
+          "y": 1167.8165552382532
+        },
+        "data": {
+          "keyword": "showMonthYear"
+        },
+        "type": "state",
+        "width": 327,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2418.541476655072,
+          "y": 1167.8165552382532
+        },
+        "dragging": false
+      },
+      {
+        "id": "e064a363-0478-4f7d-91f7-6c28781354be",
+        "position": {
+          "x": 2441.011474715705,
+          "y": 1240.84404893531
+        },
+        "data": {
+          "keyword": "monthYearPosition"
+        },
+        "type": "state",
+        "width": 383,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2441.011474715705,
+          "y": 1240.84404893531
+        },
+        "dragging": false
+      },
+      {
+        "id": "e3395c86-c6ca-41a9-b4d0-43cf544bf25d",
+        "position": {
+          "x": 2476.120846685444,
+          "y": 1312.4671677535775
+        },
+        "data": {
+          "keyword": "showGrid"
+        },
+        "type": "state",
+        "width": 248,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2476.120846685444,
+          "y": 1312.4671677535775
+        },
+        "dragging": false
+      },
+      {
+        "id": "9631c8f2-f3a8-4191-8898-b6bfdb99944e",
+        "position": {
+          "x": 2484.547095958181,
+          "y": 1396.7296604809508
+        },
+        "data": {
+          "keyword": "gridWidth"
+        },
+        "type": "state",
+        "width": 282,
+        "height": 48
+      },
+      {
+        "id": "5a6a196a-c946-41c1-ab4b-726d9b3a73ae",
+        "position": {
+          "x": 2522.4652176854993,
+          "y": 1448.6915309961644
+        },
+        "data": {
+          "keyword": "gridColor"
+        },
+        "type": "state",
+        "width": 223,
+        "height": 48
+      },
+      {
+        "id": "e955110d-9277-48b7-ac07-5d3b96fc6d06",
+        "position": {
+          "x": 2254.9881015409615,
+          "y": 334.9275984429491
+        },
+        "data": {
+          "keyword": "startWeekOnMonday"
+        },
+        "type": "state",
+        "width": 620,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2254.9881015409615,
+          "y": 334.9275984429491
+        },
+        "dragging": false
+      },
+      {
+        "id": "1e6f8260-23f0-4e3e-946a-49d6be82c1bd",
+        "position": {
+          "x": 2207.9392956583742,
+          "y": 661.0933953284554
+        },
+        "data": {
+          "keyword": "titleFont"
+        },
+        "type": "state",
+        "width": 382,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2207.9392956583742,
+          "y": 661.0933953284554
+        },
+        "dragging": false
+      },
+      {
+        "id": "212007b6-046d-4dfc-bf4c-89dd2b013a18",
+        "position": {
+          "x": 2053.8041746562812,
+          "y": 745.2026618651304
+        },
+        "data": {
+          "keyword": "weekdayFont"
+        },
+        "type": "state",
+        "width": 422,
+        "height": 48
+      },
+      {
+        "id": "271f7090-578b-4f9a-816f-02ee79b1ebd8",
+        "position": {
+          "x": 2280.7035913598697,
+          "y": 954.4978134796473
+        },
+        "data": {
+          "keyword": "dateFont"
+        },
+        "type": "state",
+        "width": 246,
+        "height": 48
+      },
+      {
+        "id": "f3b6d6ce-58a1-4b64-acb1-f57030168b69",
+        "position": {
+          "x": 2142.999117774244,
+          "y": 974.05810802306
+        },
+        "data": {
+          "keyword": "eventTitleFont"
+        },
+        "type": "state",
+        "width": 218,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2142.999117774244,
+          "y": 974.05810802306
+        },
+        "dragging": false
+      },
+      {
+        "id": "a1068f5c-49fa-4dee-8d69-7474087537b1",
+        "position": {
+          "x": 2054.9777923288866,
+          "y": 1050.34325674237
+        },
+        "data": {
+          "keyword": "eventTimeFont"
+        },
+        "type": "state",
+        "width": 224,
+        "height": 48
+      },
+      {
+        "id": "a7dab505-a6e3-42d2-a7d0-511afc6cf820",
+        "position": {
+          "x": 2034.0125183028176,
+          "y": 333.16048497706225
+        },
+        "data": {
+          "keyword": "year"
+        },
+        "type": "state",
+        "width": 256,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 2034.0125183028176,
+          "y": 333.16048497706225
+        },
+        "dragging": false
+      },
+      {
+        "id": "26e95cb8-a362-47ab-ba01-f161c959217e",
+        "position": {
+          "x": 1974.796766447341,
+          "y": 378.08277948811354
+        },
+        "data": {
+          "keyword": "month"
+        },
+        "type": "state",
+        "width": 331,
+        "height": 48,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 1974.796766447341,
+          "y": 378.08277948811354
+        },
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "c122b52a-5219-41c3-b6f5-92b4793dac27",
+        "target": "489e12cc-ada4-4e66-800a-6aaf92b98490",
+        "targetHandle": "prev",
+        "source": "463556ab-e4fe-40c7-93f3-40bc723f454e",
+        "sourceHandle": "next",
+        "type": "appNodeEdge"
+      },
+      {
+        "id": "b41ef0fa-49e0-41eb-bf81-64ed97855cf0",
+        "source": "ebbbbbf9-bdbc-4ddf-9554-4fe6fe17e13e",
+        "sourceHandle": "fieldOutput",
+        "target": "4aea23f6-1d19-4863-9e00-0bb2b351020e",
+        "targetHandle": "fieldInput/ical",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "c42f0896-b09f-45c2-93bd-1b91da87d865",
+        "source": "eede0450-6c88-4ff2-997d-80b7c0e5aa94",
+        "sourceHandle": "fieldOutput",
+        "target": "ebbbbbf9-bdbc-4ddf-9554-4fe6fe17e13e",
+        "targetHandle": "fieldInput/url",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "8412fcba-3de8-4b8c-9522-6ff7ae310f61",
+        "source": "4aea23f6-1d19-4863-9e00-0bb2b351020e",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/events",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "10d873e6-f9cd-4c55-8c10-32360888d3dd",
+        "source": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "sourceHandle": "fieldOutput",
+        "target": "489e12cc-ada4-4e66-800a-6aaf92b98490",
+        "targetHandle": "fieldInput/image",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "dcbcc4df-f471-4f21-894a-89f3aafa4775",
+        "source": "fa525ced-91bb-4b4f-8aee-8c8f7baa4858",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/titleFontSize",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "39441692-a3cc-4e1d-a48f-12bf3a6a129d",
+        "source": "2279daca-0e38-4649-ae99-ebb4932904be",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/weekdayFontSize",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "32901156-a9c9-498a-8e80-c528b0a3bbf7",
+        "source": "b8861a54-e264-467e-8f77-7c2d2414632d",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/dateFontSize",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "ffb5c3d7-38e4-462f-aa98-226d3a7f0944",
+        "source": "72f477e8-b882-4a63-b8ad-c0387192c6a9",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/eventFontSize",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "976d8557-27cb-4d45-99a3-051a6a5eeed0",
+        "source": "e5464510-690a-4e8f-9a7f-09fafd204613",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/backgroundColor",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "d0051f09-38b0-450f-83bf-0bfc9d730302",
+        "source": "6e4bc1b3-6099-45e5-baa0-8da5c7a19c58",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/weekendBackgroundColor",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "aaba41b6-5438-452f-bcfc-689111f3f6af",
+        "source": "d6a53867-4099-40b9-b9f7-ccff26ca494a",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/todayStrokeColor",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "3a2a35e6-9242-4f2b-aa46-db14f63062f2",
+        "source": "f2eda316-1a0f-4cef-9583-7e3683160f57",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/dateTextColor",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "cda59a62-052d-4f7d-9efd-9967d79e0516",
+        "source": "8517b1d9-5bdb-426f-8bea-846933378768",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/eventTimeColor",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "1154eb5d-c037-4799-a076-ca12799bec70",
+        "source": "5d6a5a89-c082-46b6-8c5c-fc6ead4d4753",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/eventTitleColor",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "995bcffb-6eaa-4583-8a2e-e9a1b41d7d84",
+        "source": "9de5b186-8b5d-4a31-8968-121b74d242a0",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/titleTextColor",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "c8b0cbbb-d3bc-4076-9810-ed6ea16f9b6f",
+        "source": "b0180128-2ddd-4da9-bebe-df8d9220ea67",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/titleBackgroundColor",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "c0795a84-b4ee-403c-8777-c0de69fc907f",
+        "source": "5ad381ea-ae8e-42f5-b714-80c3fe19200c",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/weekdayTextColor",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "57ecead6-5419-4f62-a34e-1a31d330249a",
+        "source": "55e37017-6d2c-4b7c-8a21-f71a02d8543b",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/weekdayBackgroundColor",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "388f6797-a8b5-4e32-abce-abc9e0776bba",
+        "source": "c43a2b4e-cd32-4c0d-b0eb-859b2c70c64e",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/padding",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "de968cec-a6e1-46e2-afc5-deda30adf616",
+        "source": "08a24883-6ad1-4774-ace4-b09cd4a9bea0",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/showMonthYear",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "1db54273-0102-4ec5-b22a-24cd24645e47",
+        "source": "e064a363-0478-4f7d-91f7-6c28781354be",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/monthYearPosition",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "ee5b8c30-cf16-4bd4-a398-95b1dc036ff9",
+        "source": "e3395c86-c6ca-41a9-b4d0-43cf544bf25d",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/showGrid",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "cf574a97-432e-49ed-af0f-bba17ac6c649",
+        "source": "9631c8f2-f3a8-4191-8898-b6bfdb99944e",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/gridWidth",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "dcf32afe-15eb-4d26-bbbe-a2764d437459",
+        "source": "5a6a196a-c946-41c1-ab4b-726d9b3a73ae",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/gridColor",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "aa1c65d3-297f-4558-bc64-c185f6ed0e3b",
+        "source": "e955110d-9277-48b7-ac07-5d3b96fc6d06",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/startWeekOnMonday",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "fdd9637e-149c-4a50-b727-7af0757871de",
+        "source": "1e6f8260-23f0-4e3e-946a-49d6be82c1bd",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/titleFont",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "f315746f-30a6-4c83-a3b0-3751c22b7eb0",
+        "source": "212007b6-046d-4dfc-bf4c-89dd2b013a18",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/weekdayFont",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "bfe14d7c-bc83-4859-b01c-032f9f811422",
+        "source": "271f7090-578b-4f9a-816f-02ee79b1ebd8",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/dateFont",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "df3b35c7-9e98-404a-9e0b-da40da243728",
+        "source": "f3b6d6ce-58a1-4b64-acb1-f57030168b69",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/eventTitleFont",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "ef2cc13a-ec9e-4177-97a8-f93432ee68f6",
+        "source": "a1068f5c-49fa-4dee-8d69-7474087537b1",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/eventTimeFont",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "cf68128d-1b3a-4994-8a31-b9454f43470e",
+        "source": "a7dab505-a6e3-42d2-a7d0-511afc6cf820",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/year",
+        "type": "codeNodeEdge"
+      },
+      {
+        "id": "72a4d96a-2dbe-4aa8-9cf3-322175016bef",
+        "source": "26e95cb8-a362-47ab-ba01-f161c959217e",
+        "sourceHandle": "fieldOutput",
+        "target": "a2cd8921-b9ed-44c6-ad77-ffd8ba3508b3",
+        "targetHandle": "fieldInput/month",
+        "type": "codeNodeEdge"
+      }
+    ],
+    "fields": [
+      {
+        "name": "url",
+        "label": "iCal URL",
+        "type": "text",
+        "value": "",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "titleFontSize",
+        "label": "Month & year title font size",
+        "type": "float",
+        "value": "28",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "weekdayFontSize",
+        "label": "Weekday row font size",
+        "type": "float",
+        "value": "16",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "dateFontSize",
+        "label": "Date number font size",
+        "type": "float",
+        "value": "18",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "eventFontSize",
+        "label": "Event font size",
+        "type": "float",
+        "value": "14",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "backgroundColor",
+        "label": "Overall background color",
+        "type": "color",
+        "value": "#ffffff",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "weekendBackgroundColor",
+        "label": "Weekend day background color (Sat/Sun cells)",
+        "type": "color",
+        "value": "#f7f7f7",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "todayStrokeColor",
+        "label": "Today's cell outline color",
+        "type": "color",
+        "value": "#ff0000",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "dateTextColor",
+        "label": "Date number color",
+        "type": "color",
+        "value": "#000000",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "eventTimeColor",
+        "label": "Event time color",
+        "type": "color",
+        "value": "#333333",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "eventTitleColor",
+        "label": "Event title color",
+        "type": "color",
+        "value": "#333333",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "titleTextColor",
+        "label": "Title text color",
+        "type": "color",
+        "value": "#000000",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "titleBackgroundColor",
+        "label": "Title background",
+        "type": "color",
+        "value": "#ffffff",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "weekdayTextColor",
+        "label": "Weekday text color",
+        "type": "color",
+        "value": "#000000",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "weekdayBackgroundColor",
+        "label": "Weekday background",
+        "type": "color",
+        "value": "#ffffff",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "padding",
+        "label": "Outer padding (px)",
+        "type": "integer",
+        "value": "18",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "showMonthYear",
+        "label": "Show month & year title",
+        "type": "boolean",
+        "value": "true",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "monthYearPosition",
+        "label": "Title position (ignored if hidden)",
+        "type": "string",
+        "value": "top",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "showGrid",
+        "label": "Show grid lines",
+        "type": "boolean",
+        "value": "true",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "gridWidth",
+        "label": "Grid stroke width (px)",
+        "type": "float",
+        "value": "1",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "gridColor",
+        "label": "Grid line color",
+        "type": "color",
+        "value": "#999999",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "startWeekOnMonday",
+        "label": "Week starts on Monday (Mon\u2013Sun order in weekday row)",
+        "type": "boolean",
+        "value": "true",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "titleFont",
+        "label": "Title font (used for month & year)",
+        "type": "font",
+        "value": "",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "weekdayFont",
+        "label": "Weekday font (used for weekday row)",
+        "type": "font",
+        "value": "",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "dateFont",
+        "label": "Date number font",
+        "type": "font",
+        "value": "",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "eventTitleFont",
+        "label": "Event title font",
+        "type": "font",
+        "value": "Ubuntu-Medium.ttf",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "eventTimeFont",
+        "label": "Event time font",
+        "type": "font",
+        "value": "Ubuntu-Light.ttf",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "year",
+        "label": "Year (0 = current)",
+        "type": "integer",
+        "value": "0",
+        "persist": "disk",
+        "access": "public"
+      },
+      {
+        "name": "month",
+        "label": "Month (1\u201312; 0 = current)",
+        "type": "integer",
+        "value": "0",
+        "persist": "disk",
+        "access": "public"
+      }
+    ],
+    "settings": {
+      "refreshInterval": 3600,
+      "backgroundColor": "#000000"
+    }
+  }
+]
