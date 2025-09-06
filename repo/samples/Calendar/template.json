@@ -1,6 +1,6 @@
 {
   "name": "Calendar",
-  "description": "",
+  "description": "Monthly calendar with .ics support",
   "config": null,
   "image": "./image.jpg",
   "imageWidth": 1280,
