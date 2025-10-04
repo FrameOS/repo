@@ -4,7 +4,8 @@
     "name": "Image from URL",
     "settings": {
       "refreshInterval": 86400,
-      "backgroundColor": "#000000"
+      "backgroundColor": "#000000",
+      "execution": "interpreted"
     },
     "fields": [
       {

@@ -4,7 +4,8 @@
     "name": "SD card image",
     "settings": {
       "backgroundColor": "#000000",
-      "refreshInterval": 60
+      "refreshInterval": 60,
+      "execution": "interpreted"
     },
     "fields": [
       {
