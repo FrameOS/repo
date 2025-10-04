@@ -4,7 +4,8 @@
     "name": "MiniGPT",
     "settings": {
       "backgroundColor": "#ffffff",
-      "refreshInterval": 3600
+      "refreshInterval": 3600,
+      "execution": "interpreted"
     },
     "fields": [
       {
@@ -74,6 +75,7 @@
       {
         "data": {
           "code": "\"> \" & prompt & \"\\n\\n\" & reply",
+          "codeJS": "'> ' + prompt + '\\n\\n' + reply",
           "codeArgs": [
             {
               "name": "prompt",

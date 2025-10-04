@@ -92,7 +92,8 @@
     ],
     "settings": {
       "backgroundColor": "#000000",
-      "refreshInterval": 3600
+      "refreshInterval": 3600,
+      "execution": "interpreted"
     }
   },
   {
@@ -188,7 +189,8 @@
     ],
     "settings": {
       "backgroundColor": "#000000",
-      "refreshInterval": 3600
+      "refreshInterval": 3600,
+      "execution": "interpreted"
     }
   },
   {
@@ -284,7 +286,8 @@
     ],
     "settings": {
       "backgroundColor": "#000000",
-      "refreshInterval": 3600
+      "refreshInterval": 3600,
+      "execution": "interpreted"
     }
   },
   {
@@ -345,7 +348,8 @@
     ],
     "settings": {
       "backgroundColor": "#000000",
-      "refreshInterval": 3600
+      "refreshInterval": 3600,
+      "execution": "interpreted"
     }
   },
   {
@@ -540,7 +544,8 @@
     ],
     "settings": {
       "refreshInterval": 3600,
-      "backgroundColor": "#000000"
+      "backgroundColor": "#000000",
+      "execution": "interpreted"
     }
   }
 ]

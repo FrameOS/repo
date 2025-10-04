@@ -4,7 +4,8 @@
     "name": "Unsplash image",
     "settings": {
       "backgroundColor": "#000000",
-      "refreshInterval": 600
+      "refreshInterval": 600,
+      "execution": "interpreted"
     },
     "fields": [
       {

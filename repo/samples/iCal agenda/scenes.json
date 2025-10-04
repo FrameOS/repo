@@ -4,7 +4,8 @@
     "name": "iCal Agenda",
     "settings": {
       "backgroundColor": "#ffffff",
-      "refreshInterval": 60
+      "refreshInterval": 60,
+      "execution": "interpreted"
     },
     "fields": [
       {

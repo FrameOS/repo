@@ -4,7 +4,8 @@
     "name": "Masterpieces",
     "settings": {
       "backgroundColor": "#000000",
-      "refreshInterval": 3600
+      "refreshInterval": 3600,
+      "execution": "interpreted"
     },
     "fields": [],
     "nodes": [

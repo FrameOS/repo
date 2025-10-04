@@ -256,6 +256,6 @@
         "options": ["light", "dark"]
       }
     ],
-    "settings": { "refreshInterval": 900, "backgroundColor": "#000000" }
+    "settings": { "refreshInterval": 900, "backgroundColor": "#000000", "execution": "interpreted" }
   }
 ]

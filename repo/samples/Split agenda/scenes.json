@@ -124,7 +124,7 @@
       }
     ],
     "id": "6855b741-76b0-4e8d-a1a2-0b9e7660915b",
-    "name": "Cute Agenda",
+    "name": "Split Agenda",
     "nodes": [
       {
         "data": {
@@ -416,7 +416,8 @@
     ],
     "settings": {
       "backgroundColor": "#000000",
-      "refreshInterval": 60
+      "refreshInterval": 60,
+      "execution": "interpreted"
     },
     "default": false
   }

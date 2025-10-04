@@ -162,6 +162,7 @@
       {
         "data": {
           "code": "if stars >= 0: &\"{stars} star\" & (if stars == 1: \"\" else: \"s\") else: \"Error fetching stars\"",
+          "codeJS": "stars >= 0 ? `${stars} star${stars == 1 ? '' : 's'}` : 'Error fetching stars'",
           "codeArgs": [
             {
               "name": "stars",
