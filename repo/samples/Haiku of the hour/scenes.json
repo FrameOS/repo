@@ -4,7 +4,8 @@
     "name": "Haiku of the hour",
     "settings": {
       "backgroundColor": "#000000",
-      "refreshInterval": 60
+      "refreshInterval": 60,
+      "execution": "interpreted"
     },
     "fields": [
       {
@@ -113,6 +114,7 @@
       {
         "data": {
           "code": "\"Generate an abstract full screen background image best suited for the current hour of the current day (24h format): \" & now().format(\"dddd, yyyy-MM-dd HH\") & \"\\nWe're located in: \" & location & \"\\nAlso take inspiration from this \" & textType & \":\\n\\n\" & reply",
+          "codeJS": "`Generate an abstract full screen background image best suited for the current hour of the current day (24h format): ${format(now(), '{weekday}, {year/4}-{month/2}-{day/2} {hour/2}')}\nWe're located in: ${location}\nAlso take inspiration from this ${textType}:\n\n${reply}`,",
           "codeArgs": [
             {
               "name": "reply",
@@ -205,6 +207,7 @@
       {
         "data": {
           "code": "\"Generate: \" & textType",
+          "codeJS": "`Generate: ${textType}`",
           "codeArgs": [
             {
               "name": "textType",
@@ -240,6 +243,7 @@
       {
         "data": {
           "code": "\"Generate the following plain text (no quotes) based on the current hour of the current day (given in 24h format): \" & now().format(\"dddd, yyyy-MM-dd HH\") & \":00. Include at least the hour as a word in the reply. \" & (if clockType == \"12h\": \"Use the \" & now().format(\"tt\") & \" format of the hour as a word in the text: \" & now().format(\"hh\") else: \"Use the 24h format of the hour as a word in the text: \" & now().format(\"HH\")) & \"\\n. Use calendar seasonality for: \" & location",
+          "codeJS": "`Generate the following plain text (no quotes) based on the current hour of the current day (given in 24h format): ${format(now(), '{weekday}, {year/4}-{month/2}-{day/2} {hour}/2')}:00. Include at least the hour as a word in the reply. ${clockType == '12h' ? 'Use the ' + format(now(), '{am/pm}') + ' format of the hour as a word in the text: ' : 'Use the 24h format of the hour as a word in the text: ' + format(now(), '{hour/2}')}\n. Use calendar seasonality for: ${location}`",
           "codeArgs": [
             {
               "name": "clockType",
