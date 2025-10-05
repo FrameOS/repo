@@ -1,7 +1,7 @@
 [
   {
     "id": "d68549a7-a425-4dca-bb2a-82b113e7ccb2",
-    "name": "iCal Agenda",
+    "name": "iCal agenda",
     "settings": {
       "backgroundColor": "#ffffff",
       "refreshInterval": 60,

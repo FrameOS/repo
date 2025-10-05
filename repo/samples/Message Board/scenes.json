@@ -1,7 +1,7 @@
 [
   {
     "id": "350497f4-e022-4a10-85b5-53de8be63eb4",
-    "name": "Message Board",
+    "name": "Message board",
     "settings": {
       "backgroundColor": "#000000",
       "refreshInterval": 3600,
